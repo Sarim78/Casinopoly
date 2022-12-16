@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * Card Game (Hi-Lo)
- * @Athuor Sarim Siddiqui
+ * @athuor Sarim Siddiqui
  */
 
 public class cardGame {

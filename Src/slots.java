@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * Slot Game
- * @Athuor Sarim Siddiqui
+ * @athuor Sarim Siddiqui
  */
 
 public class slots {
