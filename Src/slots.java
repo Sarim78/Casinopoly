@@ -19,8 +19,6 @@ public class slots {
 
     static int jackPot = 75000; // This will be a jackpot ($75k) for the slot machine. It will be very hard to win.
 
-    static int limitedTry = 3; // You only get 3 try's
-
     static int maxBet = 20000; // Max bet that player can make is $20k
     static int minBet = 1000; // Min bet that player can make is $1k
 
@@ -36,11 +34,6 @@ public class slots {
         int doubledMoney = money * 2; // this will double the amount of money you win 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
-    }
-
-    public static void limitedTrys() {
-        // This method is for players getting limited try's
-
     }
 
     public static void jackPot() {
