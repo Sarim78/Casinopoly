@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class blackJack {
     //Creating objects
     static Random rnd = new Random();
-	Scanner in = new Scanner(System.in);
+	static Scanner in = new Scanner(System.in);
 
     //cards the human and dealer will take
     int card;
@@ -26,7 +26,7 @@ public class blackJack {
     int playerCards;
 
     //the total value of the cards the player took
-    int playerCardValue;
+    static int playerCardValue;
 
     //the max value the player can have
     int maxValue = 21;
@@ -35,16 +35,19 @@ public class blackJack {
     int minValue = 17;
 
     //the amount of money the player bet
-    double wager;
+    static int wager;
 
     //the maximum a player can wager
-    int maxBet = 20000;
+    static int maxBet = 20000;
 
     //the minimum a player can wager
     int minBet = 1000;
 
     //the value of cards player/dealer chooses from
     static int randomNumber = rnd.nextInt(1,11);
+
+    //whether the player hits or stand
+    static String playerDecision;
 
     public static int dealerPickingCards() {
         dealerCardValue = randomNumber;
@@ -54,8 +57,27 @@ public class blackJack {
     return dealerCardValue;
     }
 
-    public int playerWager() {
-    System.out.println("How much money would you like to wager?");
-    return 0;
+    public static void playerWager() {
+        System.out.println("How much money would you like to wager?");
+        wager = in.nextInt();
+        if (wager > maxBet) {
+            System.out.println("You cannot go over the max bet of $20K! Please enter a value between 1000 and 20000.");
+        }
+        else {
+            System.out.println("You have wagered $" + wager + "!");
+        }
+    }
+
+    public static void playerPickingCards() {
+        playerCardValue = randomNumber + randomNumber;
+        System.out.println("Your starting value is $" + playerCardValue);
+        System.out.println("Would you like to hit or stand? Press h for hit, s for stand");
+        playerDecision = in.nextLine();
+        if (playerDecision == "S" || playerDecision == "s") {
+            //stand
+        }
+        else if (playerDecision == "H" || playerDecision == "h") {
+            //hit
+        }
     }
 }
