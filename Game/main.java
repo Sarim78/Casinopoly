@@ -3,12 +3,11 @@ package Game;
 import Src.blackJack;
 import Src.slots;
 
-public class Main {
+public class main {
     public static void main(String[] args) {
-        
-        System.out.println(blackJack.dealerPickingCards());
-        
-        slots game = new slots();
-        game.slotMachine();
+
+        blackJack.dealerPickingCards();
+        blackJack.playerWager();
+        blackJack.playerPickingCards();
     }
 }
