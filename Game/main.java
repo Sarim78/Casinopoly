@@ -9,5 +9,6 @@ public class main {
         blackJack.dealerPickingCards();
         blackJack.playerWager();
         blackJack.playerPickingCards();
+
     }
 }

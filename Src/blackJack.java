@@ -42,7 +42,11 @@ public class blackJack {
     //the minimum a player can wager
     int minBet = 1000;
 
-    static boolean didWin;
+    public static double minMoneyEarned = 1.5;
+    public static double maxMoneyEarned = 2.5;
+    public static double minMoneyLost = 2.5;
+    public static double maxMoneyLost = 1.5;
+
 
     //the value of cards player/dealer chooses from
     static int dealerRandomNumber = rnd.nextInt(1,11);
@@ -59,6 +63,15 @@ public class blackJack {
     return dealerCardValue;
     }
 
+    public static void instructions() {
+        System.out.println("Welcome to blackjack! Enter w for instrcutions, anything else to continue");
+        Scanner in = new Scanner(System.in);
+        String instruction = in.nextLine();
+        if (instruction.equals("W") || instruction.equals("w")) {
+            System.out.println("Here's how to play. ");
+        }
+    }
+
     public static void playerWager() {
         System.out.println("How much money would you like to wager?");
         Scanner in = new Scanner(System.in);
@@ -72,9 +85,18 @@ public class blackJack {
         playerCardValue = rnd.nextInt(1,11) + playerRandomNumber;
     }
 
+
     public static void playerPickingCards() {
+        minMoneyEarned = wager*0.2 + wager;
+        maxMoneyEarned = wager*2;
+        minMoneyLost = wager - wager*0.2;
+        maxMoneyLost = wager - wager;
+        double moneyEarnedWin = rnd.nextDouble(minMoneyEarned, maxMoneyEarned);
+        double moneyEarned = moneyEarnedWin - wager;
+        double moneyEarnedLoss = rnd.nextDouble(maxMoneyLost, minMoneyLost);
+        double moneyLost = wager - moneyEarnedLoss;
         System.out.println("Your starting value is " + playerCardValue);
-        System.out.println("Would you like to hit or stand? Press h for hit, s for stand");
+        System.out.println("Would you like to hit or stand? Enter h for hit, s for stand");
         Scanner in = new Scanner(System.in);
         playerDecision = in.nextLine();
         if (playerDecision.equals("H")|| playerDecision.equals("h")) {
@@ -86,21 +108,24 @@ public class blackJack {
             System.out.println("You have decided to stand at a value of " + playerCardValue);
             if (playerCardValue < 22 && playerCardValue > dealerCardValue) {
                 System.out.println("Congratulations! You won!");
-                didWin = true;
                 System.out.println("Your value: " + playerCardValue);
                 System.out.println("Dealer value: " + dealerCardValue);
+                System.out.println("You have won $" + moneyEarned);
+                System.out.println("$" + moneyEarnedWin + " will be added to your total");
             }
             else if (playerCardValue > 21) {
                 System.out.println("You busted! You lose!");
-                didWin = false;
                 System.out.println("Your value: " + playerCardValue);
                 System.out.println("Dealer value: " + dealerCardValue);
+                System.out.println("You have lost $" + moneyLost);
+                System.out.println("$" + moneyEarnedLoss + " will be added to your total");
             }
             else if (dealerCardValue > 21) {
                 System.out.println("The dealer busted! You win!");
-                didWin = true;
                 System.out.println("Your value: " + playerCardValue);
                 System.out.println("Dealer value: " + dealerCardValue);
+                System.out.println("You have won $" + moneyEarned);
+                System.out.println("$" + moneyEarnedWin + " will be added to your total");
             }
             else if (playerCardValue == dealerCardValue) {
                 System.out.println("Push!");
@@ -110,18 +135,15 @@ public class blackJack {
             }
             else {
                 System.out.println("You lose!");
-                didWin = false;
                 System.out.println("Your value: " + playerCardValue);
                 System.out.println("Dealer value: " + dealerCardValue);
+                System.out.println("You have lost $" + moneyLost);
+                System.out.println("$" + moneyEarnedWin + " will be added to your total");
             }
         }
         else {
             System.out.println("Please try again.");
             playerPickingCards();
         }
-    }
-
-    public static void moneyReturned() {
-        
     }
 }
