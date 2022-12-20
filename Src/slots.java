@@ -30,10 +30,13 @@ public class slots {
         // This method is called after you place a bet, it will generate a random amount money for you. 
         // Between $0 - $5500 but the amount will get double
 
-        int money = rnd.nextInt(randomMoney) - 100;
+        int money = rnd.nextInt(randomMoney);
         int doubledMoney = money * 2; // this will double the amount of money you win 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
+
+        // This will make a play have a chance of 50/50 to lose or gain money.
+
     }
 
     public static void jackPot() {
