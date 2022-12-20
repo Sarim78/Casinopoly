@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 /**
- * Slot Game
+ * Casino Slot Game
  * @athuor Sarim Siddiqui
  */
 
