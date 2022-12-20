@@ -13,4 +13,7 @@ public class cardGame {
     // Creating Objects 
     Random rnd = new Random();
     Scanner in = new Scanner(System.in);
+
+    // Creating Variables
+    
 }
