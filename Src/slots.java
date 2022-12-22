@@ -26,7 +26,6 @@ public class slots {
 
     // Methods for Casino Slot Machine
     public static void moneyGeneratedAfterBetting() {
-
         // This method is called after you place a bet, it will generate a random amount money for you. 
         // Between $0 - $5500 but the amount will get double
 
@@ -34,9 +33,20 @@ public class slots {
         int doubledMoney = money * 2; // this will double the amount of money you win 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
+    }
 
-        // This will make a play have a chance of 50/50 to lose or gain money.
+    public static void instructions() { 
+        // This methid will tell the players the instructions of this mini game
+        System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
+        String playerInput = in.nextLine();
+
+        if(playerInput.equals("G") || playerInput.equals("g")) {
+            System.out.println("\nInstructions: ");
+            System.out.println("You have to place a bet.");
+            System.out.println("You might win more money.");
+            System.out.println("Or You might lose your money.");
+        }
     }
 
     public static void jackPot() {

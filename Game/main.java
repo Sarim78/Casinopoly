@@ -13,8 +13,8 @@ public class main {
         blackJack.playerPickingCards();
 
         slots.slotMachine();
-
-        cardGame.HiLo();
+        
+        cardGame.allMethods();
 
     }
 }
