@@ -1,4 +1,4 @@
-package Game;
+package game;
 
 import Src.blackJack;
 import Src.slots;

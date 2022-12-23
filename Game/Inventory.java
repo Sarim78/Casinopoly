@@ -1,4 +1,4 @@
-package Src;
+package game;
 
 public class Inventory {
     
