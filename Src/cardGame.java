@@ -45,9 +45,11 @@ public class cardGame {
         if(bet > 20000) {
             System.out.println("Sorry, you went over the betting limit. Max: $20k");
             bet();
+            confrimBet();
         } else if(bet < 1000) {
             System.out.println("Sorry, you went under the betting limit. Min: $1k");
             bet();
+            confrimBet();
         }
     }
 
