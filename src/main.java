@@ -1,8 +1,8 @@
-package game;
+package src;
 
-import Src.blackJack;
-import Src.slots;
-import Src.cardGame;
+import game.blackJack;
+import game.cardGame;
+import game.slots;
 
 public class main {
     public static void main(String[] args) {
