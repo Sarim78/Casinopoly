@@ -77,20 +77,27 @@ public class blackJack {
     }
 
     public static void playerWager() {
-        System.out.println("How much money would you like to wager? (please bet from 1K to 20K)");
-        Scanner in = new Scanner(System.in);
-        wager = in.nextDouble();
-        if (wager > maxBet) {
-            System.out.println("You cannot go over the max bet of $20K! Please enter a value between 1000 and 20000.");
+        try {
+            System.out.println("How much money would you like to wager? (please bet from 1K to 20K)");
+            Scanner in = new Scanner(System.in);
+            wager = in.nextDouble();
+            if (wager > maxBet) {
+                System.out.println("You cannot go over the max bet of $20K! Please enter a value between 1000 and 20000.");
+                playerWager();
+            }
+            else if (wager < minBet) {
+                System.out.println("You cannot go under the max bet of $1K! Please enter a value between 1000 and 20000.");
+                playerWager();
+            }
+            else {
+                System.out.println("You have wagered " + String.format("$%.2f", wager).replace("$0.", "$.") + "!");
+                playerCardValue = rnd.nextInt(1,11) + playerRandomNumber;
+                System.out.println("Your starting value is " + playerCardValue);
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid input! Please try again.");
+            playerWager();
         }
-        else if (wager < minBet) {
-            System.out.println("You cannot go under the max bet of $1K! Please enter a value between 1000 and 20000.");
-        }
-        else {
-            System.out.println("You have wagered " + String.format("$%.2f", wager).replace("$0.", "$.") + "!");
-        }
-        playerCardValue = rnd.nextInt(1,11) + playerRandomNumber;
-        System.out.println("Your starting value is " + playerCardValue);
     }
 
 
@@ -158,5 +165,12 @@ public class blackJack {
             System.out.println("Please try again.");
             playerPickingCards();
         }
+    }
+
+    public static void blackJack() {
+        instructions();
+        dealerPickingCards();
+        playerWager();
+        playerPickingCards();
     }
 }
