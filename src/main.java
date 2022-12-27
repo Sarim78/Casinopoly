@@ -4,6 +4,7 @@ package src;
 import game.blackJack;
 import game.cardGame;
 import game.slots;
+import game.Roulette;
 
 // Player Data File
 import src.ai;
@@ -24,5 +25,6 @@ public class main {
         
         cardGame.allMethods();
 
+        Roulette.roulette();
     }
 }
