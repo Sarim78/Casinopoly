@@ -100,32 +100,36 @@ public class cardGame {
 
     public static void HiLo() {
 
-        Scanner newUserInput = new Scanner(System.in);
+        while(true) {
+            Scanner newUserInput = new Scanner(System.in);
         
-        // Player guess if the number is Hi or Lo
-        System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
-
-        String userInput = newUserInput.nextLine();
-        
-        if(userInput.equals("Hi") || userInput.equals("hi")) {
-
-            if(ai > num1) {
-                System.out.println("\nCongrats, You Got It Right!");
-            } else if(ai < num1) {
-                System.out.println("\nSorry, you lost :(");
+            // Player guess if the number is Hi or Lo
+            System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
+    
+            String userInput = newUserInput.nextLine();
+            
+            if(userInput.equals("Hi") || userInput.equals("hi")) {
+    
+                if(ai > num1) {
+                    System.out.println("\nCongrats, You Got It Right!");
+                } else if(ai < num1) {
+                    System.out.println("\nSorry, you lost :(");
+                    break;
+                }
+    
+            } else if (userInput.equals("Lo") || userInput.equals("lo")) {
+    
+                if(ai < num1) {
+                    System.out.println("\nCongrats, You Got It Right!");
+                } else if(ai > num1) {
+                    System.out.println("\nSorry, you lost :(");
+                    break;
+                }
+    
+            } else {
+                System.out.println("You only can pick between (Hi/Lo)"); 
+                HiLo();
             }
-
-        } else if (userInput.equals("Lo") || userInput.equals("lo")) {
-
-            if(ai < num1) {
-                System.out.println("\nCongrats, You Got It Right!");
-            } else if(ai > num1) {
-                System.out.println("\nSorry, you lost :(");
-            }
-
-        } else {
-            System.out.println("You only can pick between (Hi/Lo)"); 
-            HiLo();
         }
     }
 
