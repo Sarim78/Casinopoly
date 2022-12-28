@@ -20,7 +20,7 @@ public class main {
 
         slots.slotMachine();
         
-        cardGame.allMethods();
+        cardGame.cardgame();
 
         Roulette.roulette();
     }

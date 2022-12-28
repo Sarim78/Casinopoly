@@ -133,7 +133,7 @@ public class cardGame {
         }
     }
 
-    public static void allMethods() {
+    public static void cardgame() {
             // Calling all methods into one method
             instructions(); // have to remove this soon
             bet(); // have to remove this soon
