@@ -16,10 +16,7 @@ import src.buyingObjects;
 public class main {
     public static void main(String[] args) {
 
-        blackJack.instructions();
-        blackJack.dealerPickingCards();
-        blackJack.playerWager();
-        blackJack.playerPickingCards();
+        blackJack.blackJack();
 
         slots.slotMachine();
         
