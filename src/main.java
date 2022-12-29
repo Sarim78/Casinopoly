@@ -5,6 +5,7 @@ import game.blackJack;
 import game.cardGame;
 import game.slots;
 import game.Roulette;
+import game.gameBoard;
 
 // Player Data File
 import src.ai;
