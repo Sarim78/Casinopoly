@@ -6,6 +6,12 @@ import java.util.Random;
 import java.util.ArrayList;
 import src.player;
 
+/**
+ * Game Board
+ * @athuor Sarim Siddiqui
+ * @athuor Adil Baig
+ */
+
 public class gameBoard {
     // Creating Objects 
     static Random rnd = new Random();

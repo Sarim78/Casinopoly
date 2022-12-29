@@ -17,13 +17,13 @@ import src.buyingObjects;
 public class main {
     public static void main(String[] args) {
 
-        // blackJack.blackJack();
+        blackJack.blackJack();
 
-        // slots.slotMachine();
+        slots.slotMachine();
         
-        // cardGame.cardgame();
+        cardGame.cardgame();
 
-        // Roulette.roulette();
+        Roulette.roulette();
 
         gameBoard.dice();
     }
