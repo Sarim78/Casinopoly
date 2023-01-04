@@ -27,5 +27,7 @@ public class main {
         Roulette.roulette();
 
         gameBoard.dice();
+
+        chanceWheel.chancesOfWheel();
     }
 }
