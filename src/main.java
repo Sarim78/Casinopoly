@@ -11,6 +11,7 @@ import game.gameBoard;
 // Player Data File
 import src.ai;
 import src.player;
+import src.player2;
 import src.Inventory;
 import src.buyingObjects;
 
