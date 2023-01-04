@@ -7,24 +7,25 @@ import game.chanceWheel;
 import game.slots;
 import game.Roulette;
 import game.gameBoard;
-import game.chanceWheel;
+
+// Player Data File
+import src.ai;
+import src.player;
+import src.Inventory;
+import src.buyingObjects;
 
 // Main Code Of The Game Goes Here
 public class main {
     public static void main(String[] args) {
 
-        // ai.aiErrorMessage();
+        blackJack.blackJack();
 
-        // blackJack.blackJack();
-
-        // slots.slotMachine();
+        slots.slotMachine();
         
-        // cardGame.cardgame();
+        cardGame.cardgame();
 
-        // Roulette.roulette();
+        Roulette.roulette();
 
-        // gameBoard.dice();
-        
-        chanceWheel.chancesOfWheel();
+        gameBoard.dice();
     }
 }
