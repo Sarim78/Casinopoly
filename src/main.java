@@ -6,6 +6,7 @@ import game.cardGame;
 import game.slots;
 import game.Roulette;
 import game.gameBoard;
+import game.giantWheel;
 
 // Player Data File
 import src.ai;
@@ -17,14 +18,16 @@ import src.buyingObjects;
 public class main {
     public static void main(String[] args) {
 
-        blackJack.blackJack();
+        //blackJack.blackJack();
 
-        slots.slotMachine();
+        //slots.slotMachine();
         
-        cardGame.cardgame();
+        //cardGame.cardgame();
 
-        Roulette.roulette();
+        //Roulette.roulette();
 
-        gameBoard.dice();
+        //gameBoard.dice();
+
+        giantWheel.giantWheel();
     }
 }
