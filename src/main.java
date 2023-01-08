@@ -1,20 +1,13 @@
 package src;
 
-// Game File
+// Game Package File
 import game.blackJack;
 import game.cardGame;
 import game.chanceWheel;
 import game.slots;
 import game.Roulette;
 import game.gameBoard;
-
-// Player Data File
-import src.ai;
-import src.player;
-import src.player2;
-import src.Inventory;
-import src.buyingObjects;
-
+import game.penaltyWheel;
 // Main Code Of The Game Goes Here
 public class main {
     public static void main(String[] args) {
@@ -30,5 +23,7 @@ public class main {
         gameBoard.dice();
 
         chanceWheel.chancesOfWheel();
+
+        penaltyWheel.wheelOfPenalty();
     }
 }

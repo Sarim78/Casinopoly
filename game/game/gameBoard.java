@@ -159,6 +159,8 @@ public class gameBoard {
   
           }  else if(totalSpace == 19) {
               System.out.println("\nYou have just landed at " + totalSpace);
+              System.out.println("\nOn this space, you have to spin Wheels Of Penalty!");
+              penaltyWheel.wheelOfPenalty();
           }
     }
 }
