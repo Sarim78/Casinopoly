@@ -3,6 +3,7 @@ package game;
 // Importing Libraries 
 import java.util.Random;
 import java.util.Scanner;
+import java.lang.Thread;
 
 /**
  * Chances Wheel
@@ -41,6 +42,12 @@ public class penaltyWheel {
        while(true) {
             // this if statement will check the user input
             if(playerInput.equals("G") || playerInput.equals("g")) {
+                System.out.println("Spinning the penalty wheel...");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 // Creating a object for the random library 
                 int randomSlot = rnd.nextInt(1, 5);
 
@@ -57,12 +64,14 @@ public class penaltyWheel {
 
                 } else if (randomSlot == 3) {
                     // playerLosesMoney method
-                    penaltyWheelSlots.playerLosesMoney();
+                    double loseMoney = rnd.nextDouble(1000,20000);
+                    System.out.println("You lost " + String.format("$%.2f", loseMoney).replace("$0.", "$.") + "!");
                     break;
 
                 } else if (randomSlot == 4) {
-                    // gettingFined method
-                    penaltyWheelSlots.gettingFined();
+                    // payingOtherPlayer method
+                    double moneyTaken = rnd.nextDouble(1000,10000);
+                    System.out.println("You owe the other player " + String.format("$%.2f", moneyTaken).replace("$0.", "$.") + "!");
                     break;
                     
                 } else if (randomSlot == 5) {

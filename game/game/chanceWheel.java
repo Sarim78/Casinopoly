@@ -3,6 +3,7 @@ package game;
 // Importing Libraries 
 import java.util.Random;
 import java.util.Scanner;
+import java.lang.Thread;
 
 /**
  * Chances Wheel
@@ -39,6 +40,12 @@ public class chanceWheel {
         while(true) {
             // this if statement will check the user input
             if(playerInput.equals("G") || playerInput.equals("g")) {
+                System.out.println("Spinning the chance wheel.....");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 // Creating a object for the random library 
                 int randomSlot = rnd.nextInt(1, 12);
 
