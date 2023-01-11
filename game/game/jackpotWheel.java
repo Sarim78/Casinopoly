@@ -5,7 +5,8 @@ import java.util.Random;
 import java.lang.Thread;
 
 public class jackpotWheel {
-    public static void giantWheel() {
+    
+    public static void jackpotWheel() {
         Random rnd = new Random();
         int spinWheel = rnd.nextInt(1,11);
         System.out.println("Spinning the jackpot wheel...");
@@ -18,6 +19,7 @@ public class jackpotWheel {
             System.out.println("Advance to START!");
         } else if (spinWheel == 2) {
             System.out.println("You won a get out of jail free card!");
+            wheelMethods.jailFreeCard();
         } else if (spinWheel == 3) {
             System.out.println("Advance to the nearest game!");
         } else if (spinWheel == 4) {

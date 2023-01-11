@@ -8,7 +8,7 @@ public class giantWheel {
 
     public static void giantWheel() {
         Random rnd = new Random();
-        int spinWheel = rnd.nextInt(1,11);
+        int spinWheel = rnd.nextInt(1,15);
         System.out.println("Spinning the giant Casinopoly wheel...");
         try {
             Thread.sleep(3000);
@@ -19,12 +19,15 @@ public class giantWheel {
             System.out.println("Spin the chance wheel!");
         } else if (spinWheel == 2) {
             System.out.println("Spin the penalty wheel!");
+            wheelMethods.casinopolyPenaltySpace();
         } else if (spinWheel == 3) {
             System.out.println("Advance to START!");
         } else if (spinWheel == 4) {
             System.out.println("Go directly to jail! You do not collect money for crossing START.");
+            wheelMethods.goToJail();
         } else if (spinWheel == 5) {
             System.out.println("You won a get out of jail free card!");
+            wheelMethods.jailFreeCard();
         } else if (spinWheel == 6) {
             System.out.println("Advance to the nearest game!");
         } else if (spinWheel == 7) {
@@ -53,6 +56,12 @@ public class giantWheel {
         } else if (spinWheel == 11) {
             double moneyTaken = rnd.nextDouble(1000,10000);
             System.out.println("You owe the other player " + String.format("$%.2f", moneyTaken).replace("$0.", "$.") + "!");
+        } else if (spinWheel == 12) {
+            System.out.println("The other player has won a move control powerup! This means they can move you 1-3 spaces at any time (one time use).");
+            wheelMethods.playerChoosesToMoveYou();
+        } else if (spinWheel == 13) {
+            System.out.println("You have lost one turn!");
+            wheelMethods.movingPrevelges();  
         }
     }
 }

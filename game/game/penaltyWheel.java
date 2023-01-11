@@ -54,12 +54,12 @@ public class penaltyWheel {
                 // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
                 if(randomSlot == 1) {
                     // goToJail method
-                    penaltyWheelSlots.goToJail();
+                    wheelMethods.goToJail();
                     break;
 
                 } else if (randomSlot == 2) {
                     // playerChoosesToMoveYou method
-                    penaltyWheelSlots.playerChoosesToMoveYou();
+                    wheelMethods.playerChoosesToMoveYou();
                     break;
 
                 } else if (randomSlot == 3) {
@@ -76,7 +76,7 @@ public class penaltyWheel {
                     
                 } else if (randomSlot == 5) {
                     // movingPrevelges method
-                    penaltyWheelSlots.movingPrevelges();    
+                    wheelMethods.movingPrevelges();    
                     break;
                 }               
                 else {

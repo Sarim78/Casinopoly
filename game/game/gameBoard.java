@@ -24,6 +24,8 @@ public class gameBoard {
     
     public static int totalSpace2; // For Player 2
 
+    public static String showSpace = ("\nYou have just landed at space #" + totalSpace);
+
     // Methods: 
     public static void dice() {
         // This method is for rolling a dice
@@ -71,96 +73,62 @@ public class gameBoard {
             System.out.println("This is the starting point of this game.");
 
           } else if(totalSpace == 2) {
-              System.out.println("\nYou have just landed at " + totalSpace);
+            //jackpotwheel
+            System.out.println(showSpace);
+            jackpotWheel.jackpotWheel();
   
-          } else if(totalSpace == 3) {
-              // roulette
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play roulette!");
-              Roulette.roulette();
+          } else if(totalSpace == 3 || totalSpace == 12) {
+            // roulette
+            System.out.println(showSpace);
+            Roulette.roulette();
   
-          } else if(totalSpace == 4) {
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you got to spin Chances Of Wheel!");
-              chanceWheel.chancesOfWheel();
+          } else if(totalSpace == 4 || totalSpace == 10) {
+            //chance wheel
+            System.out.println(showSpace);
+            chanceWheel.chancesOfWheel();
   
-          } else if(totalSpace == 5) {
-              // slot machine
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play casino slots!");
-              slots.slotMachine();
+          } else if(totalSpace == 5 || totalSpace == 9) {
+            // slot machine
+            System.out.println(showSpace);
+            slots.slotMachine();
   
-          } else if(totalSpace == 6) {
-              // BlackJack
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play BlackJack!");
-              blackJack.blackJack();
+          } else if(totalSpace == 6 || totalSpace == 13) {
+            // BlackJack
+            System.out.println(showSpace);
+            blackJack.blackJack();
   
-          } else if(totalSpace == 7) {
-              // cardgame
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play CardGame (Hi-Lo)!");
-              cardGame.cardgame();
+          } else if(totalSpace == 7 || totalSpace == 18) {
+            // cardgame
+            System.out.println(showSpace);
+            cardGame.cardgame();
   
           } else if(totalSpace == 8) {
-              // Jail
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nYou have landed in a jail cell :(");
+            // Jail
+            System.out.println(showSpace);
+            System.out.println("You are visiting the jail! You have earned nothing...");
   
-          } else if(totalSpace == 9) {
-              // slot machine
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play casino slots!");
-              slots.slotMachine();
-  
-          } else if(totalSpace == 10) {
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you got to spin Chances Of Wheel!");
-              chanceWheel.chancesOfWheel();
-  
-          } else if(totalSpace == 11) {
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("This is a free space, you have earned nothing...");
-  
-          } else if(totalSpace == 12) {
-              // roulette
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play roulette!");
-              Roulette.roulette();
-  
-          } else if(totalSpace == 13) {
-              // BlackJack
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play BlackJack!");
-              blackJack.blackJack();
+          } else if(totalSpace == 11 || totalSpace == 16) {
+            //free space
+            System.out.println(showSpace);
+            System.out.println("This is a free space, you have earned nothing...");
   
           } else if(totalSpace == 14) {
-              // Jail
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("GO BACK TO JAIL");
-
-              // this will push the player back to jail 
-              System.out.println("\nYou have been placed back to jail!");
+            // go to Jail
+            System.out.println(showSpace);
   
           } else if(totalSpace == 15) {
-              System.out.println("\nYou have just landed at " + totalSpace);
-  
-          } else if(totalSpace == 16) {
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("This is a free space, you have earned nothing...");
+            //giant casinopoly wheel
+            System.out.println(showSpace);
+            giantWheel.giantWheel();
 
           } else if(totalSpace == 17) {
-  
-          } else if(totalSpace == 18) {
-              // cardgame
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to play CardGame (Hi-Lo)!");
-              cardGame.cardgame();
+            //casinopoly shop
+            System.out.println(showSpace);
   
           }  else if(totalSpace == 19) {
-              System.out.println("\nYou have just landed at " + totalSpace);
-              System.out.println("\nOn this space, you have to spin Wheels Of Penalty!");
-              penaltyWheel.wheelOfPenalty();
+            //penalty wheel
+            System.out.println(showSpace);
+            penaltyWheel.wheelOfPenalty();
           }
     }
 }
