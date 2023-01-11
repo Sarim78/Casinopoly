@@ -312,7 +312,7 @@ public class chanceWheelSlots {
                     player2.playersMoney = player2.playersMoney + payOpponent;
         
                     System.out.println("\nPlayer 1: Your current Balance In Your Account is: $" + player.playersMoney);
-                    System.out.println("\nPlayer 1: Your current Balance In Your Account is: $" + player2.playersMoney);
+                    System.out.println("\nPlayer 2: Your current Balance In Your Account is: $" + player2.playersMoney);
                 } else if(userConfrimPay.equals("N") || userConfrimPay.equals("n")) {
                     // If player press (N), it will print this statment
                     System.out.println("\nSIKE, You still gotta pay your opponent!");
@@ -323,7 +323,7 @@ public class chanceWheelSlots {
                     player2.playersMoney = player2.playersMoney + payOpponent;
         
                     System.out.println("\nPlayer 1: Your current Balance In Your Account is: $" + player.playersMoney);
-                    System.out.println("\nPlayer 1: Your current Balance In Your Account is: $" + player2.playersMoney);
+                    System.out.println("\nPlayer 2: Your current Balance In Your Account is: $" + player2.playersMoney);
                 }
             }
         }
@@ -394,6 +394,7 @@ public class chanceWheelSlots {
         // This 1 methods will be called if player lands on casinopolyPenaltySpace Slot
         public static void casinopolyPenaltySpace() {
             // Go directly to the Casinopoly penalty space
-            System.out.println("test 12");
+            System.out.println("\nYou have won: Free spin of Casinopoly Penalty!");
+            penaltyWheel.wheelOfPenalty();
         }
 }
