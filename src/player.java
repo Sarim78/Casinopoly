@@ -15,5 +15,5 @@ public class player {
     // Creating Variables
     public static int space = 1;
 
-    public static int playersMoney = 10000;
+    public static double playersMoney = 10000;
 }

@@ -14,6 +14,9 @@ public class chanceWheel {
     // Creating Objects  
     static Random rnd = new Random();
     static Scanner in = new Scanner(System.in);
+    public static double birthdayMoney;
+    public static double payOpponent;
+    public static double userGettingFined;
 
     // Main Chances Wheel Methods 
     public static void instructions() {
@@ -52,62 +55,65 @@ public class chanceWheel {
                 // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
                 if(randomSlot == 1) {
                     // This will call moveThreeSpaces() method
-                    chanceWheelSlots.moveThreeSpaces();
+                    wheelMethods.moveThreeSpaces();
                     break;
 
                 } else if (randomSlot == 2) {
                     // This will call moveBackThreeSpaces() method
-                    chanceWheelSlots.moveBackThreeSpaces();
+                    wheelMethods.moveBackThreeSpaces();
                     break;
 
                 } else if (randomSlot == 3) {
                     // This will call jailFreeCard() method
-                    chanceWheelSlots.jailFreeCard();
+                    wheelMethods.jailFreeCard();
                     break;
 
                 } else if (randomSlot == 4) {
                     // This will call raffelCard() method
-                    chanceWheelSlots.raffelCard();
+                    wheelMethods.raffelCard();
                     break;
                     
                 } else if (randomSlot == 5) {
                     // This will call yourBirthday() method
-                    chanceWheelSlots.yourBirthday();
+                    birthdayMoney = rnd.nextDouble(1000,10000);
+                    wheelMethods.yourBirthday();
                     break;
                     
                 } else if (randomSlot == 6) {
                     // This will call advanceToFreeSpot() method
-                    chanceWheelSlots.advanceToFreeSpot();
+                    wheelMethods.advanceToFreeSpot();
                     break;
                     
                 } else if (randomSlot == 7) {
                     // This will call freeSpinForGainCasinoWheel() method
-                    chanceWheelSlots.freeSpinForGaintCasinoWheel();
+                    wheelMethods.freeSpinForGaintCasinoWheel();
                     break;
                     
                 } else if (randomSlot == 8) {
                     // This will call buyingAnyObjects() method
-                    chanceWheelSlots.buyingAnyObjects();
+                    wheelMethods.buyingAnyObjects();
                     break;
                     
                 } else if (randomSlot == 9) {
                     // This will call goToJail() method
-                    chanceWheelSlots.goToJail();
+                    wheelMethods.goToJail();
                     break;
                     
                 } else if (randomSlot == 10) {
                     // This will call youLost() method
-                    chanceWheelSlots.youLost();
+                    payOpponent = rnd.nextDouble(1000,10000);
+                    wheelMethods.youLost();
                     break;
                     
                 } else if (randomSlot == 11) {
                     // This will call youHaveBeenFined() method
-                    chanceWheelSlots.youHaveBeenFined();
+                    userGettingFined = rnd.nextDouble(500, 5000);
+                    wheelMethods.youHaveBeenFined();
                     break;
                     
                 } else if (randomSlot == 12) {
                     // This will call casinopolyPenaltySpace() method
-                    chanceWheelSlots.casinopolyPenaltySpace();
+                    wheelMethods.casinopolyPenaltySpace();
                     break;
                 }
             } else {
