@@ -24,6 +24,7 @@ public class chanceWheelSlots {
     
         // Method For Slots In The Chances Of Wheel
         public static void moveThreeSpaces() {
+            gameBoard gameBoard = new gameBoard();
             // this method will move the player 3 spaces forward
             System.out.println("\nYou have moved 3 spaces foward from your current position!");
             
@@ -35,6 +36,7 @@ public class chanceWheelSlots {
     
         public static void moveBackThreeSpaces() {
             // this method will move the player 3 spaces backwards
+            gameBoard gameBoard = new gameBoard();
             System.out.println("\nYou have moved 3 spaces backward from your current position!");
             
             gameBoard.totalSpace = gameBoard.totalSpace + player.space - 3;
@@ -393,6 +395,7 @@ public class chanceWheelSlots {
     
         // This 1 methods will be called if player lands on casinopolyPenaltySpace Slot
         public static void casinopolyPenaltySpace() {
+            penaltyWheel penaltyWheel = new penaltyWheel();
             // Go directly to the Casinopoly penalty space
             System.out.println("\nYou have won: Free spin of Casinopoly Penalty!");
             penaltyWheel.wheelOfPenalty();

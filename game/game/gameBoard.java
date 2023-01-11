@@ -16,18 +16,18 @@ import src.player2;
 
 public class gameBoard {
     // Creating Objects 
-    static Random rnd = new Random();
-    static Scanner in = new Scanner(System.in);
+    Random rnd = new Random();
+    Scanner in = new Scanner(System.in);
 
     // Creating Variables
-    public static int totalSpace; // For Player 1
+    public int totalSpace; // For Player 1
     
-    public static int totalSpace2; // For Player 2
+    public int totalSpace2; // For Player 2
 
-    public static String showSpace = ("\nYou have just landed at space #" + totalSpace);
+    public String showSpace = ("\nYou have just landed at space #" + totalSpace);
 
     // Methods: 
-    public static void dice() {
+    public void dice() {
         // This method is for rolling a dice
 
         int diceRoller = rnd.nextInt(1, 6);
@@ -56,17 +56,9 @@ public class gameBoard {
         }
     }
 
-    public static void goBackToJail1() {
-        // This method will push Player 1 back to jail
-        player.space = totalSpace - 6;
-    }
 
-    public static void goBackToJail2() {
-        // This method will push Player 2 back to jail
-        player2.space = totalSpace2 - 6;  
-    }
 
-    public static void gameBoardSpace() {
+    public void gameBoardSpace() {
           // this if statement calls the game
           if(totalSpace == 1) {
             System.out.println("\nYou are on space #" + totalSpace);
@@ -80,26 +72,31 @@ public class gameBoard {
           } else if(totalSpace == 3 || totalSpace == 12) {
             // roulette
             System.out.println(showSpace);
+            Roulette Roulette = new Roulette();
             Roulette.roulette();
   
           } else if(totalSpace == 4 || totalSpace == 10) {
             //chance wheel
+            chanceWheel chanceWheel = new chanceWheel();
             System.out.println(showSpace);
             chanceWheel.chancesOfWheel();
   
           } else if(totalSpace == 5 || totalSpace == 9) {
             // slot machine
             System.out.println(showSpace);
+            slots slots = new slots();
             slots.slotMachine();
   
           } else if(totalSpace == 6 || totalSpace == 13) {
             // BlackJack
             System.out.println(showSpace);
+            blackJack blackJack = new blackJack();
             blackJack.blackJack();
   
           } else if(totalSpace == 7 || totalSpace == 18) {
             // cardgame
             System.out.println(showSpace);
+            cardGame cardGame = new cardGame();
             cardGame.cardgame();
   
           } else if(totalSpace == 8) {
@@ -127,6 +124,7 @@ public class gameBoard {
   
           }  else if(totalSpace == 19) {
             //penalty wheel
+            penaltyWheel penaltyWheel = new penaltyWheel();
             System.out.println(showSpace);
             penaltyWheel.wheelOfPenalty();
           }

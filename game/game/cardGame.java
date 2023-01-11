@@ -12,26 +12,26 @@ import java.util.Random;
 public class cardGame {
 
     // Creating Objects 
-    static Random rnd = new Random(); 
-    static Scanner in = new Scanner(System.in);
+    Random rnd = new Random(); 
+    Scanner in = new Scanner(System.in);
 
     // Creating Variables
-    static int numberLimit = 50; // this is for a limit that the numberGenerator() method can use
+    int numberLimit = 50; // this is for a limit that the numberGenerator() method can use
 
-    static int num1; // this Variable is for the method called numberGenerator()
+    int num1; // this Variable is for the method called numberGenerator()
 
-    static int ai; // this Variable is for the method called Ai()
+    int ai; // this Variable is for the method called Ai()
 
-    static int bet; // this Variable is for the method called bet()
+    int bet; // this Variable is for the method called bet()
 
     // Creating methods for the card game
-    public static void numberGenerator() {
+    public void numberGenerator() {
         // This methid will tell the player, if you need to guess Hi or Lo
         int num = rnd.nextInt(numberLimit);
         num1 = num;
     }
 
-    public static void bet() {
+    public void bet() {
         // this methid will let the player bet on them self. If they lose the game, they will lose all the money earned and even the bet.
         System.out.print("\nPlease Place Your Bet (Between 1000 - 20000): ");
 
@@ -42,7 +42,7 @@ public class cardGame {
         betOverUnderLimit();
     }
 
-    public static void betOverUnderLimit() {
+    public void betOverUnderLimit() {
         // this method if for when the player bet over $20k or under $1k.
         if(bet > 20000) {
             System.out.println("Sorry, you went over the betting limit. Max: $20k");
@@ -55,7 +55,7 @@ public class cardGame {
         }
     }
 
-    public static void confrimBet() {
+    public void confrimBet() {
         // this method will confrim the player bet
 
         Scanner newScanner = new Scanner(System.in);
@@ -73,7 +73,7 @@ public class cardGame {
         }
     }
 
-    public static void instructions() { 
+    public void instructions() { 
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
@@ -90,7 +90,7 @@ public class cardGame {
         }
     }
 
-    public static void Ai() {
+    public void Ai() {
         // this method will let the ai think of a number greater than or less then numberGenerator() method
         System.out.println("\nAi: Am i thinking of an number higher or Lower of: " + num1 + "?");
 
@@ -98,7 +98,7 @@ public class cardGame {
         ai = aiNum;
     }
 
-    public static void HiLo() {
+    public void HiLo() {
 
         while(true) {
             Scanner newUserInput = new Scanner(System.in);
@@ -133,7 +133,7 @@ public class cardGame {
         }
     }
 
-    public static void cardgame() {
+    public void cardgame() {
             // Calling all methods into one method
             instructions(); // have to remove this soon
             bet(); // have to remove this soon

@@ -10,23 +10,23 @@ import java.lang.Math;
  */
 public class blackJack {
     //Creating objects
-    static Random rnd = new Random();
+    Random rnd = new Random();
 
     //cards the human and dealer will take
     int card;
 
     //the amount of cards the dealer will take
     //IT APPEARS THIS IS NOT USED
-    static int dealerCards;
+    int dealerCards;
 
     //the total value of the cards the dealer took
-    static int dealerCardValue;
+    int dealerCardValue;
 
     //the amount of cards the player will take
     int playerCards;
 
     //the total value of the cards the player took
-    static int playerCardValue;
+    int playerCardValue;
 
     //the max value the player can have
     int maxValue = 21;
@@ -35,28 +35,28 @@ public class blackJack {
     int minValue = 17;
 
     //the amount of money the player bet
-    static double wager;
+    double wager;
 
     //the maximum a player can wager
-    static int maxBet = 20000;
+    int maxBet = 20000;
 
     //the minimum a player can wager
-    static int minBet = 1000;
+    int minBet = 1000;
 
-    public static double minMoneyEarned = 1.5;
-    public static double maxMoneyEarned = 2.5;
-    public static double minMoneyLost = 2.5;
-    public static double maxMoneyLost = 1.5;
+    public double minMoneyEarned = 1.5;
+    public double maxMoneyEarned = 2.5;
+    public double minMoneyLost = 2.5;
+    public double maxMoneyLost = 1.5;
 
 
     //the value of cards player/dealer chooses from
-    static int dealerRandomNumber = rnd.nextInt(1,11);
-    static int playerRandomNumber = rnd.nextInt(1,11);
+    int dealerRandomNumber = rnd.nextInt(1,11);
+    int playerRandomNumber = rnd.nextInt(1,11);
 
     //whether the player hits or stand
-    static String playerDecision;
+    String playerDecision;
 
-    public static int dealerPickingCards() {
+    public int dealerPickingCards() {
         dealerCardValue = dealerRandomNumber;
         while (dealerCardValue < 17) {
             dealerCardValue = dealerCardValue + rnd.nextInt(1,11);
@@ -64,7 +64,7 @@ public class blackJack {
     return dealerCardValue;
     }
 
-    public static void instructions() {
+    public void instructions() {
         System.out.println("Welcome to blackjack! Enter w for instrcutions, anything else to continue");
         Scanner in = new Scanner(System.in);
         String instruction = in.nextLine();
@@ -76,7 +76,7 @@ public class blackJack {
         }
     }
 
-    public static void playerWager() {
+    public void playerWager() {
         try {
             System.out.println("How much money would you like to wager? (please bet from 1K to 20K)");
             Scanner in = new Scanner(System.in);
@@ -101,7 +101,7 @@ public class blackJack {
     }
 
 
-    public static void playerPickingCards() {
+    public void playerPickingCards() {
         double minMoneyEarnedBeforeRound = wager*0.2 + wager;
         minMoneyEarned = Math.round(minMoneyEarnedBeforeRound*1000.00/1000.00);
         maxMoneyEarned = wager*2;
@@ -167,7 +167,7 @@ public class blackJack {
         }
     }
 
-    public static void blackJack() {
+    public void blackJack() {
         instructions();
         dealerPickingCards();
         playerWager();

@@ -12,11 +12,11 @@ import java.lang.Thread;
 
 public class penaltyWheel {
     // Creating Objects  
-    static Random rnd = new Random();
-    static Scanner in = new Scanner(System.in);
+    Random rnd = new Random();
+    Scanner in = new Scanner(System.in);
 
     // Methods
-    public static void instructions() {
+    public void instructions() {
         // this method is for the instructions
         System.out.println("\nYou will have one chance to spin the wheel.");
         System.out.println("There are 6 random slots in this Chances Wheel!");
@@ -25,12 +25,12 @@ public class penaltyWheel {
         System.out.println("\nGOODLUCK!");
     }
 
-    public static void welcomeUser() {
+    public void welcomeUser() {
         // this method is for welcoming the users
         System.out.println("\nWelcome to the Wheel Of Penalty!");
     }
 
-    public static void wheelOfPenalty() {
+    public void wheelOfPenalty() {
         // Calling other methods
         welcomeUser();
         instructions();
@@ -54,11 +54,13 @@ public class penaltyWheel {
                 // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
                 if(randomSlot == 1) {
                     // goToJail method
+                    wheelMethods wheelMethods = new wheelMethods();
                     wheelMethods.goToJail();
                     break;
 
                 } else if (randomSlot == 2) {
                     // playerChoosesToMoveYou method
+                    wheelMethods wheelMethods = new wheelMethods();
                     wheelMethods.playerChoosesToMoveYou();
                     break;
 
@@ -76,6 +78,7 @@ public class penaltyWheel {
                     
                 } else if (randomSlot == 5) {
                     // movingPrevelges method
+                    wheelMethods wheelMethods = new wheelMethods();
                     wheelMethods.movingPrevelges();    
                     break;
                 }               

@@ -19,6 +19,7 @@ public class jackpotWheel {
             System.out.println("Advance to START!");
         } else if (spinWheel == 2) {
             System.out.println("You won a get out of jail free card!");
+            wheelMethods wheelMethods = new wheelMethods();
             wheelMethods.jailFreeCard();
         } else if (spinWheel == 3) {
             System.out.println("Advance to the nearest game!");
