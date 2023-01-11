@@ -1,4 +1,5 @@
 package game;
+
 // Importing Libraries 
 import java.util.Random;
 import java.util.Scanner;
@@ -6,6 +7,11 @@ import java.util.Scanner;
 // Importing Files 
 import src.player;
 import src.player2;
+
+/**
+ * Game Board
+ * @athuor Sarim Siddiqui
+ */
 
 public class wheelMethods {
     // Variables

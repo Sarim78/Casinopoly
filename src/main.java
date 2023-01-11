@@ -8,6 +8,7 @@ import game.slots;
 import game.Roulette;
 import game.gameBoard;
 import game.penaltyWheel;
+
 // Main Code Of The Game Goes Here
 public class main {
     public static void main(String[] args) {
