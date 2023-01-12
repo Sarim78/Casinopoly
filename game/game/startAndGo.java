@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * //TODO NOT Casino Slot Game
- * @athuor Sarim Siddiqui
+ * @author adil baig
  */
 
 public class startAndGo {

@@ -99,29 +99,11 @@ public class Roulette {
             System.out.println("For every correct guess, you could win as much as 3 times your wager! But with every incorrect guess, you lose a percentage of what you wagered.");
             dealerPickingNumbers();
             playerWager1();
-            playerPickingNumbers1();
-            playerWager2();
-            playerPickingNumbers2();
-            playerWager3();
-            playerPickingNumbers3();
-            playerWager4();
-            playerPickingNumbers4();
-            playerWager5();
-            playerPickingNumbers5();
-            finalDisplay();
+            in.close();
         } else {
             dealerPickingNumbers();
             playerWager1();
-            playerPickingNumbers1();
-            playerWager2();
-            playerPickingNumbers2();
-            playerWager3();
-            playerPickingNumbers3();
-            playerWager4();
-            playerPickingNumbers4();
-            playerWager5();
-            playerPickingNumbers5();
-            finalDisplay();
+            in.close();
         }
     }
 
@@ -160,6 +142,8 @@ public class Roulette {
             }
             else {
                 System.out.println("You have wagered " + String.format("$%.2f", wager1).replace("$0.", "$.") + "!");
+                playerPickingNumbers1();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -184,6 +168,8 @@ public class Roulette {
                 totalMoneyWon = totalMoneyWon + moneyEarned1;
                 playerWinAmount = playerWinAmount + 1;
                 System.out.println("Money won: " + String.format("$%.2f", moneyEarned1).replace("$0.", "$."));
+                playerWager2();
+                in.close();
             }
             else if (playerPick != dealerFirstPick || playerPick != dealerSecondPick || playerPick != dealerThirdPick || playerPick != dealerFourthPick || playerPick != dealerFifthPick) {
                 System.out.println("There is no match! You have 4 guesses left. ");
@@ -192,6 +178,8 @@ public class Roulette {
                 moneyLost1 = rnd.nextDouble(moneyLostMin, moneyLostMax);
                 totalMoneyLost = totalMoneyLost + moneyLost1;
                 System.out.println("Money lost: " + String.format("$%.2f", moneyLost1).replace("$0.", "$."));
+                playerWager2();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -214,6 +202,8 @@ public class Roulette {
             }
             else {
                 System.out.println("You have wagered " + String.format("$%.2f", wager2).replace("$0.", "$.") + "!");
+                playerPickingNumbers2();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -242,6 +232,8 @@ public class Roulette {
                 totalMoneyWon = totalMoneyWon + moneyEarned2;
                 System.out.println("Money won: " + String.format("$%.2f", moneyEarned2).replace("$0.", "$."));
                 playerWinAmount = playerWinAmount + 1;
+                playerWager3();
+                in.close();
             }
             else if (playerPick2 != dealerFirstPick || playerPick2 != dealerSecondPick || playerPick2 != dealerThirdPick || playerPick2 != dealerFourthPick || playerPick2 != dealerFifthPick) {
                 System.out.println("There is no match! You have 3 guesses left. ");
@@ -250,6 +242,8 @@ public class Roulette {
                 moneyLost2 = rnd.nextDouble(moneyLostMin, moneyLostMax);
                 totalMoneyLost = totalMoneyLost + moneyLost2;
                 System.out.println("Money lost: " + String.format("$%.2f", moneyLost2).replace("$0.", "$."));
+                playerWager3();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -272,6 +266,8 @@ public class Roulette {
             }
             else {
                 System.out.println("You have wagered " + String.format("$%.2f", wager3).replace("$0.", "$.") + "!");
+                playerPickingNumbers3();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -300,6 +296,8 @@ public class Roulette {
                 totalMoneyWon = totalMoneyWon + moneyEarned3;
                 System.out.println("Money won: " + String.format("$%.2f", moneyEarned3).replace("$0.", "$."));
                 playerWinAmount = playerWinAmount + 1;
+                playerWager4();
+                in.close();
             }
             else if (playerPick3 != dealerFirstPick || playerPick3 != dealerSecondPick || playerPick3 != dealerThirdPick || playerPick3 != dealerFourthPick || playerPick3 != dealerFifthPick) {
                 System.out.println("There is no match! You have 2 guesses left. ");
@@ -308,6 +306,8 @@ public class Roulette {
                 moneyLost3 = rnd.nextDouble(moneyLostMin, moneyLostMax);
                 totalMoneyLost = totalMoneyLost + moneyLost3;
                 System.out.println("Money lost: " + String.format("$%.2f", moneyLost3).replace("$0.", "$."));
+                playerWager4();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -330,6 +330,8 @@ public class Roulette {
             }
             else {
                 System.out.println("You have wagered " + String.format("$%.2f", wager4).replace("$0.", "$.") + "!");
+                playerPickingNumbers4();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -358,6 +360,8 @@ public class Roulette {
                 totalMoneyWon = totalMoneyWon + moneyEarned4;
                 System.out.println("Money won: " + String.format("$%.2f", moneyEarned4).replace("$0.", "$."));
                 playerWinAmount = playerWinAmount + 1;
+                playerWager5();
+                in.close();
             }
             else if (playerPick4 != dealerFirstPick || playerPick4 != dealerSecondPick || playerPick4 != dealerThirdPick || playerPick4 != dealerFourthPick || playerPick4 != dealerFifthPick) {
                 System.out.println("There is no match! You have 1 guess left. ");
@@ -366,6 +370,8 @@ public class Roulette {
                 moneyLost4 = rnd.nextDouble(moneyLostMin, moneyLostMax);
                 totalMoneyLost = totalMoneyLost + moneyLost4;
                 System.out.println("Money lost: " + String.format("$%.2f", moneyLost4).replace("$0.", "$."));
+                playerWager5();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -388,6 +394,8 @@ public class Roulette {
             }
             else {
                 System.out.println("You have wagered " + String.format("$%.2f", wager5).replace("$0.", "$.") + "!");
+                playerPickingNumbers5();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
@@ -416,6 +424,8 @@ public class Roulette {
                 totalMoneyWon = totalMoneyWon + moneyEarned5;
                 System.out.println("Money won: " + String.format("$%.2f", moneyEarned5).replace("$0.", "$."));
                 playerWinAmount = playerWinAmount + 1;
+                finalDisplay();
+                in.close();
             }
             else if (playerPick5 != dealerFirstPick || playerPick5 != dealerSecondPick || playerPick5 != dealerThirdPick || playerPick5 != dealerFourthPick || playerPick5 != dealerFifthPick) {
                 System.out.println("There is no match!");
@@ -424,6 +434,8 @@ public class Roulette {
                 moneyLost5 = rnd.nextDouble(moneyLostMin, moneyLostMax);
                 totalMoneyLost = totalMoneyLost + moneyLost5;
                 System.out.println("Money lost: " + String.format("$%.2f", moneyLost5).replace("$0.", "$."));
+                finalDisplay();
+                in.close();
             }
         } catch (Exception e) {
             System.out.println("Invalid input! Please try again.");
