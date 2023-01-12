@@ -11,14 +11,27 @@ import java.lang.Thread;
  */
 
 public class chanceWheel {
+    
     // Creating Objects  
-    Random rnd = new Random();
-    Scanner in = new Scanner(System.in);
-    public double birthdayMoney;
-    public double payOpponent;
-    public double userGettingFined;
 
-    // Main Chances Wheel Methods 
+    Random rnd = new Random();
+
+    Scanner in = new Scanner(System.in);
+    
+    wheelMethods wheelMethods = new wheelMethods();
+
+    // Creating Variables
+
+    double birthdayMoney;
+
+    double payOpponent;
+
+    double userGettingFined;
+
+    int randomSlot; // Creating a object for the random library 
+
+    // Creating Methods
+    
     public void instructions() {
         System.out.println("\nYou will have one chance to spin the wheel.");
         System.out.println("There are 12 random slots in this Chances Wheel!");
@@ -49,9 +62,7 @@ public class chanceWheel {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                // Creating a object for the random library 
-                int randomSlot = rnd.nextInt(1, 12);
-                wheelMethods wheelMethods = new wheelMethods();
+                randomSlot = rnd.nextInt(1, 12);
                 // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
                 if(randomSlot == 1) {
                     // This will call moveThreeSpaces() method

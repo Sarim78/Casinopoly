@@ -11,11 +11,25 @@ import java.lang.Thread;
  */
 
 public class penaltyWheel {
+
+    //TODO make penaltywheel not optional
+
     // Creating Objects  
+
     Random rnd = new Random();
+
     Scanner in = new Scanner(System.in);
 
-    // Methods
+    wheelMethods wheelMethods = new wheelMethods();
+
+    // Creating Variables
+
+    double loseMoney;
+
+    double moneyTaken;
+
+    // Creating Methods
+    
     public void instructions() {
         // this method is for the instructions
         System.out.println("\nYou will have one chance to spin the wheel.");
@@ -54,31 +68,29 @@ public class penaltyWheel {
                 // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
                 if(randomSlot == 1) {
                     // goToJail method
-                    wheelMethods wheelMethods = new wheelMethods();
                     wheelMethods.goToJail();
                     break;
 
                 } else if (randomSlot == 2) {
                     // playerChoosesToMoveYou method
-                    wheelMethods wheelMethods = new wheelMethods();
+
                     wheelMethods.playerChoosesToMoveYou();
                     break;
 
                 } else if (randomSlot == 3) {
                     // playerLosesMoney method
-                    double loseMoney = rnd.nextDouble(1000,20000);
+                    loseMoney = rnd.nextDouble(1000,20000);
                     System.out.println("You lost " + String.format("$%.2f", loseMoney).replace("$0.", "$.") + "!");
                     break;
 
                 } else if (randomSlot == 4) {
                     // payingOtherPlayer method
-                    double moneyTaken = rnd.nextDouble(1000,10000);
+                    moneyTaken = rnd.nextDouble(1000,10000);
                     System.out.println("You owe the other player " + String.format("$%.2f", moneyTaken).replace("$0.", "$.") + "!");
                     break;
                     
                 } else if (randomSlot == 5) {
                     // movingPrevelges method
-                    wheelMethods wheelMethods = new wheelMethods();
                     wheelMethods.movingPrevelges();    
                     break;
                 }               

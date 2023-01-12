@@ -3,8 +3,14 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Roulette {
-    //Creating objects
+
+    //TODO close scanners
+
+    //Creating Objects
+
     Random rnd = new Random();
+
+    //Creating Variables
     
     int dealerFirstPick;
 
@@ -80,6 +86,8 @@ public class Roulette {
 
     double playerNetEarnings;
 
+    //Creating Methods
+
     public void instructions() {
         System.out.println("Welcome to roulette! Enter w for instrcutions, anything else to continue");
         Scanner in = new Scanner(System.in);
@@ -89,6 +97,31 @@ public class Roulette {
             System.out.println("The dealer picks 5 numbers, from 1 to 20. You have 5 chances to correctly guess the numbers.");
             System.out.println("Before you guess a number, you will wager a value from 400 to 4000 dollars.");
             System.out.println("For every correct guess, you could win as much as 3 times your wager! But with every incorrect guess, you lose a percentage of what you wagered.");
+            dealerPickingNumbers();
+            playerWager1();
+            playerPickingNumbers1();
+            playerWager2();
+            playerPickingNumbers2();
+            playerWager3();
+            playerPickingNumbers3();
+            playerWager4();
+            playerPickingNumbers4();
+            playerWager5();
+            playerPickingNumbers5();
+            finalDisplay();
+        } else {
+            dealerPickingNumbers();
+            playerWager1();
+            playerPickingNumbers1();
+            playerWager2();
+            playerPickingNumbers2();
+            playerWager3();
+            playerPickingNumbers3();
+            playerWager4();
+            playerPickingNumbers4();
+            playerWager5();
+            playerPickingNumbers5();
+            finalDisplay();
         }
     }
 
@@ -418,18 +451,6 @@ public class Roulette {
 
     public void roulette() {
         instructions();
-        dealerPickingNumbers();
-        playerWager1();
-        playerPickingNumbers1();
-        playerWager2();
-        playerPickingNumbers2();
-        playerWager3();
-        playerPickingNumbers3();
-        playerWager4();
-        playerPickingNumbers4();
-        playerWager5();
-        playerPickingNumbers5();
-        finalDisplay();
     }
 
 }

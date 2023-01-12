@@ -9,43 +9,84 @@ import src.player;
 import src.player2;
 
 public class wheelMethods {
-    // Variables
-    public int raffelCardMoney;
-    public int userGettingFined;
-    public String showPlayer1Money = ("\nPlayer 1: Your current Balance In Your Account is: $" + String.format("$%.2f", player.playersMoney).replace("$0.", "$."));
-    public String showPlayer2Money = ("\nPlayer 2: Your current Balance In Your Account is: $" + String.format("$%.2f", player2.playersMoney).replace("$0.", "$."));
-    
-    // Creating   
-    Random rnd = new Random();
-    Scanner in = new Scanner(System.in);
 
-    // Method For Slots In The Chances Of Wheel
-    public static void moveThreeSpaces() {
+    // Creating Objects
+
+    Random rnd = new Random();
+
+    player player = new player();
+
+    player2 player2 = new player2();
+
+    gameBoard gameBoard = new gameBoard();
+
+    chanceWheel chanceWheel = new chanceWheel();
+
+    // Creating Variables
+
+    int raffelCardMoney;
+    int raffelCardMoney2;
+
+    int userGettingFined;
+
+    String showPlayer1Money = ("\nPlayer 1: Your current Balance In Your Account is: $" + String.format("$%.2f", player.playersMoney).replace("$0.", "$."));
+    String showPlayer2Money = ("\nPlayer 2: Your current Balance In Your Account is: $" + String.format("$%.2f", player2.playersMoney).replace("$0.", "$."));
+
+    int player1Decides;
+    int player2Decides;
+
+    int blackjackSpace1;
+    int blackjackSpace2;
+
+    int blackjackDistance1;
+    int blackjackDistance2;
+
+    int cardgameSpace1;
+    int cardgameSpace2;
+
+    int cardgameDistance1;
+    int cardgameDistance2;
+
+    int rouletteSpace1;
+    int rouletteSpace2;
+
+    int rouletteDistance1;
+    int rouletteDistance2;
+
+    int slotsSpace1;
+    int slotsSpace2;
+
+    int slotsDistance1;
+    int slotsDistance2;
+    
+    int smallest;
+
+    // Creating Methods
+    
+    public void moveThreeSpaces() {
         // this method will move the player 3 spaces forward
         System.out.println("\nYou have moved 3 spaces foward from your current position!");
     }
 
-    public static void moveThreeSpaces1() {
+    public void moveThreeSpaces1() {
         gameBoard.totalSpace = gameBoard.totalSpace + player.space + 3;
     }
 
-    public static void moveBackThreeSpaces() {
+    public void moveBackThreeSpaces() {
         // this method will move the player 3 spaces backwards
         System.out.println("\nYou have moved 3 spaces backward from your current position!");
         System.out.println("Sorry...");
-        
-        gameBoard gameBoard = new gameBoard();
         gameBoard.totalSpace = gameBoard.totalSpace + player.space - 3;
     }
 
     // This 3 methods will be called if player lands on jailFreeCard Slot
-    public static void jailFreeCard() {
+    public void jailFreeCard() {
         // this method will be a pass for player 1 and 2 to get out of jail
         System.out.println("\nYou have won a free pass to leave jail cell anytime!");
         System.out.println("You only can use this pass, when your in jail!");
     }
 
-    public static void jailFreeCardPlayer1() {
+    public void jailFreeCardPlayer1() {
         // Player 1 free jail pass
         if(player.space == 8) {
             System.out.println("\nYou have moved 1 space forward!");
@@ -55,7 +96,7 @@ public class wheelMethods {
         }
     }
 
-    public static void jailFreeCardPlayer2() {
+    public void jailFreeCardPlayer2() {
         // Player 2 free jail pass
         if(player2.space == 8) {
             System.out.println("\nYou have moved 1 space forward!");
@@ -66,9 +107,9 @@ public class wheelMethods {
     }
 
     // This 3 methods will be called if player lands on raffelCard Slot
-    public static void raffelCard() {
+    public void raffelCard() {
         // This object will generate random amount of money
-        int raffelCardMoney2 = rnd.nextInt(500, 5000);
+        raffelCardMoney2 = rnd.nextInt(500, 5000);
 
         raffelCardMoney = raffelCardMoney2;
 
@@ -78,14 +119,14 @@ public class wheelMethods {
     }
 
     // this raffel card method will be called, when player 1 or 2 lands on this slot
-    public static void raffelCard1() {
+    public void raffelCard1() {
         // This method is for player 1, if he wins a raffel card
         player.playersMoney = player.playersMoney + raffelCardMoney;
 
         System.out.println("\nNow You have: $" + player.playersMoney + " In your account");
     }
 
-    public static void raffelCard2() {
+    public void raffelCard2() {
         // This method is for player 2, if he wins a raffel card
         player2.playersMoney = player2.playersMoney + raffelCardMoney;
 
@@ -93,19 +134,17 @@ public class wheelMethods {
     }
 
     // This 3 methods will be called if player lands on yourBirthday Slot
-    public static void yourBirthday() {
+    public void yourBirthday() {
         // Today is your birthday! All other players are obligated to give you money
-        chanceWheel chanceWheel = new chanceWheel();
         System.out.println("\nToday is your birthday!");
         System.out.println("All other players are obligated to give you money!");
         System.out.println("The other player owes you " + String.format("$%.2f", chanceWheel.birthdayMoney).replace("$0.", "$.") + "!");
     }
 
     // this birthdayMoney method will only be called when the player 1 or 2 land son this slot
-    public static void birthdayMoney1() {
+    public void birthdayMoney1() {
         // Player 1 gives Player 2 money
         // this will subtract the money from players 1 account
-        chanceWheel chanceWheel = new chanceWheel();
         player.playersMoney = player.playersMoney - chanceWheel.birthdayMoney;
         // this will add money to players 2 account
         player2.playersMoney = player2.playersMoney + chanceWheel.birthdayMoney;
@@ -113,23 +152,22 @@ public class wheelMethods {
         System.out.println(showPlayer2Money);
     }
     
-    public static void birthdayMoney2() {
+    public void birthdayMoney2() {
         // this will subtract the money from players 2 account
-        chanceWheel chanceWheel = new chanceWheel();
         player2.playersMoney = player2.playersMoney - chanceWheel.birthdayMoney;
         // this will add money to players 1 account
         player.playersMoney = player.playersMoney + chanceWheel.birthdayMoney;            
     }
 
     // This 3 methods will be called if player lands on advanceToFreeSpot Slot
-    public static void advanceToFreeSpot() {
+    public void advanceToFreeSpot() {
         // this method will congrats the player to the free spot
         System.out.println("\nYou have moved to the free spot on the board!");
         System.out.println("CONGRATS!");
     }
 
     // this advanceToFreeSpot method will only be called when the player 1 or 2 land on this slot
-    public static void advanceToFreeSpot1() {
+    public void advanceToFreeSpot1() {
         // Player 1 advance to the free spot
         if(player.space == 4) {
             player.space = player.space + 12;
@@ -140,7 +178,7 @@ public class wheelMethods {
         }
     }
 
-    public static void advanceToFreeSpot2() {
+    public void advanceToFreeSpot2() {
         // Player 1 advance to the free spot
         if(player2.space == 4) {
             player.space = player2.space + 12;
@@ -163,7 +201,7 @@ public class wheelMethods {
     
     
     // This 3 methods will be called if player lands on goToJail Slot
-    public static void goToJail() {
+    public void goToJail() {
         // Go directly to jail for illegal gambling
         System.out.println("\nYou have been sent back to jail for illegal gambling...");
         System.out.println("\nYou do not get money for crossing GO");
@@ -171,7 +209,7 @@ public class wheelMethods {
     }
 
     // this goToJail method will only be called when the player 1 or 2 land on this slot
-    public static void goToJail1() {
+    public void goToJail1() {
         // Player 1 sent to jail
         if(player.space == 4) {
             player.space = player.space + 4;
@@ -182,7 +220,7 @@ public class wheelMethods {
         }
     }
 
-    public static void goToJail2() {
+    public void goToJail2() {
         // Player 2 sent to jail
         if(player2.space == 4) {
             player2.space = player2.space + 4;
@@ -194,48 +232,44 @@ public class wheelMethods {
     }
 
     // This 3 methods will be called if player lands on youLost Slot
-    public static void youLost() {
+    public void youLost() {
         // You lost a game to the other player, pay them random amount
-        chanceWheel chanceWheel = new chanceWheel();
         System.out.println("\nYou have lost a bet, you got to pay your opponent a random amount of money!");
         System.out.println("Range: Any Amount between $1000 - $10000!");
         System.out.println("You owe the other player " + String.format("$%.2f", chanceWheel.payOpponent).replace("$0.", "$.") + "!");
     }
 
-    public static void youLost1() {
+    public void youLost1() {
         // This method is called when player 1 loses
-        chanceWheel chanceWheel = new chanceWheel();
         player.playersMoney = player.playersMoney - chanceWheel.payOpponent;
         player2.playersMoney = player2.playersMoney + chanceWheel.payOpponent;
         System.out.println(showPlayer1Money);
         System.out.println(showPlayer2Money);
     }
 
-    public static void youLost2() {
+    public void youLost2() {
         // This method is called when player 2 loses
-        chanceWheel chanceWheel = new chanceWheel();
         player2.playersMoney = player2.playersMoney - chanceWheel.payOpponent;
         System.out.println(showPlayer1Money);
         System.out.println(showPlayer2Money);
     }
     
     // This 3 methods will be called if player lands on youHaveBeenFined Slot
-    public static void youHaveBeenFined() {
+    public void youHaveBeenFined() {
         // You have been fined for excessive gambling!
         System.out.println("\nYou have been fined for excessive gambling...");
         System.out.println("Fine: " + String.format("$%.2f", chanceWheel.userGettingFined).replace("$0.", "$."));
     }
 
     // this GettingFined method will only be called when the player 1 land on this slot
-    public static void gettingFined1() {
+    public void gettingFined1() {
         // This method will be called if player 1 get fined
-        chanceWheel chanceWheel = new chanceWheel();
         player.playersMoney = player.playersMoney - chanceWheel.userGettingFined;
         System.out.println(showPlayer1Money);
     }
 
     // this GettingFined method will only be called when the player 2 land on this slot
-    public static void gettingFined2() {
+    public void gettingFined2() {
         // This method will be called if player 2 get fined
         player2.playersMoney = player2.playersMoney - chanceWheel.userGettingFined;
         System.out.println(showPlayer2Money);
@@ -248,17 +282,18 @@ public class wheelMethods {
     }
 
     // This 3 methods will be called if player lands on playerChoosesToMoveYou Slot
-    public static void playerChoosesToMoveYou() {
+    public void playerChoosesToMoveYou() {
         // Player decides how much another player can move
         System.out.println("\nAnother player has to decide, how much you have to move backwards!");
         System.out.println("Player only can move another player between (1 - 3) spaces!");
     }
 
-    public static void playerMove1() {
+    public void playerMove1() {
         // Player 1
         System.out.println("\nPlayer 2: Please enter the amount, you want Player 1 to move!");
         System.out.println("Player 2: Please enter the amount: ");
-        int player2Decides = in.nextInt();
+        Scanner in = new Scanner(System.in);
+        player2Decides = in.nextInt();
 
         if(player2Decides < 3) {
             // If player pick any number over 3, this statment will print
@@ -280,14 +315,16 @@ public class wheelMethods {
                 // if player 2 decides to pick 3, player 1 moves back 1.
                 player.space = player.space - player2Decides;
             }
+            in.close();
         }
     }
 
-    public static void playerMove2() {
+    public void playerMove2() {
         // Player 2
         System.out.println("\nPlayer 1: Please enter the amount, you want Player 1 to move!");
         System.out.println("Player 1: Please enter the amount: ");
-        int player1Decides = in.nextInt();
+        Scanner in = new Scanner(System.in);
+        player1Decides = in.nextInt();
 
         if(player1Decides > 3) {
             // If player pick any number over 3, this statment will print
@@ -310,44 +347,44 @@ public class wheelMethods {
                 player.space = player.space - player1Decides;
             }
         }
+        in.close();
     }
 
     // This 3 methods will be called if player lands on movingPrevelges Slot
-    public static void movingPrevelges() {
+    public void movingPrevelges() {
         // Player moving prevelges are gone until another player dont move more then 2 spaces
         System.out.println("\nYour moving prevelges are gone until another player dont move more then 2 spaces!");
         System.out.println("HAVE FUN!");
     }
 
-    public static void movingPrevelges1() {
+    public void movingPrevelges1() {
         // Player 1
 
     }
 
-    public static void movingPrevelges2() {
+    public void movingPrevelges2() {
         // Player 2
 
     }
 
     public void advanceToNearestGame() {
         System.out.println("Advance to the nearest game!");
-        gameBoard gameBoard = new gameBoard();
-        int blackjackSpace1 = 6;
-        int blackjackSpace2 = 13;
-        int blackjackDistance1 = blackjackSpace1 - gameBoard.totalSpace;
-        int blackjackDistance2 = blackjackSpace2 - gameBoard.totalSpace;
-        int cardgameSpace1 = 7;
-        int cardgameSpace2 = 18;
-        int cardgameDistance1 = cardgameSpace1 - gameBoard.totalSpace;
-        int cardgameDistance2 = cardgameSpace2 - gameBoard.totalSpace;
-        int rouletteSpace1 = 3;
-        int rouletteSpace2 = 12;
-        int rouletteDistance1 = rouletteSpace1 - gameBoard.totalSpace;
-        int rouletteDistance2 = rouletteSpace2 - gameBoard.totalSpace;
-        int slotsSpace1 = 5;
-        int slotsSpace2 = 9;
-        int slotsDistance1 = slotsSpace1 - gameBoard.totalSpace;
-        int slotsDistance2 = slotsSpace2 - gameBoard.totalSpace;
+        blackjackSpace1 = 6;
+        blackjackSpace2 = 13;
+        blackjackDistance1 = blackjackSpace1 - gameBoard.totalSpace;
+        blackjackDistance2 = blackjackSpace2 - gameBoard.totalSpace;
+        cardgameSpace1 = 7;
+        cardgameSpace2 = 18;
+        cardgameDistance1 = cardgameSpace1 - gameBoard.totalSpace;
+        cardgameDistance2 = cardgameSpace2 - gameBoard.totalSpace;
+        rouletteSpace1 = 3;
+        rouletteSpace2 = 12;
+        rouletteDistance1 = rouletteSpace1 - gameBoard.totalSpace;
+        rouletteDistance2 = rouletteSpace2 - gameBoard.totalSpace;
+        slotsSpace1 = 5;
+        slotsSpace2 = 9;
+        slotsDistance1 = slotsSpace1 - gameBoard.totalSpace;
+        slotsDistance2 = slotsSpace2 - gameBoard.totalSpace;
         if (blackjackDistance1 < 0) {
             blackjackDistance1 = 100;
         } else if (blackjackDistance2 < 0) {
@@ -365,6 +402,6 @@ public class wheelMethods {
         } else if (slotsDistance2 < 0) {
             slotsDistance2 = 100;
         }
-        int smallest = 1111;
+        smallest = 1111;
     }
 }

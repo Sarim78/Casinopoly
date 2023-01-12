@@ -5,18 +5,18 @@ import game.blackJack;
 import game.cardGame;
 import game.chanceWheel;
 import game.slots;
-import game.wheelMethods;
 import game.Roulette;
 import game.gameBoard;
 import game.penaltyWheel;
 
 // Main Code Of The Game Goes Here
-public class main {
+public class casinopolyMain {
+
     public static void main(String[] args) {
 
         blackJack blackJack = new blackJack();
-        blackJack.blackJack();
-
+        blackJack.blackjack();
+        
         slots slots = new slots();
         slots.slotMachine();
         

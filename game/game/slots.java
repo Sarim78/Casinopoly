@@ -10,11 +10,17 @@ import java.util.Random;
  */
 
 public class slots {
+
+    //TODO close scanners
+
     // Creating Objects 
+
     Random rnd = new Random();
+
     Scanner in = new Scanner(System.in);
 
     // Creating Variables
+
     int bet; // Player bet Variable
 
     int randomMoney = 5500; // This is for random money generated, when you bet your money
@@ -22,19 +28,25 @@ public class slots {
     int jackPot = 75000; // This will be a jackpot ($75k) for the slot machine. It will be very hard to win.
 
     int maxBet = 20000; // Max bet that player can make is $20k
+
     int minBet = 1000; // Min bet that player can make is $1k
 
     int slotMachine; // Slow Machine Variable
 
     int probability = 15; // The probability of winning the jackpot is 15%
 
-    // Methods for Casino Slot Machine
+    int money;
+
+    int doubledMoney; // this will double the amount of money you win 
+
+    // Creating Methods
+
     public void moneyGeneratedAfterBetting() {
         // This method is called after you place a bet, it will generate a random amount money for you. 
         // Between $0 - $5500 but the amount will get double
 
-        int money = rnd.nextInt(randomMoney);
-        int doubledMoney = money * 2; // this will double the amount of money you win 
+        money = rnd.nextInt(randomMoney);
+        doubledMoney = money * 2; 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
     }
@@ -61,8 +73,7 @@ public class slots {
             // This is for the jackpot, the chances to win this is (15%).
             System.out.println("\nYOU HAVE WON $" + jackPot + "!");
             System.out.println("Congrats!");
-            slots slots = new slots();
-            slots.slotMachine();
+            slotMachine();
         }
     }
 
@@ -79,8 +90,7 @@ public class slots {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
         } else if(confrimBet.equals("N") || confrimBet.equals("n")) {
             System.out.println("\nPlease Re-Enter Your Bet.");
-            slots slots = new slots();
-            slots.slotMachine();
+            slotMachine();
         }
     }
 

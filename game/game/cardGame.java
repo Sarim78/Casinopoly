@@ -11,11 +11,16 @@ import java.util.Random;
 
 public class cardGame {
 
+    //TODO give out money and close scanners
+
     // Creating Objects 
+
     Random rnd = new Random(); 
+    
     Scanner in = new Scanner(System.in);
 
     // Creating Variables
+    
     int numberLimit = 50; // this is for a limit that the numberGenerator() method can use
 
     int num1; // this Variable is for the method called numberGenerator()
@@ -24,10 +29,17 @@ public class cardGame {
 
     int bet; // this Variable is for the method called bet()
 
-    // Creating methods for the card game
+    int num;
+
+    int playerBet;
+
+    int aiNum;
+
+    // Creating Methods
+    
     public void numberGenerator() {
         // This methid will tell the player, if you need to guess Hi or Lo
-        int num = rnd.nextInt(numberLimit);
+        num = rnd.nextInt(numberLimit);
         num1 = num;
     }
 
@@ -35,7 +47,7 @@ public class cardGame {
         // this methid will let the player bet on them self. If they lose the game, they will lose all the money earned and even the bet.
         System.out.print("\nPlease Place Your Bet (Between 1000 - 20000): ");
 
-        int playerBet = in.nextInt();
+        playerBet = in.nextInt();
 
         bet = playerBet;
 
@@ -94,7 +106,7 @@ public class cardGame {
         // this method will let the ai think of a number greater than or less then numberGenerator() method
         System.out.println("\nAi: Am i thinking of an number higher or Lower of: " + num1 + "?");
 
-        int aiNum = rnd.nextInt(numberLimit);
+        aiNum = rnd.nextInt(numberLimit);
         ai = aiNum;
     }
 
@@ -112,6 +124,7 @@ public class cardGame {
     
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
+                    break;
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
                     break;
@@ -121,6 +134,7 @@ public class cardGame {
     
                 if(ai < num1) {
                     System.out.println("\nCongrats, You Got It Right!");
+                    break;
                 } else if(ai > num1) {
                     System.out.println("\nSorry, you lost :(");
                     break;

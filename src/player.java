@@ -9,11 +9,14 @@ import java.util.Random;
  */
 
 public class player {
+
     // Creating Objects  
-    static Random rnd = new Random();
+
+    Random rnd = new Random();
 
     // Creating Variables
-    public static int space = 1;
+    
+    public int space = 1;
 
-    public static double playersMoney = 10000;
+    public double playersMoney = 10000;
 }
