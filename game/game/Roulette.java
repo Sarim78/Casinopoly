@@ -1,88 +1,86 @@
 package game;
 import java.util.Scanner;
 import java.util.Random;
-import java.util.ArrayList;
-import java.lang.Math;
 
 public class Roulette {
     //Creating objects
-    static Random rnd = new Random();
+    Random rnd = new Random();
     
-    static int dealerFirstPick;
+    int dealerFirstPick;
 
-    static int dealerSecondPick;
+    int dealerSecondPick;
 
-    static int dealerThirdPick;
+    int dealerThirdPick;
 
-    static int dealerFourthPick;
+    int dealerFourthPick;
 
-    static int dealerFifthPick;
+    int dealerFifthPick;
 
-    static int playerPick;
+    int playerPick;
 
-    static int playerPick2;
+    int playerPick2;
 
-    static int playerPick3;
+    int playerPick3;
 
-    static int playerPick4;
+    int playerPick4;
 
-    static int playerPick5;
+    int playerPick5;
 
-    static int playerWinAmount;
+    int playerWinAmount;
 
-    static double wager1;
+    double wager1;
 
-    static double wager2;
+    double wager2;
 
-    static double wager3;
+    double wager3;
     
-    static double wager4;
+    double wager4;
 
-    static double wager5;
+    double wager5;
 
-    static int maxBet = 4000;
+    int maxBet = 4000;
 
-    static int minBet = 200;
+    int minBet = 200;
 
-    static double moneyEarnedMax;
+    double moneyEarnedMax;
 
-    static double moneyEarnedMin;
+    double moneyEarnedMin;
 
-    static double moneyLostMax;
+    double moneyLostMax;
 
-    static double moneyLostMin;
+    double moneyLostMin;
 
-    static double moneyEarned1;
+    double moneyEarned1;
 
-    static double moneyEarned2;
+    double moneyEarned2;
 
-    static double moneyEarned3;
+    double moneyEarned3;
 
-    static double moneyEarned4;
+    double moneyEarned4;
 
-    static double moneyEarned5;
+    double moneyEarned5;
 
-    static double moneyLost1;
+    double moneyLost1;
 
-    static double moneyLost2;
+    double moneyLost2;
 
-    static double moneyLost3;
+    double moneyLost3;
 
-    static double moneyLost4;
+    double moneyLost4;
 
-    static double moneyLost5;
+    double moneyLost5;
 
-    static double playerEarnings;
+    double playerEarnings;
 
-    static double totalMoneyWon;
+    double totalMoneyWon;
 
-    static double totalMoneyLost;
+    double totalMoneyLost;
 
-    static double totalWager;
+    double totalWager;
 
-    static double playerNetEarnings;
+    double playerNetEarnings;
 
-    public static void instructions() {
+    public void instructions() {
         System.out.println("Welcome to roulette! Enter w for instrcutions, anything else to continue");
         Scanner in = new Scanner(System.in);
         String instruction = in.nextLine();
@@ -94,7 +92,7 @@ public class Roulette {
         }
     }
 
-    public static void dealerPickingNumbers() {
+    public void dealerPickingNumbers() {
         dealerFirstPick = rnd.nextInt(1,20);
         dealerSecondPick = rnd.nextInt(1,20);
             while (dealerSecondPick == dealerFirstPick) {
@@ -114,7 +112,7 @@ public class Roulette {
             }
     }
 
-    public static void playerWager1() {
+    public void playerWager1() {
         try {
             System.out.println("How much money would you like to wager? (please bet from 400 to 4K)");
             Scanner in = new Scanner(System.in);
@@ -136,7 +134,7 @@ public class Roulette {
         }
     }
 
-    public static void playerPickingNumbers1() {
+    public void playerPickingNumbers1() {
         try {
             System.out.println("Pick a number from 1 to 20: ");
             Scanner in = new Scanner(System.in);
@@ -168,7 +166,7 @@ public class Roulette {
         }
     }
 
-    public static void playerWager2() {
+    public void playerWager2() {
         try {
             System.out.println("How much money would you like to wager? (please bet from 400 to 4K)");
             Scanner in = new Scanner(System.in);
@@ -190,7 +188,7 @@ public class Roulette {
         }
     }
 
-    public static void playerPickingNumbers2() {
+    public void playerPickingNumbers2() {
         try {
             System.out.println("Pick a number from 1 to 20: ");
             Scanner in = new Scanner(System.in);
@@ -226,7 +224,7 @@ public class Roulette {
         }
     }
 
-    public static void playerWager3() {
+    public void playerWager3() {
         try {
             System.out.println("How much money would you like to wager? (please bet from 400 to 4K)");
             Scanner in = new Scanner(System.in);
@@ -248,7 +246,7 @@ public class Roulette {
         }
     }
 
-    public static void playerPickingNumbers3() {
+    public void playerPickingNumbers3() {
         try {
             System.out.println("Pick a number from 1 to 20: ");
             Scanner in = new Scanner(System.in);
@@ -284,7 +282,7 @@ public class Roulette {
         }
     }
 
-    public static void playerWager4() {
+    public void playerWager4() {
         try {
             System.out.println("How much money would you like to wager? (please bet from 400 to 4K)");
             Scanner in = new Scanner(System.in);
@@ -306,7 +304,7 @@ public class Roulette {
         }
     }
 
-    public static void playerPickingNumbers4() {
+    public void playerPickingNumbers4() {
         try {
             System.out.println("Pick a number from 1 to 20: ");
             Scanner in = new Scanner(System.in);
@@ -342,7 +340,7 @@ public class Roulette {
         }
     }
 
-    public static void playerWager5() {
+    public void playerWager5() {
         try {
             System.out.println("How much money would you like to wager? (please bet from 400 to 4K)");
             Scanner in = new Scanner(System.in);
@@ -364,7 +362,7 @@ public class Roulette {
         }
     }
 
-    public static void playerPickingNumbers5() {
+    public void playerPickingNumbers5() {
         try {
             System.out.println(" This is your last guess! Pick a number from 1 to 20: ");
             Scanner in = new Scanner(System.in);
@@ -400,7 +398,7 @@ public class Roulette {
         }
     }
 
-    public static void finalDisplay() {
+    public void finalDisplay() {
         System.out.println("Total times won: " + playerWinAmount);
         totalWager = wager1 + wager2 + wager3 + wager4 + wager5;
         System.out.println("Total money wagered: " + String.format("$%.2f", totalWager).replace("$0.", "$."));
@@ -418,7 +416,7 @@ public class Roulette {
         }
     }
 
-    public static void roulette() {
+    public void roulette() {
         instructions();
         dealerPickingNumbers();
         playerWager1();
