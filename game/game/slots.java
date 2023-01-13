@@ -39,6 +39,10 @@ public class slots {
 
     int doubledMoney; // this will double the amount of money you win 
 
+    String confrimBet;
+
+    String playerInput;
+
     // Creating Methods
 
     public void moneyGeneratedAfterBetting() {
@@ -55,7 +59,7 @@ public class slots {
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
-        String playerInput = in.nextLine();
+        playerInput = in.nextLine();
 
         if(playerInput.equals("G") || playerInput.equals("g")) {
             System.out.println("\nInstructions: ");
@@ -84,7 +88,7 @@ public class slots {
 
         System.out.println("\nPlease confrim if you want to place this bet (Y/N): ");
 
-        String confrimBet = newScanner.nextLine();
+        confrimBet = newScanner.nextLine();
 
         if(confrimBet.equals("Y") || confrimBet.equals("y")) {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");

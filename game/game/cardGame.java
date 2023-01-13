@@ -35,6 +35,12 @@ public class cardGame {
 
     int aiNum;
 
+    String confrimBet;
+
+    String playerInput;
+
+    String userInput;
+
     // Creating Methods
     
     public void numberGenerator() {
@@ -75,7 +81,7 @@ public class cardGame {
         System.out.println("You have placed a bet of $" + bet);
         System.out.println("Please confrim if you want to place this bet (Y/N): ");
 
-        String confrimBet = newScanner.nextLine();
+        confrimBet = newScanner.nextLine();
 
         if(confrimBet.equals("Y") || confrimBet.equals("y")) {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
@@ -89,7 +95,7 @@ public class cardGame {
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
-        String playerInput = in.nextLine();
+        playerInput = in.nextLine();
 
         if(playerInput.equals("G") || playerInput.equals("g")) {
             // If the player presses G/g then this IF STATEMENT will run.
@@ -118,7 +124,7 @@ public class cardGame {
             // Player guess if the number is Hi or Lo
             System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
     
-            String userInput = newUserInput.nextLine();
+            userInput = newUserInput.nextLine();
             
             if(userInput.equals("Hi") || userInput.equals("hi")) {
     

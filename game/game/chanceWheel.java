@@ -30,6 +30,8 @@ public class chanceWheel {
 
     int randomSlot; // Creating a object for the random library 
 
+    String playerInput;
+
     // Creating Methods
     
     public void instructions() {
@@ -51,7 +53,7 @@ public class chanceWheel {
 
         // this will allow the player to input to spin the wheel
         System.out.println("\nClick (G) To Spin The Wheel or to exit, press anything: ");
-        String playerInput = in.nextLine();
+        playerInput = in.nextLine();
 
         while(true) {
             // this if statement will check the user input

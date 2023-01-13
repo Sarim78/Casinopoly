@@ -3,6 +3,7 @@ package game;
 // Importing Libraries 
 import java.util.Random;
 import java.util.Scanner;
+import java.lang.Math;
 
 // Importing Files 
 import src.player;
@@ -10,15 +11,20 @@ import src.player2;
 
 public class wheelMethods {
 
+    //TODO all or nothing
+    //TODO money
+
     // Creating Objects
 
+     
     Random rnd = new Random();
-
+ 
     player player = new player();
 
     player2 player2 = new player2();
 
     gameBoard gameBoard = new gameBoard();
+    
 
     chanceWheel chanceWheel = new chanceWheel();
 
@@ -34,6 +40,7 @@ public class wheelMethods {
 
     int player1Decides;
     int player2Decides;
+     
 
     int blackjackSpace1;
     int blackjackSpace2;
@@ -58,9 +65,14 @@ public class wheelMethods {
 
     int slotsDistance1;
     int slotsDistance2;
-    
-    int smallest;
 
+    int smallestBlackjack;
+    int smallestcardGame;
+    int smallestRoulette;
+    int smallestSlots;
+    int smallest;
+    
+ 
     // Creating Methods
     
     public void moveThreeSpaces() {
@@ -366,6 +378,7 @@ public class wheelMethods {
         // Player 2
 
     }
+    
 
     public void advanceToNearestGame() {
         System.out.println("Advance to the nearest game!");
@@ -402,6 +415,11 @@ public class wheelMethods {
         } else if (slotsDistance2 < 0) {
             slotsDistance2 = 100;
         }
-        smallest = 1111;
+        smallestBlackjack = Math.min(blackjackDistance1, blackjackDistance2);
+        smallestcardGame = Math.min(cardgameDistance1, cardgameDistance2);
+        smallestRoulette = Math.min(rouletteDistance1, rouletteDistance2);
+        smallestSlots = Math.min(slotsDistance1, slotsDistance2);
+        smallest = Math.min(smallestBlackjack, Math.min(smallestcardGame, Math.min(smallestRoulette, smallestSlots)));
+        System.out.println(smallest);
     }
 }

@@ -19,6 +19,12 @@ public class startAndGo {
 
     // Creating Variables
 
+    String landingMoney = ("\nYou have landed on GO! Collect $4000");
+
     // Creating Methods 
+
+    public void start() {
+        System.out.println(landingMoney);
+    }
     
 }
