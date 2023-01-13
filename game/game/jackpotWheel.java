@@ -12,15 +12,15 @@ public class jackpotWheel {
 
     wheelMethods wheelMethods = new wheelMethods();
 
+    startAndGo startAndGo = new startAndGo();
+
+    allorNothing allorNothing = new allorNothing();
+
     // Creating Variables
 
     int spinWheel;
 
     int jackpot;
-
-    double winMoney;
-
-    double takeMoney;
 
     String choice;
 
@@ -36,13 +36,13 @@ public class jackpotWheel {
         }
         if (spinWheel == 1) {
             System.out.println("\nAdvance to START!");
-            //TODO add start
+            startAndGo.start();
         } else if (spinWheel == 2) {
             System.out.println("\nYou won a get out of jail free card!");
             wheelMethods.jailFreeCard();
         } else if (spinWheel == 3) {
             System.out.println("\nAdvance to the nearest game!");
-            //TODO add nearest game
+            wheelMethods.advanceToNearestGame();
         } else if (spinWheel == 4) {
             jackpot = rnd.nextInt(1,3);
             if (jackpot == 1) {
@@ -51,20 +51,20 @@ public class jackpotWheel {
                 choice = in.nextLine();
                 if (choice.equals("Y") || choice.equals("y")) {
                     System.out.println("\nYou have chosen to go all or nothing!");
+                    allorNothing.allOrNothing();
                 } else {
                     System.out.println("\nYou have chosen to spin the jackpot wheel again instead!");
+                    jackpotwheel();
                 }
                 in.close();
             } else {
                 System.out.println("\nSpin the jackpot wheel again!");
-                //TODO add all or nothing/jackpot wheel
+                jackpotwheel();
             }
         } else if (spinWheel == 5) {
-            winMoney = rnd.nextDouble(1000,20000);
-            System.out.println("\nYou won " + String.format("$%.2f", winMoney).replace("$0.", "$.") + "!");
+            wheelMethods.winMoney();
         } else if (spinWheel == 6) {
-            takeMoney = rnd.nextDouble(1000,10000);
-            System.out.println("\nThe other player owes you " + String.format("$%.2f", takeMoney).replace("$0.", "$.") + "!");  
+            wheelMethods.takeMoney();
         }
     }
 }

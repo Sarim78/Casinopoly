@@ -18,6 +18,8 @@ public class giantWheel {
 
     jackpotWheel jackpotWheel = new jackpotWheel();
 
+    allorNothing allorNothing = new allorNothing();
+
     // Creating Variables
 
     double winMoney;
@@ -67,8 +69,10 @@ public class giantWheel {
                 choice = in.nextLine();
                 if (choice.equals("Y") || choice.equals("y")) {
                     System.out.println("\nYou have chosen to go all or nothing!");
+                    allorNothing.allOrNothing();
                 } else {
                     System.out.println("\nYou have chosen to spin the jackpot wheel instead!");
+                    jackpotWheel.jackpotwheel();
                 }
                 in.close();
             } else {
@@ -77,16 +81,16 @@ public class giantWheel {
             }
         } else if (spinWheel == 8) {
             winMoney = rnd.nextDouble(1000,20000);
-            System.out.println("\nYou won " + String.format("$%.2f", winMoney).replace("$0.", "$.") + "!");
+            wheelMethods.winMoney();
         } else if (spinWheel == 9) {
             loseMoney = rnd.nextDouble(1000,20000);
-            System.out.println("\nYou lost " + String.format("$%.2f", loseMoney).replace("$0.", "$.") + "!");
+            wheelMethods.loseMoney();
         } else if (spinWheel == 10) {
             takeMoney = rnd.nextDouble(1000,10000);
-            System.out.println("\nThe other player owes you " + String.format("$%.2f", takeMoney).replace("$0.", "$.") + "!");  
+            wheelMethods.takeMoney();
         } else if (spinWheel == 11) {
             moneyTaken = rnd.nextDouble(1000,10000);
-            System.out.println("\nYou owe the other player " + String.format("$%.2f", moneyTaken).replace("$0.", "$.") + "!");
+            wheelMethods.moneyTaken();
         } else if (spinWheel == 12) {
             System.out.println("\nThe other player has won a move control powerup! This means they can move you 1-3 spaces at any time (one time use).");
             wheelMethods.playerChoosesToMoveYou();

@@ -24,10 +24,6 @@ public class penaltyWheel {
 
     // Creating Variables
 
-    double loseMoney;
-
-    double moneyTaken;
-
     String playerInput;
 
     // Creating Methods
@@ -81,14 +77,12 @@ public class penaltyWheel {
 
                 } else if (randomSlot == 3) {
                     // playerLosesMoney method
-                    loseMoney = rnd.nextDouble(1000,20000);
-                    System.out.println("You lost " + String.format("$%.2f", loseMoney).replace("$0.", "$.") + "!");
+                    wheelMethods.loseMoney();
                     break;
 
                 } else if (randomSlot == 4) {
                     // payingOtherPlayer method
-                    moneyTaken = rnd.nextDouble(1000,10000);
-                    System.out.println("You owe the other player " + String.format("$%.2f", moneyTaken).replace("$0.", "$.") + "!");
+                    wheelMethods.moneyTaken();
                     break;
                     
                 } else if (randomSlot == 5) {

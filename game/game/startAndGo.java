@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * //TODO NOT Casino Slot Game
+ * 
  * @author adil baig
  */
 

@@ -11,11 +11,7 @@ import src.player2;
 
 public class wheelMethods {
 
-    //TODO all or nothing
-    //TODO money
-
     // Creating Objects
-
      
     Random rnd = new Random();
  
@@ -25,8 +21,9 @@ public class wheelMethods {
 
     gameBoard gameBoard = new gameBoard();
     
-
     chanceWheel chanceWheel = new chanceWheel();
+
+    giantWheel giantWheel = new giantWheel();
 
     // Creating Variables
 
@@ -264,6 +261,70 @@ public class wheelMethods {
         player2.playersMoney = player2.playersMoney - chanceWheel.payOpponent;
         System.out.println(showPlayer1Money);
         System.out.println(showPlayer2Money);
+    }
+
+    public void loseMoney() {
+        System.out.println("\nYou lost " + String.format("$%.2f", giantWheel.loseMoney).replace("$0.", "$.") + "!");
+    }
+
+    public void loseMoney1() {
+        player.playersMoney = player.playersMoney - giantWheel.loseMoney;
+        System.out.println(showPlayer1Money);
+    }
+
+    public void loseMoney2() {
+        player2.playersMoney = player2.playersMoney - giantWheel.loseMoney;
+        System.out.println(showPlayer2Money);
+    }
+
+    public void winMoney() {
+        System.out.println("\nYou won " + String.format("$%.2f", giantWheel.winMoney).replace("$0.", "$.") + "!");
+    }
+
+    public void winMoney1() {
+        player.playersMoney = player.playersMoney + giantWheel.winMoney;
+        System.out.println(showPlayer1Money);
+    }
+
+    public void winMoney2() {
+        player2.playersMoney = player2.playersMoney + giantWheel.winMoney;
+        System.out.println(showPlayer2Money);
+    }
+
+    public void takeMoney() {
+        System.out.println("\nThe other player owes you " + String.format("$%.2f", giantWheel.takeMoney).replace("$0.", "$.") + "!");
+    }
+
+    public void takeMoney1() {
+        player.playersMoney = player.playersMoney + giantWheel.takeMoney;
+        player2.playersMoney = player2.playersMoney - giantWheel.takeMoney;
+        System.out.println(showPlayer1Money);
+        System.out.println(showPlayer2Money);
+    }
+
+    public void takeMoney2() {
+        player.playersMoney = player.playersMoney - giantWheel.takeMoney;
+        player2.playersMoney = player2.playersMoney + giantWheel.takeMoney;
+        System.out.println(showPlayer2Money);
+        System.out.println(showPlayer1Money);
+    }
+
+    public void moneyTaken() {
+        System.out.println("\nYou owe the other player " + String.format("$%.2f", giantWheel.moneyTaken).replace("$0.", "$.") + "!");
+    }
+
+    public void moneyTaken1() {
+        player.playersMoney = player.playersMoney - giantWheel.takeMoney;
+        player2.playersMoney = player2.playersMoney + giantWheel.takeMoney;
+        System.out.println(showPlayer1Money);
+        System.out.println(showPlayer2Money);
+    }
+
+    public void moneyTaken2() {
+        player.playersMoney = player.playersMoney + giantWheel.takeMoney;
+        player2.playersMoney = player2.playersMoney - giantWheel.takeMoney;
+        System.out.println(showPlayer2Money);
+        System.out.println(showPlayer1Money);
     }
     
     // This 3 methods will be called if player lands on youHaveBeenFined Slot

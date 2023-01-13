@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class Roulette {
 
-    //TODO close scanners
-
     //Creating Objects
 
     Random rnd = new Random();
