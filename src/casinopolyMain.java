@@ -15,13 +15,6 @@ import game.wheelMethods;
 public class casinopolyMain {
     public static void main(String[] args) {
 
-<<<<<<< HEAD
-        // blackJack blackJack = new blackJack();
-        // blackJack.blackjack();
-=======
-        allorNothing allorNothing = new allorNothing();
-        allorNothing.allOrNothing();
-/** 
         blackJack blackJack = new blackJack();
         blackJack.blackjack();
 >>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
@@ -47,10 +40,5 @@ public class casinopolyMain {
 =======
         penaltyWheel penaltyWheel = new penaltyWheel();
         penaltyWheel.wheelOfPenalty();
-
-        wheelMethods wheelMethods = new wheelMethods();
-        wheelMethods.advanceToNearestGame();
-        /* */
->>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
     }
 }

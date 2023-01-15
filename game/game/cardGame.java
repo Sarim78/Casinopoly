@@ -37,21 +37,6 @@ public class cardGame {
 
     int aiNum;
 
-<<<<<<< HEAD
-    int playerEarningRandomAmountMoney;
-
-    // Creating Object
-    player player = new player();
-
-    player2 player2 = new player2();
-=======
-    String confrimBet;
-
-    String playerInput;
-
-    String userInput;
->>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
-
     // Creating Methods
     
     public void numberGenerator() {
@@ -118,11 +103,7 @@ public class cardGame {
         System.out.println("You have placed a bet of $" + bet);
         System.out.println("Please confrim if you want to place this bet (Y/N): ");
 
-<<<<<<< HEAD
-        String confrimBet = confrimingBet.nextLine();
-=======
-        confrimBet = newScanner.nextLine();
->>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
+        String confrimBet = newScanner.nextLine();
 
         if(confrimBet.equals("Y") || confrimBet.equals("y")) {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
@@ -138,12 +119,7 @@ public class cardGame {
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
-<<<<<<< HEAD
-        Scanner instructions = new Scanner(System.in);
-        String playerInput = instructions.nextLine();
-=======
-        playerInput = in.nextLine();
->>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
+        String playerInput = in.nextLine();
 
         if(playerInput.equals("G") || playerInput.equals("g")) {
             // If the player presses G/g then this IF STATEMENT will run.
@@ -185,11 +161,7 @@ public class cardGame {
             // Player guess if the number is Hi or Lo
             System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
     
-<<<<<<< HEAD
-            String userInput = HiLo.nextLine();
-=======
-            userInput = newUserInput.nextLine();
->>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
+            String userInput = newUserInput.nextLine();
             
             if(userInput.equals("Hi") || userInput.equals("hi")) {
     
