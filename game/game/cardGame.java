@@ -3,6 +3,8 @@ package game;
 // Importing Libraries 
 import java.util.Scanner;
 import java.util.Random;
+import src.player;
+import src.player2;
 
 /**
  * Card Game (Hi-Lo)
@@ -35,23 +37,64 @@ public class cardGame {
 
     int aiNum;
 
+<<<<<<< HEAD
+    int playerEarningRandomAmountMoney;
+
+    // Creating Object
+    player player = new player();
+
+    player2 player2 = new player2();
+=======
+    String confrimBet;
+
+    String playerInput;
+
+    String userInput;
+>>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
+
     // Creating Methods
     
     public void numberGenerator() {
-        // This methid will tell the player, if you need to guess Hi or Lo
+        // This method will tell the player, if you need to guess Hi or Lo
         num = rnd.nextInt(numberLimit);
         num1 = num;
     }
 
     public void bet() {
-        // this methid will let the player bet on them self. If they lose the game, they will lose all the money earned and even the bet.
+        // this method will let the player bet on them self. If they lose the game, they will lose all the money earned and even the bet.
         System.out.print("\nPlease Place Your Bet (Between 1000 - 20000): ");
 
-        playerBet = in.nextInt();
+        Scanner playerPlacingBet = new Scanner(System.in);
+        playerBet = playerPlacingBet.nextInt();
 
         bet = playerBet;
 
         betOverUnderLimit();
+
+        playerPlacingBet.close();
+    }
+
+    public void playerGettingMoney() {
+        // This method will give the player money
+        int moneyEarned = rnd.nextInt(1000, 8500);
+
+        playerEarningRandomAmountMoney = moneyEarned;
+
+        System.out.print("\nYou have earned: $" + moneyEarned + "!");
+    }
+
+    public void playerGettingMoney1() {
+        // Player 1 earning the money
+        player.playersMoney = player.playersMoney + playerEarningRandomAmountMoney;
+
+        System.out.println("\nYour current balance is: " + "$" + player.playersMoney);
+    }
+
+    public void playerGettingMoney2() {
+        // Player 2 earning the money
+        player2.playersMoney = player2.playersMoney + playerEarningRandomAmountMoney;
+
+        System.out.println("\nYour current balance is: " + "$" + player2.playersMoney);
     }
 
     public void betOverUnderLimit() {
@@ -70,18 +113,24 @@ public class cardGame {
     public void confrimBet() {
         // this method will confrim the player bet
 
-        Scanner newScanner = new Scanner(System.in);
+        Scanner confrimingBet = new Scanner(System.in);
 
         System.out.println("You have placed a bet of $" + bet);
         System.out.println("Please confrim if you want to place this bet (Y/N): ");
 
-        String confrimBet = newScanner.nextLine();
+<<<<<<< HEAD
+        String confrimBet = confrimingBet.nextLine();
+=======
+        confrimBet = newScanner.nextLine();
+>>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
 
         if(confrimBet.equals("Y") || confrimBet.equals("y")) {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
+            confrimingBet.close();
         } else if(confrimBet.equals("N") || confrimBet.equals("n")) {
             System.out.println("\nPlease Re-Enter Your Bet.");
             bet();
+            confrimingBet.close();
         }
     }
 
@@ -89,7 +138,12 @@ public class cardGame {
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
-        String playerInput = in.nextLine();
+<<<<<<< HEAD
+        Scanner instructions = new Scanner(System.in);
+        String playerInput = instructions.nextLine();
+=======
+        playerInput = in.nextLine();
+>>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
 
         if(playerInput.equals("G") || playerInput.equals("g")) {
             // If the player presses G/g then this IF STATEMENT will run.
@@ -99,6 +153,19 @@ public class cardGame {
             System.out.println("Then you have to decide if the number is (Hi/Lo).");
             System.out.println("If you get the answer wrong, you will lose all the money you gained from this mini game and the game will end...");
             System.out.println("Otherwise, you will keep going on until you lose. You will earn $2k every round you WIN!");
+            bet(); 
+            confrimBet(); 
+            numberGenerator(); 
+            Ai(); 
+            HiLo(); 
+            instructions.close();
+        } else {
+            bet(); 
+            confrimBet(); 
+            numberGenerator(); 
+            Ai(); 
+            HiLo(); 
+            instructions.close();
         }
     }
 
@@ -113,47 +180,58 @@ public class cardGame {
     public void HiLo() {
 
         while(true) {
-            Scanner newUserInput = new Scanner(System.in);
+            Scanner HiLo = new Scanner(System.in);
         
             // Player guess if the number is Hi or Lo
             System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
     
-            String userInput = newUserInput.nextLine();
+<<<<<<< HEAD
+            String userInput = HiLo.nextLine();
+=======
+            userInput = newUserInput.nextLine();
+>>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
             
             if(userInput.equals("Hi") || userInput.equals("hi")) {
     
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
+                    playerGettingMoney();
+                    HiLo.close();
                     break;
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
+                    HiLo.close();
                     break;
                 }
-    
+
             } else if (userInput.equals("Lo") || userInput.equals("lo")) {
     
                 if(ai < num1) {
                     System.out.println("\nCongrats, You Got It Right!");
+                    playerGettingMoney();
+                    HiLo.close();
                     break;
                 } else if(ai > num1) {
                     System.out.println("\nSorry, you lost :(");
+                    HiLo.close();
                     break;
                 }
-    
+                
             } else {
                 System.out.println("You only can pick between (Hi/Lo)"); 
                 HiLo();
+                HiLo.close();
             }
         }
     }
 
     public void cardgame() {
             // Calling all methods into one method
-            instructions(); // have to remove this soon
-            bet(); // have to remove this soon
-            confrimBet(); // have to remove this soon
-            numberGenerator(); // have to remove this soon
-            Ai(); // have to remove this soon
-            HiLo(); // have to remove this soon
+            instructions(); 
+            bet(); 
+            confrimBet(); 
+            numberGenerator(); 
+            Ai(); 
+            HiLo(); 
     }
 }   

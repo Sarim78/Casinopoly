@@ -24,9 +24,7 @@ public class penaltyWheel {
 
     // Creating Variables
 
-    double loseMoney;
-
-    double moneyTaken;
+    String playerInput;
 
     // Creating Methods
     
@@ -51,7 +49,7 @@ public class penaltyWheel {
 
        // this will allow the player to input to spin the wheel
        System.out.println("\nClick (G) To Spin The Wheel or to exit, press anything: ");
-       String playerInput = in.nextLine();
+       playerInput = in.nextLine();
 
        while(true) {
             // this if statement will check the user input
@@ -79,14 +77,12 @@ public class penaltyWheel {
 
                 } else if (randomSlot == 3) {
                     // playerLosesMoney method
-                    loseMoney = rnd.nextDouble(1000,20000);
-                    System.out.println("You lost " + String.format("$%.2f", loseMoney).replace("$0.", "$.") + "!");
+                    wheelMethods.loseMoney();
                     break;
 
                 } else if (randomSlot == 4) {
                     // payingOtherPlayer method
-                    moneyTaken = rnd.nextDouble(1000,10000);
-                    System.out.println("You owe the other player " + String.format("$%.2f", moneyTaken).replace("$0.", "$.") + "!");
+                    wheelMethods.moneyTaken();
                     break;
                     
                 } else if (randomSlot == 5) {

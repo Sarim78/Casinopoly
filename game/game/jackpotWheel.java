@@ -12,54 +12,59 @@ public class jackpotWheel {
 
     wheelMethods wheelMethods = new wheelMethods();
 
+    startAndGo startAndGo = new startAndGo();
+
+    allorNothing allorNothing = new allorNothing();
+
     // Creating Variables
 
     int spinWheel;
 
     int jackpot;
 
-    double winMoney;
-
-    double takeMoney;
+    String choice;
 
     //Creating Methods
     
     public void jackpotwheel() {
         spinWheel = rnd.nextInt(1,11);
-        System.out.println("Spinning the jackpot wheel...");
+        System.out.println("\nSpinning the jackpot wheel...");
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         if (spinWheel == 1) {
-            System.out.println("Advance to START!");
+            System.out.println("\nAdvance to START!");
+            startAndGo.start();
         } else if (spinWheel == 2) {
-            System.out.println("You won a get out of jail free card!");
+            System.out.println("\nYou won a get out of jail free card!");
             wheelMethods.jailFreeCard();
         } else if (spinWheel == 3) {
-            System.out.println("Advance to the nearest game!");
+            System.out.println("\nAdvance to the nearest game!");
+            wheelMethods.advanceToNearestGame();
         } else if (spinWheel == 4) {
             jackpot = rnd.nextInt(1,3);
             if (jackpot == 1) {
                 Scanner in = new Scanner(System.in);
-                System.out.println("You have been given the opportunity to go ALL OR NOTHING! Would you like to play and get a 50% chance of either doubling your money or losing it all, or would you instead like to spin the jackpot wheel? Press y to go all or nothing, anything else to spin the jackpot wheel again.");
-                String choice = in.nextLine();
+                System.out.println("\nYou have been given the opportunity to go ALL OR NOTHING! Would you like to play and get a 50% chance of either doubling your money or losing almost all of it, or would you instead like to spin the jackpot wheel? Press y to go all or nothing, anything else to spin the jackpot wheel again.");
+                choice = in.nextLine();
                 if (choice.equals("Y") || choice.equals("y")) {
-                    System.out.println("You have chosen to go all or nothing!");
+                    System.out.println("\nYou have chosen to go all or nothing!");
+                    allorNothing.allOrNothing();
                 } else {
-                    System.out.println("You have chosen to spin the jackpot wheel again instead!");
+                    System.out.println("\nYou have chosen to spin the jackpot wheel again instead!");
+                    jackpotwheel();
                 }
                 in.close();
             } else {
-                System.out.println("Spin the jackpot wheel again!");
+                System.out.println("\nSpin the jackpot wheel again!");
+                jackpotwheel();
             }
         } else if (spinWheel == 5) {
-            winMoney = rnd.nextDouble(1000,20000);
-            System.out.println("You won " + String.format("$%.2f", winMoney).replace("$0.", "$.") + "!");
+            wheelMethods.winMoney();
         } else if (spinWheel == 6) {
-            takeMoney = rnd.nextDouble(1000,10000);
-            System.out.println("The other player owes you " + String.format("$%.2f", takeMoney).replace("$0.", "$.") + "!");  
+            wheelMethods.takeMoney();
         }
     }
 }

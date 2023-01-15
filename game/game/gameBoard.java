@@ -44,13 +44,13 @@ public class gameBoard {
 
   // Creating Variables
 
-  int totalSpace; // For Player 1
+  public int totalSpace; // For Player 1
   
-  int totalSpace2; // For Player 2
+  public int totalSpace2; // For Player 2
 
-  String showSpace = ("\nYou have just landed at space #" + totalSpace);
+  public String showSpace = ("\nYou have just landed at space #" + totalSpace);
 
-  int diceRoller;
+  public int diceRoller;
 
   // Creating Methods
 

@@ -10,14 +10,8 @@ import java.util.Random;
  */
 
 public class slots {
-
-    //TODO close scanners
-
     // Creating Objects 
-
     Random rnd = new Random();
-
-    Scanner in = new Scanner(System.in);
 
     // Creating Variables
 
@@ -39,6 +33,10 @@ public class slots {
 
     int doubledMoney; // this will double the amount of money you win 
 
+    String confrimBet;
+
+    String playerInput;
+
     // Creating Methods
 
     public void moneyGeneratedAfterBetting() {
@@ -52,10 +50,17 @@ public class slots {
     }
 
     public void instructions() { 
+
+        Scanner instructions = new Scanner(System.in);
+
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
-        String playerInput = in.nextLine();
+<<<<<<< HEAD
+        String playerInput = instructions.nextLine();
+=======
+        playerInput = in.nextLine();
+>>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
 
         if(playerInput.equals("G") || playerInput.equals("g")) {
             System.out.println("\nInstructions: ");
@@ -63,6 +68,11 @@ public class slots {
             System.out.println("You have to place a bet.");
             System.out.println("You might win more money.");
             System.out.println("Or You might lose your money.");
+            slotMachine();
+            instructions.close();
+        } else {
+            slotMachine();
+            instructions.close();
         }
     }
 
@@ -80,39 +90,45 @@ public class slots {
     public void confrimBet() {
         // this method will confrim the player bet
 
-        Scanner newScanner = new Scanner(System.in);
+        Scanner playerConfrimBet = new Scanner(System.in);
 
         System.out.println("\nPlease confrim if you want to place this bet (Y/N): ");
 
-        String confrimBet = newScanner.nextLine();
+<<<<<<< HEAD
+        String confrimBet = playerConfrimBet.nextLine();
+=======
+        confrimBet = newScanner.nextLine();
+>>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
 
         if(confrimBet.equals("Y") || confrimBet.equals("y")) {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
         } else if(confrimBet.equals("N") || confrimBet.equals("n")) {
             System.out.println("\nPlease Re-Enter Your Bet.");
             slotMachine();
+            playerConfrimBet.close();
         }
     }
 
     public void slotMachine() {
-        // This is a main methid for the Slot Machine. This is were all the methods gonna get called together.
-
-        instructions();
+        Scanner betPlacer = new Scanner(System.in);
 
         System.out.println("\nPlease Place Your Bet: ");
-        bet = in.nextInt(); 
+        bet = betPlacer.nextInt();
 
         if(bet > maxBet) {
             System.out.println("\nYou have placed a bet of: " + "$" + bet);
             System.out.println("\nSorry, you went over the limit. The maximum limit of betting was: $20k...");
+            betPlacer.close();
         } else if (bet < minBet) {
             System.out.println("\nYou have placed a bet of: " + "$" + bet);
             System.out.println("\nSorry, you went under the limit. The minimum limit of betting was: $1k...");
+            betPlacer.close();
         } else {
             System.out.println("\nYou have placed a bet of: " + "$" + bet);
             confrimBet();
             moneyGeneratedAfterBetting();
             jackPot();
+            betPlacer.close();
         }
     }
 }
