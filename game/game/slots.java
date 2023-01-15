@@ -14,7 +14,6 @@ public class slots {
     Random rnd = new Random();
 
     // Creating Variables
-
     int bet; // Player bet Variable
 
     int randomMoney = 5500; // This is for random money generated, when you bet your money
@@ -56,7 +55,7 @@ public class slots {
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
-        String playerInput = in.nextLine();
+        String playerInput = instructions.nextLine();
 
         if(playerInput.equals("G") || playerInput.equals("g")) {
             System.out.println("\nInstructions: ");
@@ -90,7 +89,7 @@ public class slots {
 
         System.out.println("\nPlease confrim if you want to place this bet (Y/N): ");
 
-        String confrimBet = newScanner.nextLine();
+        String confrimBet = playerConfrimBet.nextLine();
 
         if(confrimBet.equals("Y") || confrimBet.equals("y")) {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");

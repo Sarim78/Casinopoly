@@ -12,17 +12,16 @@ import src.player2;
  */
 
 public class cardGame {
-
-    //TODO give out money and close scanners
-
     // Creating Objects 
-
     Random rnd = new Random(); 
     
     Scanner in = new Scanner(System.in);
 
+    player player = new player();
+
+    player2 player2 = new player2();
+
     // Creating Variables
-    
     int numberLimit = 50; // this is for a limit that the numberGenerator() method can use
 
     int num1; // this Variable is for the method called numberGenerator()
@@ -36,6 +35,8 @@ public class cardGame {
     int playerBet;
 
     int aiNum;
+
+    int playerEarningRandomAmountMoney;
 
     // Creating Methods
     
@@ -103,7 +104,7 @@ public class cardGame {
         System.out.println("You have placed a bet of $" + bet);
         System.out.println("Please confrim if you want to place this bet (Y/N): ");
 
-        String confrimBet = newScanner.nextLine();
+        String confrimBet = confrimingBet.nextLine();
 
         if(confrimBet.equals("Y") || confrimBet.equals("y")) {
             System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
@@ -119,6 +120,7 @@ public class cardGame {
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
+        Scanner instructions = new Scanner(System.in);;
         String playerInput = in.nextLine();
 
         if(playerInput.equals("G") || playerInput.equals("g")) {
@@ -156,10 +158,10 @@ public class cardGame {
     public void HiLo() {
 
         while(true) {
-            Scanner HiLo = new Scanner(System.in);
-        
             // Player guess if the number is Hi or Lo
             System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
+
+            Scanner newUserInput = new Scanner(System.in);
     
             String userInput = newUserInput.nextLine();
             
@@ -168,32 +170,29 @@ public class cardGame {
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
-                    HiLo.close();
                     break;
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
-                    HiLo.close();
                     break;
                 }
+                newUserInput.close();
 
             } else if (userInput.equals("Lo") || userInput.equals("lo")) {
     
                 if(ai < num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
-                    HiLo.close();
                     break;
                 } else if(ai > num1) {
                     System.out.println("\nSorry, you lost :(");
-                    HiLo.close();
                     break;
                 }
-                
+                newUserInput.close();
             } else {
                 System.out.println("You only can pick between (Hi/Lo)"); 
                 HiLo();
-                HiLo.close();
             }
+            newUserInput.close();
         }
     }
 

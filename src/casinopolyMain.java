@@ -15,9 +15,8 @@ import game.wheelMethods;
 public class casinopolyMain {
     public static void main(String[] args) {
 
-        blackJack blackJack = new blackJack();
-        blackJack.blackjack();
->>>>>>> a95ed53c86eef0e74c15d1c1609bd889bcc6371a
+        // blackJack blackJack = new blackJack();
+        // blackJack.blackjack();
         
         // slots slots = new slots();
         // slots.instructions();
@@ -34,11 +33,10 @@ public class casinopolyMain {
         // chanceWheel chanceWheel = new chanceWheel();
         // chanceWheel.chancesOfWheel();
 
-<<<<<<< HEAD
         // penaltyWheel penaltyWheel = new penaltyWheel();
         // penaltyWheel.wheelOfPenalty();
-=======
-        penaltyWheel penaltyWheel = new penaltyWheel();
-        penaltyWheel.wheelOfPenalty();
+
+        // penaltyWheel penaltyWheel = new penaltyWheel();
+        // penaltyWheel.wheelOfPenalty();
     }
 }
