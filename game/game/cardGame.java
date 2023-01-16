@@ -96,26 +96,6 @@ public class cardGame {
         }
     }
 
-    public void confrimBet() {
-        // this method will confrim the player bet
-
-        Scanner confrimingBet = new Scanner(System.in);
-
-        System.out.println("You have placed a bet of $" + bet);
-        System.out.println("Please confrim if you want to place this bet (Y/N): ");
-
-        String confrimBet = confrimingBet.nextLine();
-
-        if(confrimBet.equals("Y") || confrimBet.equals("y")) {
-            System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
-            confrimingBet.close();
-        } else if(confrimBet.equals("N") || confrimBet.equals("n")) {
-            System.out.println("\nPlease Re-Enter Your Bet.");
-            bet();
-            confrimingBet.close();
-        }
-    }
-
     public void instructions() { 
         // This methid will tell the players the instructions of this mini game
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
@@ -132,8 +112,8 @@ public class cardGame {
             System.out.println("If you get the answer wrong, you will lose all the money you gained from this mini game and the game will end...");
             System.out.println("Otherwise, you will keep going on until you lose. You will earn $2k every round you WIN!");
             bet(); 
-            confrimBet(); 
             numberGenerator(); 
+            confrimBet(); 
             Ai(); 
             HiLo(); 
             instructions.close();
@@ -147,6 +127,27 @@ public class cardGame {
         }
     }
 
+    public void confrimBet() {
+        // this method will confrim the player bet
+        Scanner confrimbet = new Scanner(System.in);
+
+        System.out.println("You have placed a bet of $" + bet);
+        System.out.println("Please confrim if you want to place this bet (Y/N): ");
+
+        String userConfrimBet = confrimbet.nextLine();
+
+        if(userConfrimBet.equals("Y") || userConfrimBet.equals("y")) {
+            System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
+            confrimbet.close();
+        } else if(userConfrimBet.equals("N") || userConfrimBet.equals("n")) {
+            System.out.println("\nPlease Re-Enter Your Bet.");
+            bet();
+        } else {
+            System.out.println("\nERROR");
+            confrimbet.close();
+        }
+    }
+
     public void Ai() {
         // this method will let the ai think of a number greater than or less then numberGenerator() method
         System.out.println("\nAi: Am i thinking of an number higher or Lower of: " + num1 + "?");
@@ -157,11 +158,11 @@ public class cardGame {
 
     public void HiLo() {
 
+        Scanner newUserInput = new Scanner(System.in);
+
         while(true) {
             // Player guess if the number is Hi or Lo
             System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
-
-            Scanner newUserInput = new Scanner(System.in);
     
             String userInput = newUserInput.nextLine();
             
@@ -170,39 +171,40 @@ public class cardGame {
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
+                    newUserInput.close();
                     break;
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
+                    newUserInput.close();
                     break;
                 }
-                newUserInput.close();
-
             } else if (userInput.equals("Lo") || userInput.equals("lo")) {
     
                 if(ai < num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
+                    newUserInput.close();
                     break;
                 } else if(ai > num1) {
                     System.out.println("\nSorry, you lost :(");
+                    newUserInput.close();
                     break;
                 }
-                newUserInput.close();
             } else {
                 System.out.println("You only can pick between (Hi/Lo)"); 
                 HiLo();
+                newUserInput.close();
             }
-            newUserInput.close();
         }
     }
 
-    public void cardgame() {
-            // Calling all methods into one method
-            instructions(); 
-            bet(); 
-            confrimBet(); 
-            numberGenerator(); 
-            Ai(); 
-            HiLo(); 
-    }
+    // public void cardgame() {
+    //         // Calling all methods into one method
+    //         instructions(); 
+    //         bet(); 
+    //         confrimBet(); 
+    //         numberGenerator(); 
+    //         Ai(); 
+    //         HiLo(); 
+    // }
 }   

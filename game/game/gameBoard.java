@@ -119,7 +119,7 @@ public class gameBoard {
     } else if(totalSpace == 7 || totalSpace == 18) {
       // cardgame
       System.out.println(showSpace);
-      cardGame.cardgame();
+      cardGame.instructions();
 
     } else if(totalSpace == 8) {
       // Jail
