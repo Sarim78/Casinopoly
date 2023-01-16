@@ -27,6 +27,7 @@ public class jackpotWheel {
     //Creating Methods
     
     public void jackpotwheel() {
+        System.out.println("\nWelcome to the jackpot wheel, where your biggest and wildest dreams come true!");
         spinWheel = rnd.nextInt(1,11);
         System.out.println("\nSpinning the jackpot wheel...");
         try {
