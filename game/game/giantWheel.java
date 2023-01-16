@@ -39,6 +39,7 @@ public class giantWheel {
     //Creating Methods
 
     public void giantwheel() {
+        System.out.println("\nWelcome to the Giant Casinopoly Wheel, where the outcomes are endless!");
         spinWheel = rnd.nextInt(1,15);
         System.out.println("\nSpinning the giant Casinopoly wheel...");
         try {

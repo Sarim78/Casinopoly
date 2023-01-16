@@ -4,8 +4,6 @@ package game;
 import java.util.Random;
 import java.util.Scanner;
 
-// Importing Files 
-
 public class allorNothing {
     
     // Creating Objects
