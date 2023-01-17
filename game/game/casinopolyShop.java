@@ -88,114 +88,42 @@ public class casinopolyShop {
         if (shopCounter > 0) {
             System.out.println("\nAnything else you would like to buy? Enter the number of your selected choice or press X to exit the shop.");
             System.out.println("\nRemember, you can only make 5 purchases!");
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep1500();
         }
         System.out.println("\nCasinopoly Shop Items: ");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\n1. Buy 1 spin of the Giant Casinopoly Wheel ($1K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\n2. Buy 1 spin of the Chance Wheel ($1K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("\n3. Buy a 50% chance of winning a one-time use get out of jail for free card ($2.5K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
+        System.out.println("\n1. Buy a 50% chance of winning a one-time use get out of jail for free card ($2.5K)");
+        sleep100();
         System.out.println("\n4. Buy a one-time use re-roll powerup ($5K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("\n5. Buy a one-time use powerup that allows you to advance 1-5 spaces ($3.5K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
+        System.out.println("\n5. Buy a one-time use powerup that allows you to advance 1-5 spaces ($1.5K)");
+        sleep100();
         System.out.println("\n6. Buy a one-time use powerup that allows you to refuse when you owe the other player ($5K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\n7. Buy a one-time use powerup that allows you to not only refuse when you owe the other player, but now they owe that money to you ($10K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\n8. Buy a one-time use powerup that allows you to re-spin a wheel (works for any wheel) ($10K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("\n9. Buy a one-time use powerup that allows you to move the other player 1-3 spaces ($7K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
+        System.out.println("\n9. Buy a one-time use powerup that allows you to move the other player 1-1 spaces ($7K)");
+        sleep100();
         System.out.println("\n10. Buy a one-time use powerup that allows you to put the other player in jail ($12.5K)");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\n11. Buy a lottery ticket:");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\nA lottery ticket of $1K gives you a 15% chance of winning the $15K jackpot");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("\nA lottery ticket of $2.5K gives you a 15% chance of winning the $30K jackpot");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
+        System.out.println("\nA lottery ticket of $2.5K gives you a 15% chance of winning the $10K jackpot");
+        sleep100();
         System.out.println("\nA lottery ticket of $5K gives you a 15% chance of winning the $50K jackpot");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\n12. Betting options:");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         System.out.println("\nBetting options are unavailable at this time");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep100();
         if (allOrNothing > 0) {
             System.out.println("\n13. You also have been given the option to play all or nothing! Risk almost all your money for the chance of doubling your entire total!");
             try {
@@ -723,49 +651,25 @@ public class casinopolyShop {
             System.out.println(exitShop);
         } else {
             System.out.println("\nInvalid input! Please try again");
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep1500();
             displayBuyingOptions();
         }
     }
 
     public void lotteryTickets() {
         System.out.println("\nWhich lottery ticket would you like to purchase? Enter the number please");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep300();
         System.out.println("\n1. $1K lottery ticket, 15% chance of winning the $15K jackpot");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep300();
         System.out.println("\n2. $2.5K lottery ticket, 15% chance of winning the $30K jackpot");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep300();
         System.out.println("\n3. $5K lottery ticket, 15% chance of winning the $50K jackpot");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep300();
         Scanner in = new Scanner(System.in);
         ticketChoice = in.nextLine();
         if (ticketChoice.equals("1")) {
             System.out.println("You bought the $1K lottery ticket! Will today be your lucky day...");
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep3000();
             lotteryTicket1 = rnd.nextInt(1,100);
             if (lotteryTicket1 <= 15) {
                 System.out.println(bigWinner);
@@ -780,11 +684,7 @@ public class casinopolyShop {
             }
         } else if (ticketChoice.equals("2")) {
             System.out.println("You bought the $2.5K lottery ticket! Will today be your lucky day...");
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep3000();
             lotteryTicket2 = rnd.nextInt(1,100);
             if (lotteryTicket2 <= 15) {
                 System.out.println(bigWinner);
@@ -799,11 +699,7 @@ public class casinopolyShop {
             }
         } else if (ticketChoice.equals("3")) {
             System.out.println("You bought the $5K lottery ticket! Will today be your lucky day...");
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep3000();
             lotteryTicket3 = rnd.nextInt(1,100);
             if (lotteryTicket3 <= 15) {
                 System.out.println(bigWinner);
@@ -837,11 +733,7 @@ public class casinopolyShop {
 
     public void exitShop() {
         System.out.println("\nWoah, slow down! You have reached the max purchase limit. This means you can no longer make any more purchases.");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep300();
         System.out.println("\nWould you like to exit the shop? Press anything to confirm.");
         Scanner in = new Scanner(System.in);
         plsExit = in.nextLine();
@@ -853,6 +745,38 @@ public class casinopolyShop {
 
     public void casinopolyshop() {
         welcome();
+    }
+
+    public void sleep3000() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sleep300() {
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sleep1500() {
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sleep100() {
+        try {
+            Thread.sleep(150);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     
 }

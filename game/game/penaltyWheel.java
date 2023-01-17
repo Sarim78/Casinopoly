@@ -87,7 +87,6 @@ public class penaltyWheel {
 
                     // This method will be called when player bymistake click another letter!
                     wheelOfPenalty();
-                    break;
                 }
             }
     }
