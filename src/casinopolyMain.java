@@ -43,8 +43,11 @@ public class casinopolyMain {
         //penaltyWheel penaltyWheel = new penaltyWheel();
         //penaltyWheel.wheelOfPenalty();
 
-        //wheelMethods wheelMethods = new wheelMethods();
-        //wheelMethods.moneyTaken();
+        wheelMethods wheelMethods = new wheelMethods();
+        wheelMethods.advanceStart();
+
+        player player = new player();
+        System.out.println(player.totalSpace);
 
         //giantWheel giantWheel = new giantWheel();
         //giantWheel.giantwheel();
@@ -58,7 +61,8 @@ public class casinopolyMain {
         //startAndGo startAndGo = new startAndGo();
         //startAndGo.start();
 
-        turns turns = new turns();
-        turns.playerTurn1();
+        //turns turns = new turns();
+        //turns.noNamefornow();
+        //turns.playerTurn1();
     }
 }

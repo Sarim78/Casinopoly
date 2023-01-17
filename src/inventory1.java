@@ -6,5 +6,21 @@ package src;
  */
 
 public class inventory1 {
+
+    String getOutOfJailFreeCard;
+
+    String reroll;
+
+    String advanceSpaces;
+
+    String refuseRent;
+
+    String reverseRent;
+
+    String reSpin;
+
+    String controlOpponent;
+
+    String jailSentence;
     
 }

@@ -33,7 +33,7 @@ public class jackpotWheel {
     
     public void jackpotwheel() {
         System.out.println("\nWelcome to the jackpot wheel, where your biggest and wildest dreams come true!");
-        spinWheel = rnd.nextInt(1,11);
+        spinWheel = rnd.nextInt(1,7);
         System.out.println("\nSpinning the jackpot wheel...");
         try {
             Thread.sleep(3000);
@@ -71,6 +71,8 @@ public class jackpotWheel {
             wheelMethods.winMoney();
         } else if (spinWheel == 6) {
             wheelMethods.takeMoney();
+        } else if (spinWheel == 7) {
+            wheelMethods.powerUp();
         }
     }
 }

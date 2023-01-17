@@ -72,7 +72,7 @@ public class chanceWheel {
 
             } else if (randomSlot == 4) {
                 // This will call raffelCard() method
-                //wheelMethods.raffelCard();
+                wheelMethods.raffelCard();
                 
             } else if (randomSlot == 5) {
                 // This will call yourBirthday() method
