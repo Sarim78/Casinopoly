@@ -2,6 +2,8 @@ package src;
 
 // Importing Libraries 
 import java.util.Random;
+import java.util.Scanner;
+import java.lang.Math;
 
 /**
  * Player 1 Data
@@ -26,12 +28,5 @@ public class player {
 
     public String name;
 
-    public void playerTurn() {
-        System.out.println(name + ", it's your turn! What would you like to do?");
-        System.out.println("\nPress (H) to view game instructions");
-        System.out.println("\nPress (I) to view inventory");
-        System.out.println("\nPress (M) to view your current money total");
-        System.out.println("\nPress (S) to view what space you're currently on");
-        System.out.println("\nPress (R) to roll and begin your turn!");
-    }
+    String choice;
 }
