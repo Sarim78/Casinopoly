@@ -126,6 +126,7 @@ public class blackJack {
 
 
     public void playerPickingCards() {
+        
         minMoneyEarnedBeforeRound = wager*0.2 + wager;
         minMoneyEarned = Math.round(minMoneyEarnedBeforeRound*1000.00/1000.00);
         maxMoneyEarned = wager*2;
@@ -140,9 +141,12 @@ public class blackJack {
         moneyEarnedLoss = Math.round(moneyEarnedLossBeforeRound*1000.00/1000.00);
         moneyLostBeforeRound = wager - moneyEarnedLoss;
         moneyLost = Math.round(moneyLostBeforeRound*1000.00/1000.00);
+
         System.out.println("\nWould you like to hit or stand? Enter h for hit, s for stand");
         Scanner inCards = new Scanner(System.in);
+        
         playerDecision = inCards.nextLine();
+
         if (playerDecision.equals("H")|| playerDecision.equals("h")) {
             playerCardValue = rnd.nextInt(1,11) + playerCardValue;
             System.out.println("\nYour card value is now: " + playerCardValue);

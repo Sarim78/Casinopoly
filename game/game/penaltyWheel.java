@@ -11,9 +11,6 @@ import java.lang.Thread;
  */
 
 public class penaltyWheel {
-
-    //TODO make penaltywheel not optional
-
     // Creating Objects  
 
     Random rnd = new Random();
@@ -48,7 +45,7 @@ public class penaltyWheel {
         instructions();
 
        // this will allow the player to input to spin the wheel
-       System.out.println("\nClick (G) To Spin The Wheel or to exit, press anything: ");
+       System.out.println("\nClick (G) To Spin The Wheel!");
        playerInput = in.nextLine();
             // this if statement will check the user input
             if(playerInput.equals("G") || playerInput.equals("g")) {
@@ -85,10 +82,12 @@ public class penaltyWheel {
                 }               
                 else {
                     // If player decides to click any button expect for (G), the loop will print the else statement 
-                    System.out.println("\nYou have exited out of Chances Of Wheel...");
-                    System.out.println("\nSad To See You GO :(");
+                    System.out.println("\nERROR");
+                    System.out.println("Please Spin Again");
 
-                    // this loop will break, if the player decides to leave the Chances Wheel
+                    // This method will be called when player bymistake click another letter!
+                    wheelOfPenalty();
+                    break;
                 }
             }
     }
