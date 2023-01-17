@@ -12,7 +12,9 @@ import src.player2;
  */
 
 public class cardGame {
+
     // Creating Objects 
+    
     Random rnd = new Random(); 
     
     Scanner in = new Scanner(System.in);
@@ -22,6 +24,7 @@ public class cardGame {
     player2 player2 = new player2();
 
     // Creating Variables
+
     int numberLimit = 50; // this is for a limit that the numberGenerator() method can use
 
     int num1; // this Variable is for the method called numberGenerator()
@@ -159,8 +162,6 @@ public class cardGame {
     public void HiLo() {
 
         Scanner newUserInput = new Scanner(System.in);
-
-        while(true) {
             // Player guess if the number is Hi or Lo
             System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
     
@@ -172,11 +173,9 @@ public class cardGame {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
                     newUserInput.close();
-                    break;
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
                     newUserInput.close();
-                    break;
                 }
             } else if (userInput.equals("Lo") || userInput.equals("lo")) {
     
@@ -184,18 +183,15 @@ public class cardGame {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
                     newUserInput.close();
-                    break;
                 } else if(ai > num1) {
                     System.out.println("\nSorry, you lost :(");
                     newUserInput.close();
-                    break;
                 }
             } else {
                 System.out.println("You only can pick between (Hi/Lo)"); 
                 HiLo();
                 newUserInput.close();
             }
-        }
     }
 
     // public void cardgame() {

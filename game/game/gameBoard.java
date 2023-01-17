@@ -1,7 +1,6 @@
 package game;
 
 // Importing Libraries 
-import java.util.Scanner;
 import java.util.Random;
 
 // Importing Files 
@@ -19,8 +18,6 @@ public class gameBoard {
   // Creating Objects 
 
   Random rnd = new Random();
-
-  Scanner in = new Scanner(System.in);
 
   player player = new player();
 

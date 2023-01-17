@@ -1,19 +1,26 @@
 package src;
 
 // Game Package File
+import game.allorNothing;
 import game.blackJack;
 import game.cardGame;
+import game.casinopolyShop;
 import game.chanceWheel;
-import game.slots;
-import game.Roulette;
-import game.allorNothing;
 import game.gameBoard;
+import game.giantWheel;
+import game.jackpotWheel;
 import game.penaltyWheel;
+import game.Roulette;
+import game.slots;
+import game.startAndGo;
 import game.wheelMethods;
 
 // Main Code Of The Game Goes Here
 public class casinopolyMain {
     public static void main(String[] args) {
+
+        casinopolyShop casinopolyShop = new casinopolyShop();
+        casinopolyShop.casinopolyshop();
 
         // blackJack blackJack = new blackJack();
         // blackJack.blackjack();
@@ -21,8 +28,8 @@ public class casinopolyMain {
         // slots slots = new slots();
         // slots.instructions();
         
-        cardGame cardGame = new cardGame();
-        cardGame.instructions();
+        //cardGame cardGame = new cardGame();
+        //cardGame.instructions();
 
         // Roulette Roulette = new Roulette();
         // Roulette.roulette();

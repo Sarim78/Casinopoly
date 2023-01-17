@@ -50,8 +50,6 @@ public class penaltyWheel {
        // this will allow the player to input to spin the wheel
        System.out.println("\nClick (G) To Spin The Wheel or to exit, press anything: ");
        playerInput = in.nextLine();
-
-       while(true) {
             // this if statement will check the user input
             if(playerInput.equals("G") || playerInput.equals("g")) {
                 System.out.println("Spinning the penalty wheel...");
@@ -67,28 +65,23 @@ public class penaltyWheel {
                 if(randomSlot == 1) {
                     // goToJail method
                     wheelMethods.goToJail();
-                    break;
 
                 } else if (randomSlot == 2) {
                     // playerChoosesToMoveYou method
 
                     wheelMethods.playerChoosesToMoveYou();
-                    break;
 
                 } else if (randomSlot == 3) {
                     // playerLosesMoney method
                     wheelMethods.loseMoney();
-                    break;
 
                 } else if (randomSlot == 4) {
                     // payingOtherPlayer method
                     wheelMethods.moneyTaken();
-                    break;
                     
                 } else if (randomSlot == 5) {
                     // movingPrevelges method
                     wheelMethods.movingPrevelges();    
-                    break;
                 }               
                 else {
                     // If player decides to click any button expect for (G), the loop will print the else statement 
@@ -96,9 +89,7 @@ public class penaltyWheel {
                     System.out.println("\nSad To See You GO :(");
 
                     // this loop will break, if the player decides to leave the Chances Wheel
-                    break;
                 }
             }
-        }
     }
 }
