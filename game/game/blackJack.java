@@ -5,6 +5,7 @@ import java.lang.Math;
 
 
 /**
+ * blackjack
 @author adil
  */
 public class blackJack {

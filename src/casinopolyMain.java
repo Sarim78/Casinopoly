@@ -19,8 +19,8 @@ import game.wheelMethods;
 public class casinopolyMain {
     public static void main(String[] args) {
 
-        casinopolyShop casinopolyShop = new casinopolyShop();
-        casinopolyShop.casinopolyshop();
+        //casinopolyShop casinopolyShop = new casinopolyShop();
+        //casinopolyShop.casinopolyshop();
 
         //blackJack blackJack = new blackJack();
         //blackJack.blackjack();
@@ -57,5 +57,8 @@ public class casinopolyMain {
 
         //startAndGo startAndGo = new startAndGo();
         //startAndGo.start();
+
+        turns turns = new turns();
+        turns.playerTurn1();
     }
 }

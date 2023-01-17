@@ -1,10 +1,10 @@
 package src;
 
 /**
- * Chances Wheel
+ * Player 1 
  * @athuor Sarim Siddiqui
  */
 
-public class Inventory {
+public class inventory1 {
     
 }

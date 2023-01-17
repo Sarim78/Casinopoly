@@ -9,6 +9,12 @@ import java.lang.Math;
 import src.player;
 import src.player2;
 
+/**
+ * wheel methods
+ * @author adil
+ * @author Sarim Siddiqui
+ */
+
 public class wheelMethods {
 
     // Creating Objects

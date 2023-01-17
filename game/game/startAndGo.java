@@ -5,8 +5,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * //TODO NOT Casino Slot Game
- * @athuor Sarim Siddiqui
+ * start
+ * @athuor adil
  */
 
 public class startAndGo {

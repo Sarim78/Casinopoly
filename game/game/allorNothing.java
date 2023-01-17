@@ -5,6 +5,11 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Thread;
 
+/**
+ * All or Nothing
+ * @author adil
+ */
+
 public class allorNothing {
     
     // Creating Objects

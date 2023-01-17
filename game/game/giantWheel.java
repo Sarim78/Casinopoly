@@ -4,6 +4,11 @@ import java.util.Scanner;
 import java.util.Random;
 import java.lang.Thread;
 
+/**
+ * Giant Wheel
+ * @author adil
+ */
+
 public class giantWheel {
 
     // Creating Objects

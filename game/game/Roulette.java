@@ -2,6 +2,11 @@ package game;
 import java.util.Scanner;
 import java.util.Random;
 
+/**
+ * Roulette
+ * @author adil
+ */
+
 public class Roulette {
 
     //Creating Objects

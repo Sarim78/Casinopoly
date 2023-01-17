@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.lang.Thread;
 
 /**
- * Chances Wheel
+ * Penalty Wheel
  * @athuor Sarim Siddiqui
  */
 
