@@ -22,28 +22,40 @@ public class casinopolyMain {
         casinopolyShop casinopolyShop = new casinopolyShop();
         casinopolyShop.casinopolyshop();
 
-        // blackJack blackJack = new blackJack();
-        // blackJack.blackjack();
+        //blackJack blackJack = new blackJack();
+        //blackJack.blackjack();
         
-        // slots slots = new slots();
-        // slots.instructions();
+        //slots slots = new slots();
+        //slots.instructions();
         
         //cardGame cardGame = new cardGame();
         //cardGame.instructions();
 
-        // Roulette Roulette = new Roulette();
-        // Roulette.roulette();
+        //Roulette Roulette = new Roulette();
+        //Roulette.roulette();
 
-        // gameBoard gameBoard = new gameBoard();
-        // gameBoard.dice();
+        //gameBoard gameBoard = new gameBoard();
+        //gameBoard.dice();
 
-        // chanceWheel chanceWheel = new chanceWheel();
-        // chanceWheel.chancesOfWheel();
+        //chanceWheel chanceWheel = new chanceWheel();
+        //chanceWheel.chancewheel();
 
-        // penaltyWheel penaltyWheel = new penaltyWheel();
-        // penaltyWheel.wheelOfPenalty();
+        //penaltyWheel penaltyWheel = new penaltyWheel();
+        //penaltyWheel.wheelOfPenalty();
 
-        // penaltyWheel penaltyWheel = new penaltyWheel();
-        // penaltyWheel.wheelOfPenalty();
+        //wheelMethods wheelMethods = new wheelMethods();
+        //wheelMethods.moneyTaken();
+
+        //giantWheel giantWheel = new giantWheel();
+        //giantWheel.giantwheel();
+
+        //allorNothing allorNothing = new allorNothing();
+        //allorNothing.allOrNothing();
+
+        //jackpotWheel jackpotWheel = new jackpotWheel();
+        //jackpotWheel.jackpotwheel();
+
+        //startAndGo startAndGo = new startAndGo();
+        //startAndGo.start();
     }
 }

@@ -22,17 +22,9 @@ public class giantWheel {
 
     // Creating Variables
 
-    double winMoney;
-
-    double loseMoney;
-
     int spinWheel;
 
     int jackpot;
-
-    double takeMoney;
-
-    double moneyTaken;
 
     String choice;
 
@@ -81,16 +73,12 @@ public class giantWheel {
                 jackpotWheel.jackpotwheel();
             }
         } else if (spinWheel == 8) {
-            winMoney = rnd.nextDouble(1000,20000);
             wheelMethods.winMoney();
         } else if (spinWheel == 9) {
-            loseMoney = rnd.nextDouble(1000,20000);
             wheelMethods.loseMoney();
         } else if (spinWheel == 10) {
-            takeMoney = rnd.nextDouble(1000,10000);
             wheelMethods.takeMoney();
         } else if (spinWheel == 11) {
-            moneyTaken = rnd.nextDouble(1000,10000);
             wheelMethods.moneyTaken();
         } else if (spinWheel == 12) {
             System.out.println("\nThe other player has won a move control powerup! This means they can move you 1-3 spaces at any time (one time use).");

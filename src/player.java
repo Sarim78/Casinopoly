@@ -19,4 +19,8 @@ public class player {
     public int space = 1;
 
     public double playersMoney = 10000;
+
+    public int diceRoller = rnd.nextInt(1, 6);
+
+    public int totalSpace = space + diceRoller;
 }

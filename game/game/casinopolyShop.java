@@ -11,9 +11,9 @@ public class casinopolyShop {
 
     Random rnd = new Random();
 
-    //giantWheel giantWheel = new giantWheel();
+    giantWheel giantWheel = new giantWheel();
 
-    //chanceWheel chanceWheel = new chanceWheel();
+    chanceWheel chanceWheel = new chanceWheel();
 
     allorNothing allorNothing = new allorNothing();
 
@@ -124,13 +124,9 @@ public class casinopolyShop {
         sleep100();
         System.out.println("\nBetting options are unavailable at this time");
         sleep100();
-        if (allOrNothing > 0) {
+        if (allOrNothing == 5) {
             System.out.println("\n13. You also have been given the option to play all or nothing! Risk almost all your money for the chance of doubling your entire total!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
         }
         userInput();
     }
@@ -140,39 +136,23 @@ public class casinopolyShop {
         
         if (shopCounter == 0) {
             System.out.println(message);
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
         }
         Scanner in = new Scanner(System.in);
         buyingOption = in.nextLine();
         if (buyingOption.equals("1") && timesBoughtGiantWheel > 0) {
             System.out.println(buyingLimit);
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             userInput();
             in.close();
         } else if (buyingOption.equals("2") && timesBoughtChanceWheel > 0) {
             System.out.println(buyingLimit);
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             userInput();
             in.close();
         } else if (buyingOption.equals("13") && allOrNothing == 5 && allorNothingCounter > 0) {
             System.out.println(buyingLimit);
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             userInput();
             in.close();
         } else if (shopCounter > 5) {
@@ -187,94 +167,60 @@ public class casinopolyShop {
     public void giveStuff() {
         if (buyingOption.equals("1")) {
             System.out.println("\nYou have bought 1 spin of the Giant Casinopoly wheel for $1K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
-                //giantWheel.giantwheel();
                 System.out.println(confirmPurchase);
+                sleep300();
                 timesBoughtGiantWheel = timesBoughtGiantWheel + 1;
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                giantWheel.giantwheel();
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("2")) {
             System.out.println("\nYou have bought 1 spin of the Chance wheel for $1K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
-                //chanceWheel.chancesOfWheel();
                 System.out.println(confirmPurchase);
+                sleep300();
                 timesBoughtChanceWheel = timesBoughtChanceWheel + 1;
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                chanceWheel.chancesOfWheel();
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("3")) {
             System.out.println("\nYou have bought a 50% chance of winning a one-time use get out of jail for free card for $2.5K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 shopCounter = shopCounter + 1;
                 getoutofJail = rnd.nextInt(1,100);
                 if (getoutofJail >= 1 && getoutofJail <= 50) {
@@ -283,367 +229,211 @@ public class casinopolyShop {
                 } else if (getoutofJail >= 51 && getoutofJail <= 100) {
                     System.out.println("\nSorry, you didn't win a get out of jail for free card. Better luck next time!");
                 }
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("4")) {
             System.out.println("\nYou have bought a one-time use re-roll powerup for $5K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\nThe re-roll powerup will be added to your inventory.");
                 //add it to their inventory
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("5")) {
             System.out.println("\nYou have bought a one-time use advance spaces powerup for $3.5K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\nThe advance spaces powerup will be added to your inventory.");
                 //add it to their inventory
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("6")) {
             System.out.println("\nYou have bought a one-time use refuse rent powerup for $5K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\nThe refuse rent powerup will be added to your inventory.");
                 //add it to their inventory
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("7")) {
             System.out.println("\nYou have bought a one-time use reverse rent powerup for $10K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\nThe reverse rent powerup will be added to your inventory.");
                 //add it to their inventory
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("8")) {
             System.out.println("\nYou have bought a one-time use re-spin wheel powerup for $10K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\nThe re-spin wheel powerup will be added to your inventory.");
                 //add it to their inventory
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("9")) {
             System.out.println("\nYou have bought a one-time use control opponent powerup for $10K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\nThe control opponent powerup will be added to your inventory.");
                 //add it to their inventory
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             }
         } else if (buyingOption.equals("10")) {
             System.out.println("\nYou have bought a one-time use jail sentence powerup for $12.5K!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\nThe jail sentence powerup will be added to your inventory.");
                 //add it to their inventory
                 shopCounter = shopCounter + 1;
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } 
         } else if (buyingOption.equals("11")) {
             System.out.println("\nYou have decided to buy one of the three lottery tickets!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 shopCounter = shopCounter + 1;
                 lotteryTickets();
                 in.close();
             } 
         } else if (buyingOption.equals("12")) {
             System.out.println("\nYou have decided to wager on the game!");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
                 System.out.println("no betting lol");
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } 
-        } else if (buyingOption.equals("13") && allOrNothing > 0) {
+        } else if (buyingOption.equals("13") && allOrNothing == 5) {
             System.out.println("\nYou have decided to go ALL OR NOTHING");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             System.out.println(confirm);
             Scanner in = new Scanner(System.in);
             confirmChoice = in.nextLine();
             if (confirmChoice.equals("n") || confirmChoice.equals("N")) {
                 System.out.println(withdraw);
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } else {
                 System.out.println(confirmPurchase);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 allorNothingCounter = allorNothingCounter + 1;
                 shopCounter = shopCounter + 1;
                 allorNothing.allOrNothing();
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep1500();
                 displayBuyingOptions();
                 in.close();
             } 
@@ -673,11 +463,7 @@ public class casinopolyShop {
             lotteryTicket1 = rnd.nextInt(1,100);
             if (lotteryTicket1 <= 15) {
                 System.out.println(bigWinner);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\n$15K will be added to your total.");
             } else if (lotteryTicket1 > 15) {
                 System.out.println(bigLoser);
@@ -688,11 +474,7 @@ public class casinopolyShop {
             lotteryTicket2 = rnd.nextInt(1,100);
             if (lotteryTicket2 <= 15) {
                 System.out.println(bigWinner);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\n$30K will be added to your total.");
             } else if (lotteryTicket2 > 15) {
                 System.out.println(bigLoser);
@@ -703,30 +485,18 @@ public class casinopolyShop {
             lotteryTicket3 = rnd.nextInt(1,100);
             if (lotteryTicket3 <= 15) {
                 System.out.println(bigWinner);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep300();
                 System.out.println("\n$50K will be added to your total.");
             } else if (lotteryTicket3 > 15) {
                 System.out.println(bigLoser);
             }
         } else {
             System.out.println("Invalid input! Please try again.");
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep300();
             lotteryTickets();
             in.close();
         }
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep2000();
         displayBuyingOptions();
         in.close();
     }
@@ -778,5 +548,13 @@ public class casinopolyShop {
             e.printStackTrace();
         }
     }
-    
+
+    public void sleep2000() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -23,6 +23,8 @@ public class penaltyWheel {
 
     String playerInput;
 
+    int randomSlot;
+
     // Creating Methods
     
     public void instructions() {
@@ -47,47 +49,47 @@ public class penaltyWheel {
        // this will allow the player to input to spin the wheel
        System.out.println("\nClick (G) To Spin The Wheel!");
        playerInput = in.nextLine();
-            // this if statement will check the user input
-            if(playerInput.equals("G") || playerInput.equals("g")) {
-                System.out.println("Spinning the penalty wheel...");
-                try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                // Creating a object for the random library 
-                int randomSlot = rnd.nextInt(1, 5);
-
-                // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
-                if(randomSlot == 1) {
-                    // goToJail method
-                    wheelMethods.goToJail();
-
-                } else if (randomSlot == 2) {
-                    // playerChoosesToMoveYou method
-
-                    wheelMethods.playerChoosesToMoveYou();
-
-                } else if (randomSlot == 3) {
-                    // playerLosesMoney method
-                    wheelMethods.loseMoney();
-
-                } else if (randomSlot == 4) {
-                    // payingOtherPlayer method
-                    wheelMethods.moneyTaken();
-                    
-                } else if (randomSlot == 5) {
-                    // movingPrevelges method
-                    wheelMethods.movingPrevelges();    
-                }               
-                else {
-                    // If player decides to click any button expect for (G), the loop will print the else statement 
-                    System.out.println("\nERROR");
-                    System.out.println("Please Spin Again");
-
-                    // This method will be called when player bymistake click another letter!
-                    wheelOfPenalty();
-                }
+        // this if statement will check the user input
+        if(playerInput.equals("G") || playerInput.equals("g")) {
+            System.out.println("Spinning the penalty wheel...");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+            // Creating a object for the random library 
+            randomSlot = rnd.nextInt(1, 5);
+
+            // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
+            if(randomSlot == 1) {
+                // goToJail method
+                wheelMethods.goToJail();
+
+            } else if (randomSlot == 2) {
+                // playerChoosesToMoveYou method
+
+                wheelMethods.playerChoosesToMoveYou();
+
+            } else if (randomSlot == 3) {
+                // playerLosesMoney method
+                wheelMethods.loseMoney();
+
+            } else if (randomSlot == 4) {
+                // payingOtherPlayer method
+                wheelMethods.moneyTaken();
+                
+            } else if (randomSlot == 5) {
+                // movingPrevelges method
+                wheelMethods.movingPrevelges();    
+            }               
+            else {
+                // If player decides to click any button expect for (G), the loop will print the else statement 
+                System.out.println("\nERROR");
+                System.out.println("Please Spin Again");
+
+                // This method will be called when player bymistake click another letter!
+                wheelOfPenalty();
+            }
+        }
     }
 }

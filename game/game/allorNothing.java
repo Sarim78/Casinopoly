@@ -56,7 +56,6 @@ public class allorNothing {
             if (choice != 1 && choice != 2) {
                 System.out.println("\nYou have to pick a number from 1 or 2! Try again.");
                 game();
-                in.close();
             } else if (choice == aiPick) {
                 try {
                     Thread.sleep(3000);
@@ -64,7 +63,6 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nThe numbers match! Congratulations, you have won double your entire money!");
-                in.close();
             } else if (choice != aiPick) {
                 try {
                     Thread.sleep(3000);
@@ -74,6 +72,7 @@ public class allorNothing {
                 System.out.println("\nSorry, the numbers do not match. You have lost all your money and will now be left with just 5K :(");
                 in.close();
             }
+            in.close();
         } catch (Exception e) {
             System.out.println("\nInvalid input! Please try again.");
             game();
