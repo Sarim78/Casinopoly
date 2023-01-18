@@ -9,6 +9,12 @@ import java.lang.Math;
 import src.player;
 import src.player2;
 
+/**
+ * wheel methods
+ * @author adil
+ * @author Sarim Siddiqui
+ */
+
 public class wheelMethods {
 
     // Creating Objects
@@ -73,6 +79,8 @@ public class wheelMethods {
     double takeMoney;
 
     double moneyTaken;
+
+    int powerup;
 
     // Creating Methods
     
@@ -389,8 +397,8 @@ public class wheelMethods {
     // This 3 methods will be called if player lands on playerChoosesToMoveYou Slot
     public void playerChoosesToMoveYou() {
         // Player decides how much another player can move
-        System.out.println("\nAnother player has to decide, how much you have to move backwards!");
-        System.out.println("Player only can move another player between (1 - 3) spaces!");
+        System.out.println("\nThe other player has won a control opponent powerup! This means they can move you 1-3 spaces at any time (one time use).");
+        //give other player control opponent powerup
     }
 
     public void playerMove1() {
@@ -459,7 +467,7 @@ public class wheelMethods {
     public void movingPrevelges() {
         // @Author Sarim 
         // Player moving prevelges are gone until another player dont move more then 2 spaces
-        System.out.println("\nYour moving prevelges are gone until another player dont move more then 2 spaces!");
+        System.out.println("\nYou have lost one turn!");
         System.out.println("HAVE FUN!");
     }
 
@@ -516,6 +524,37 @@ public class wheelMethods {
         smallestRoulette = Math.min(rouletteDistance1, rouletteDistance2);
         smallestSlots = Math.min(slotsDistance1, slotsDistance2);
         smallest = Math.min(smallestBlackjack, Math.min(smallestcardGame, Math.min(smallestRoulette, smallestSlots)));
-        System.out.println(smallest);
+        player.totalSpace = smallest;
+    }
+
+    public void powerUp() {
+        powerup = rnd.nextInt(1,7);
+        if (powerup == 1) {
+            System.out.println("You won the advance spaces powerup! It will be added to your inventory");
+            //give advance spaces powerup
+        } else if (powerup == 2) {
+            System.out.println("You won the re-roll powerup! It will be added to your inventory");
+            //give reroll powerup
+        } else if (powerup == 3) {
+            System.out.println("You won the refuse rent powerup! It will be added to your inventory");
+            //give refuse rent powerup
+        } else if (powerup == 4) {
+            System.out.println("You won the reverse rent powerup! It will be added to your inventory");
+            //give reverse rent powerup
+        } else if (powerup == 5) {
+            System.out.println("You won the re-spin wheel powerup! It will be added to your inventory");
+            //give respin wheel powerup
+        } else if (powerup == 6) {
+            System.out.println("You won the control opponent powerup! It will be added to your inventory");
+            //give control opponent powerup
+        } else if (powerup == 7) {
+            System.out.println("You won the jail sentence powerup! It will be added to your inventory");
+            //give jail sentence powerup
+        }
+    }
+
+    public void advanceStart() {
+        System.out.println("\nAdvance to START!");
+        player.totalSpace = 1;
     }
 }

@@ -2,6 +2,8 @@ package src;
 
 // Importing Libraries 
 import java.util.Random;
+import java.util.Scanner;
+import java.lang.Math;
 
 /**
  * Player 1 Data
@@ -23,4 +25,8 @@ public class player {
     public int diceRoller = rnd.nextInt(1, 6);
 
     public int totalSpace = space + diceRoller;
+
+    public String name = "player1";
+
+    String choice;
 }

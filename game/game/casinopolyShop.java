@@ -5,6 +5,11 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Thread;
 
+/**
+ * Casinopoly Shop
+ * @author adil
+ */
+
 public class casinopolyShop {
     
     //Creating Objects

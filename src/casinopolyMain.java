@@ -19,17 +19,21 @@ import game.wheelMethods;
 public class casinopolyMain {
     public static void main(String[] args) {
 
-        casinopolyShop casinopolyShop = new casinopolyShop();
-        casinopolyShop.casinopolyshop();
+        // casinopolyShop casinopolyShop = new casinopolyShop();
+        // casinopolyShop.casinopolyshop();
+
+        //casinopolyShop casinopolyShop = new casinopolyShop();
+        //casinopolyShop.casinopolyshop();
+
 
         //blackJack blackJack = new blackJack();
         //blackJack.blackjack();
         
-        //slots slots = new slots();
-        //slots.instructions();
+        // slots slots = new slots();
+        // slots.instructions();
         
-        //cardGame cardGame = new cardGame();
-        //cardGame.instructions();
+        cardGame cardGame = new cardGame();
+        cardGame.instructions();
 
         //Roulette Roulette = new Roulette();
         //Roulette.roulette();
@@ -43,8 +47,11 @@ public class casinopolyMain {
         //penaltyWheel penaltyWheel = new penaltyWheel();
         //penaltyWheel.wheelOfPenalty();
 
-        //wheelMethods wheelMethods = new wheelMethods();
-        //wheelMethods.moneyTaken();
+        wheelMethods wheelMethods = new wheelMethods();
+        wheelMethods.advanceStart();
+
+        player player = new player();
+        System.out.println(player.totalSpace);
 
         //giantWheel giantWheel = new giantWheel();
         //giantWheel.giantwheel();
@@ -57,5 +64,9 @@ public class casinopolyMain {
 
         //startAndGo startAndGo = new startAndGo();
         //startAndGo.start();
+
+        //turns turns = new turns();
+        //turns.noNamefornow();
+        //turns.playerTurn1();
     }
 }

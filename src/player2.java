@@ -23,4 +23,6 @@ public class player2 {
     public int diceRoller = rnd.nextInt(1, 6);
 
     public int totalSpace = space + diceRoller;
+
+    public String name = "player2";
 }
