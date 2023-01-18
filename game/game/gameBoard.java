@@ -103,7 +103,7 @@ public class gameBoard {
       // slot machine
       spaceName = "Slot Machine";
       System.out.println("\nYou have just landed at space #" + player.totalSpace);
-      slots.slotMachine();
+      slots.slotmachine();
 
     } else if(player.totalSpace == 6 || player.totalSpace == 13) {
       // BlackJack

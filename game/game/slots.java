@@ -163,4 +163,8 @@ public class slots {
             System.out.println("\nError");
         }
     }
+
+    public void slotmachine() {
+        instructions();
+    }
 }
