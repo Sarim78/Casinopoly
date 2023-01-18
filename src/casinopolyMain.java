@@ -20,9 +20,6 @@ import game.umbrella;
 public class casinopolyMain {
     public static void main(String[] args) {
 
-        // casinopolyShop casinopolyShop = new casinopolyShop();
-        // casinopolyShop.casinopolyshop();
-
         casinopolyShop casinopolyShop = new casinopolyShop();
         //casinopolyShop.casinopolyshop();
 
