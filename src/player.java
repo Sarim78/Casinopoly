@@ -22,11 +22,16 @@ public class player {
 
     public double playersMoney = 10000;
 
-    public int diceRoller = rnd.nextInt(1, 6);
+    public int diceRoller;
 
-    public int totalSpace = space + diceRoller;
+    public int totalSpace;
 
-    public String name = "player1";
+    public String name;
 
     String choice;
+
+    public void rollDice() {
+        diceRoller = rnd.nextInt(1, 6);
+        totalSpace = space + diceRoller;
+    }
 }

@@ -49,8 +49,6 @@ public class chanceWheel {
     }
 
     public void chancesOfWheel() {
-        // This methid will be called to greet the user
-        welcomeUser();
 
         // this will allow the player to input to spin the wheel
         System.out.println("\nClick (G) To Spin The Wheel or to exit, press anything: ");

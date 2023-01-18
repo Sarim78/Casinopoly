@@ -23,6 +23,17 @@ public class inventory1 {
 
     public int jailSentence = 0;
 
+    public void viewInventory() {
+        System.out.println("\nYour inventory: ");
+        System.out.println("\nGet out of jail free cards: " + getOutOfJailFreeCard);
+        System.out.println("\nReroll powerups: " + reroll);
+        System.out.println("\nRefuse rent powerups: " + refuseRent);
+        System.out.println("\nReverse rent powerups: " + reverseRent);
+        System.out.println("\nRespin powerups: " + reSpin);
+        System.out.println("\nControl opponent powerups: " + controlOpponent);
+        System.out.println("\nJail sentence powerups: " + jailSentence);
+    }
+
     public void getOutOfJailFreeCard() {
 
     }
@@ -52,7 +63,7 @@ public class inventory1 {
     }
 
     public void jailSentence() {
-        
+
     }
     
 }

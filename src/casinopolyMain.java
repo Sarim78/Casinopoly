@@ -64,8 +64,7 @@ public class casinopolyMain {
         //startAndGo.start();
 
         turns turns = new turns();
-        turns.noNamefornow();
-        turns.playerTurn1();
+        turns.gameMenu();
 
         giantWheel2 giantWheel2 = new giantWheel2();
 

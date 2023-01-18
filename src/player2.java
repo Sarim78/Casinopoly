@@ -24,5 +24,5 @@ public class player2 {
 
     public int totalSpace = space + diceRoller;
 
-    public String name = "player2";
+    public String name;
 }
