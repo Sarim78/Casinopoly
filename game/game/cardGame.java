@@ -82,28 +82,16 @@ public class cardGame {
     }
 
     // This 4 methods if for playimng gaining ot losing money
-    public void playerGettingMoney1() {
+    public void playerGettingMoney1CardGame() {
         // Player 1 earning the money
         player.playersMoney = player.playersMoney + playerEarningRandomAmountMoney;
 
         System.out.println("\nYour current balance is: " + "$" + player.playersMoney);
     }
 
-    public void playerGettingMoney2() {
-        // Player 2 earning the money
-        player2.playersMoney = player2.playersMoney + playerEarningRandomAmountMoney;
-
-        System.out.println("\nYour current balance is: " + "$" + player2.playersMoney);
-    }
-
-    public void playerLosingMoney1() {
+    public void playerLosingMoney1CardGame() {
         // This method will let the player 1 lose money
         player.playersMoney = player.playersMoney - playerBet;
-    }
-
-    public void playerLosingMoney2() {
-        // This method will let the player 2 lose money
-        player2.playersMoney = player2.playersMoney - playerBet;
     }
 
     public void betOverUnderLimit() {

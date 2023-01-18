@@ -2,7 +2,8 @@ package game;
 import java.util.Scanner;
 import java.util.Random;
 import java.lang.Math;
-
+import src.player;
+import src.player2;
 
 /**
  * blackjack
@@ -13,6 +14,11 @@ public class blackJack {
     // Creating Objects
 
     Random rnd = new Random();
+
+    player player = new player();
+
+    player2 player2 = new player2();
+
 
     // Creating Variables
 
@@ -88,6 +94,14 @@ public class blackJack {
             inStructions.close();
         }
     }
+    
+    public void player1EarningLosingMoneyBlackJack() {
+        // this statement will let player add the money he/she earned
+        player.playersMoney = player.playersMoney + moneyEarned;
+
+        // this statement will let player subtract the money he/she lost
+        player.playersMoney = player.playersMoney - moneyLost;
+    }
 
     public void playerWager() {
         try {
@@ -124,7 +138,6 @@ public class blackJack {
         }
     return dealerCardValue;
     }
-
 
     public void playerPickingCards() {
         

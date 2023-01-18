@@ -93,11 +93,6 @@ public class slots {
         player.playersMoney = player.playersMoney + jackPotMoney;
     }
 
-    public void jackpot2() {
-        // this method will be called, if player 2 wins the jackpot
-        player2.playersMoney = player2.playersMoney + jackPotMoney;
-    }
-
     public void moneyGeneratedAfterBetting() {
         // This method is called after you place a bet, it will generate a random amount money for you. 
         // Between $0 - $5500 but the amount will get double
@@ -106,6 +101,13 @@ public class slots {
         doubledMoney = money * 2; 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
+    }
+
+    public void playerEarning1MoneySlots() {
+        // Player 1 earning money
+        player.playersMoney = player.playersMoney + doubledMoney;
+
+        System.out.println("Your current balance is: $" + player.playersMoney);
     }
 
     public void confrimBet() {

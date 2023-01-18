@@ -8,6 +8,7 @@ import java.lang.Math;
 /**
  * Player 1 Data
  * @athuor Sarim Siddiqui
+ * @athuor Adil
  */
 
 public class player {
