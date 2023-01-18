@@ -1,6 +1,8 @@
 package game;
 import java.util.Scanner;
 import java.util.Random;
+import src.player;
+import src.player2;
 
 /**
  * Roulette
@@ -12,6 +14,10 @@ public class Roulette {
     //Creating Objects
 
     Random rnd = new Random();
+
+    player player = new player();
+
+    player2 player2 = new player2();
 
     //Creating Variables
     
@@ -92,6 +98,14 @@ public class Roulette {
     String instruction;
 
     //Creating Methods
+
+    public void player1EarningLosingMoneyRoulette() {
+        // Player 1 earning money
+        player.playersMoney = player.playersMoney + totalMoneyWon;
+
+        // Player 1 losing money
+        player.playersMoney = player.playersMoney - totalMoneyLost;
+    }
 
     public void instructions() {
         System.out.println("\nWelcome to roulette! Enter w for instrcutions, anything else to continue");

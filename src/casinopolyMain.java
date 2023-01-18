@@ -24,7 +24,7 @@ public class casinopolyMain {
         //casinopolyShop.casinopolyshop();
 
         blackJack blackJack = new blackJack();
-        //blackJack.blackjack();
+        blackJack.blackjack();
         
         slots slots = new slots();
         //slots.instructions();

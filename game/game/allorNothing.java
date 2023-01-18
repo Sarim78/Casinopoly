@@ -4,6 +4,8 @@ package game;
 import java.util.Random;
 import java.util.Scanner;
 import java.lang.Thread;
+import src.player;
+import src.player2;
 
 /**
  * All or Nothing
@@ -15,6 +17,10 @@ public class allorNothing {
     // Creating Objects
     
     Random rnd = new Random();
+
+    player player = new player();
+
+    player2 player2 = new player2();
 
     //Creating Variables
 
@@ -42,6 +48,15 @@ public class allorNothing {
             game();
             in.close();
         }
+    }
+
+    // 2 methods for playing 1 gaining or losing money
+    public void player1GainingMoney() {
+
+    }
+
+    public void player1LosingMoney() {
+
     }
 
     public void aiPicks() {
