@@ -60,6 +60,7 @@ public class gameBoard {
     // Player 1
     if(player.totalSpace > 19) {
       player.totalSpace = player.totalSpace - 19;
+      startAndGo.passGo();
     }
 
     gameBoardSpace();

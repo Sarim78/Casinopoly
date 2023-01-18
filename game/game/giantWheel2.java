@@ -9,7 +9,7 @@ import java.lang.Thread;
  * @author adil
  */
 
-public class giantWheel {
+public class giantWheel2 {
 
     // Creating Objects
 
@@ -22,8 +22,6 @@ public class giantWheel {
     jackpotWheel jackpotWheel = new jackpotWheel();
 
     allorNothing allorNothing = new allorNothing();
-
-    chanceWheel chanceWheel = new chanceWheel();
 
     // Creating Variables
 
@@ -45,8 +43,8 @@ public class giantWheel {
             e.printStackTrace();
         }
         if (spinWheel == 1) {
-            System.out.println("\nSpin the chance wheel!");
-            chanceWheel.chancewheel();
+            System.out.println("\nRe-spin the giant wheel!");
+            giantwheel();
         } else if (spinWheel == 2) {
             System.out.println("\nSpin the penalty wheel!");
             penaltyWheel.wheelOfPenalty();

@@ -22,5 +22,37 @@ public class inventory1 {
     public int controlOpponent = 0;
 
     public int jailSentence = 0;
+
+    public void getOutOfJailFreeCard() {
+
+    }
+
+    public void reroll() {
+
+    }
+
+    public void advanceSpaces() {
+
+    }
+
+    public void refuseRent() {
+
+    }
+
+    public void reverseRent() {
+
+    }
+
+    public void respin() {
+
+    }
+
+    public void controlOpponent() {
+
+    }
+
+    public void jailSentence() {
+        
+    }
     
 }
