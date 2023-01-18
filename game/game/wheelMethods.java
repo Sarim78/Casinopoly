@@ -8,6 +8,8 @@ import java.lang.Math;
 // Importing Files 
 import src.player;
 import src.player2;
+import src.inventory1;
+import src.inventory2;
 
 /**
  * wheel methods
@@ -24,6 +26,10 @@ public class wheelMethods {
     player player = new player();
 
     player2 player2 = new player2();
+
+    inventory1 inventory1 = new inventory1();
+
+    inventory2 inventory2 = new inventory2();
 
     // Creating Variables
 
@@ -109,6 +115,7 @@ public class wheelMethods {
         // this method will be a pass for player 1 and 2 to get out of jail
         System.out.println("\nYou have won a free pass to leave jail cell anytime!");
         System.out.println("You only can use this pass, when your in jail!");
+        inventory1.getOutOfJailFreeCard = inventory1.getOutOfJailFreeCard + 1;
     }
 
     public void jailFreeCardPlayer1() {
@@ -224,16 +231,6 @@ public class wheelMethods {
         } else {
             System.out.println("\nError");
         }
-    }
-
-    // This 1 methods will be called if player lands on freeSpinForGaintCasinoWheel Slot
-    public void freeSpinForGaintCasinoWheel() {
-        System.out.println("test 7");
-    }
-
-    // This 1 methods will be called if player lands on buyingAnyObjects Slot
-    public void buyingAnyObjects() {
-        System.out.println("test 8");
     }
     
     
@@ -388,17 +385,11 @@ public class wheelMethods {
         System.out.println(showPlayer2Money);
     }
 
-    // This 1 methods will be called if player lands on casinopolyPenaltySpace Slot
-    public void casinopolyPenaltySpace() {
-        // Go directly to the Casinopoly penalty space
-        System.out.println("test 12");
-    }
-
     // This 3 methods will be called if player lands on playerChoosesToMoveYou Slot
     public void playerChoosesToMoveYou() {
         // Player decides how much another player can move
         System.out.println("\nThe other player has won a control opponent powerup! This means they can move you 1-3 spaces at any time (one time use).");
-        //give other player control opponent powerup
+        inventory2.controlOpponent = inventory2.controlOpponent + 1; //give other player control opponent powerup
     }
 
     public void playerMove1() {
@@ -531,25 +522,25 @@ public class wheelMethods {
         powerup = rnd.nextInt(1,7);
         if (powerup == 1) {
             System.out.println("You won the advance spaces powerup! It will be added to your inventory");
-            //give advance spaces powerup
+            inventory1.advanceSpaces = inventory1.advanceSpaces + 1; //give advance spaces powerup
         } else if (powerup == 2) {
             System.out.println("You won the re-roll powerup! It will be added to your inventory");
-            //give reroll powerup
+            inventory1.reroll = inventory1.reroll + 1; //give reroll powerup
         } else if (powerup == 3) {
             System.out.println("You won the refuse rent powerup! It will be added to your inventory");
-            //give refuse rent powerup
+            inventory1.refuseRent = inventory1.refuseRent + 1; //give refuse rent powerup
         } else if (powerup == 4) {
             System.out.println("You won the reverse rent powerup! It will be added to your inventory");
-            //give reverse rent powerup
+            inventory1.reverseRent = inventory1.reverseRent + 1; //give reverse rent powerup
         } else if (powerup == 5) {
             System.out.println("You won the re-spin wheel powerup! It will be added to your inventory");
-            //give respin wheel powerup
+            inventory1.reSpin = inventory1.reSpin + 1; //give respin wheel powerup
         } else if (powerup == 6) {
             System.out.println("You won the control opponent powerup! It will be added to your inventory");
-            //give control opponent powerup
+            inventory1.controlOpponent = inventory1.controlOpponent + 1; //give control opponent powerup
         } else if (powerup == 7) {
             System.out.println("You won the jail sentence powerup! It will be added to your inventory");
-            //give jail sentence powerup
+            inventory1.jailSentence = inventory1.jailSentence + 1; //give jail sentence powerup
         }
     }
 

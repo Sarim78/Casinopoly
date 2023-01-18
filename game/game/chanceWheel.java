@@ -20,6 +20,8 @@ public class chanceWheel {
     
     wheelMethods wheelMethods = new wheelMethods();
 
+    penaltyWheel penaltyWheel = new penaltyWheel();
+
     // Creating Variables
 
     int randomSlot; // Creating a object for the random library 
@@ -84,11 +86,13 @@ public class chanceWheel {
                 
             } else if (randomSlot == 7) {
                 // This will call freeSpinForGainCasinoWheel() method
-                wheelMethods.freeSpinForGaintCasinoWheel();
+                System.out.println("Spin the giant Casinopoly wheel!");
+                //umbrella.spinGiantWheel();
                 
             } else if (randomSlot == 8) {
                 // This will call buyingAnyObjects() method
-                wheelMethods.buyingAnyObjects();
+                System.out.println("Head to the Casinopoly shop!");
+                //umbrella.shop();
                 
             } else if (randomSlot == 9) {
                 // This will call goToJail() method
@@ -104,7 +108,8 @@ public class chanceWheel {
                 
             } else if (randomSlot == 12) {
                 // This will call casinopolyPenaltySpace() method
-                wheelMethods.casinopolyPenaltySpace();
+                System.out.println("Spin the penalty wheel!");
+                penaltyWheel.wheelOfPenalty();
             }
         } else {
             // If player decides to click any button expect for (G), the loop will print the else statement 

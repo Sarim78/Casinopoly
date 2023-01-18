@@ -39,6 +39,8 @@ public class gameBoard {
 
   cardGame cardGame = new cardGame();
 
+  startAndGo startAndGo = new startAndGo();
+
   public String spaceName;
 
   // Creating Variables
@@ -92,6 +94,7 @@ public class gameBoard {
       spaceName = "START";
       System.out.println("\nYou are on space #" + player.totalSpace);
       System.out.println("This is the starting point of this game.");
+      startAndGo.start();
 
     } else if(player.totalSpace == 2) {
       //jackpotwheel

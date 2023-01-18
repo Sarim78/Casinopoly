@@ -15,8 +15,6 @@ public class giantWheel {
 
     Random rnd = new Random();
 
-    chanceWheel chanceWheel = new chanceWheel();
-
     penaltyWheel penaltyWheel = new penaltyWheel();
 
     wheelMethods wheelMethods = new wheelMethods();
@@ -24,6 +22,8 @@ public class giantWheel {
     jackpotWheel jackpotWheel = new jackpotWheel();
 
     allorNothing allorNothing = new allorNothing();
+
+    umbrella umbrella = new umbrella();
 
     // Creating Variables
 
@@ -46,7 +46,7 @@ public class giantWheel {
         }
         if (spinWheel == 1) {
             System.out.println("\nSpin the chance wheel!");
-            chanceWheel.chancesOfWheel();
+            umbrella.spinChanceWheel();
         } else if (spinWheel == 2) {
             System.out.println("\nSpin the penalty wheel!");
             penaltyWheel.wheelOfPenalty();

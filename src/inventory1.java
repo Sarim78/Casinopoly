@@ -7,20 +7,20 @@ package src;
 
 public class inventory1 {
 
-    String getOutOfJailFreeCard;
+    public int getOutOfJailFreeCard = 0;
 
-    String reroll;
+    public int reroll = 0;
 
-    String advanceSpaces;
+    public int advanceSpaces = 0;
 
-    String refuseRent;
+    public int refuseRent = 0;
 
-    String reverseRent;
+    public int reverseRent = 0;
 
-    String reSpin;
+    public int reSpin = 0;
 
-    String controlOpponent;
+    public int controlOpponent = 0;
 
-    String jailSentence;
+    public int jailSentence = 0;
     
 }

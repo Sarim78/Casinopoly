@@ -5,6 +5,9 @@ import java.util.Random;
 import java.util.Scanner;
 import java.lang.Thread;
 
+// Importing Files
+import src.inventory1;
+
 /**
  * Casinopoly Shop
  * @author adil
@@ -21,6 +24,8 @@ public class casinopolyShop {
     chanceWheel chanceWheel = new chanceWheel();
 
     allorNothing allorNothing = new allorNothing();
+
+    inventory1 inventory1 = new inventory1();
 
     //Creating Variables
 
@@ -230,7 +235,7 @@ public class casinopolyShop {
                 getoutofJail = rnd.nextInt(1,100);
                 if (getoutofJail >= 1 && getoutofJail <= 50) {
                     System.out.println("\nCongratulations, you won the get out of jail for free card! It will be added to your inventory.");
-                    //add it to their inventory
+                    inventory1.getOutOfJailFreeCard = inventory1.getOutOfJailFreeCard + 1; //add it to their inventory
                 } else if (getoutofJail >= 51 && getoutofJail <= 100) {
                     System.out.println("\nSorry, you didn't win a get out of jail for free card. Better luck next time!");
                 }
@@ -253,7 +258,7 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe re-roll powerup will be added to your inventory.");
-                //add it to their inventory
+                inventory1.reroll = inventory1.reroll + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
@@ -274,7 +279,7 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe advance spaces powerup will be added to your inventory.");
-                //add it to their inventory
+                inventory1.advanceSpaces = inventory1.advanceSpaces + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
@@ -295,7 +300,7 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe refuse rent powerup will be added to your inventory.");
-                //add it to their inventory
+                inventory1.refuseRent = inventory1.refuseRent + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
@@ -316,7 +321,7 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe reverse rent powerup will be added to your inventory.");
-                //add it to their inventory
+                inventory1.reverseRent = inventory1.reverseRent + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
@@ -337,7 +342,7 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe re-spin wheel powerup will be added to your inventory.");
-                //add it to their inventory
+                inventory1.reSpin = inventory1.reSpin + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
@@ -358,7 +363,7 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe control opponent powerup will be added to your inventory.");
-                //add it to their inventory
+                inventory1.controlOpponent = inventory1.controlOpponent + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
@@ -379,7 +384,7 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe jail sentence powerup will be added to your inventory.");
-                //add it to their inventory
+                inventory1.jailSentence = inventory1.jailSentence + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
