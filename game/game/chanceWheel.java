@@ -22,6 +22,10 @@ public class chanceWheel {
 
     penaltyWheel penaltyWheel = new penaltyWheel();
 
+    giantWheel2 giantWheel2 = new giantWheel2();
+
+    casinopolyShop2 casinopolyShop2 = new casinopolyShop2();
+
     // Creating Variables
 
     int randomSlot; // Creating a object for the random library 
@@ -35,6 +39,7 @@ public class chanceWheel {
         System.out.println("There are 12 random slots in this Chances Wheel!");
         System.out.println("You might win something or lose something...");
         System.out.println("\nGOODLUCK!");
+        chancesOfWheel();
     }
 
     public void welcomeUser() {
@@ -87,12 +92,12 @@ public class chanceWheel {
             } else if (randomSlot == 7) {
                 // This will call freeSpinForGainCasinoWheel() method
                 System.out.println("Spin the giant Casinopoly wheel!");
-                //umbrella.spinGiantWheel();
+                giantWheel2.giantwheel();
                 
             } else if (randomSlot == 8) {
                 // This will call buyingAnyObjects() method
                 System.out.println("Head to the Casinopoly shop!");
-                //umbrella.shop();
+                casinopolyShop2.casinopolyshop();
                 
             } else if (randomSlot == 9) {
                 // This will call goToJail() method
@@ -113,8 +118,8 @@ public class chanceWheel {
             }
         } else {
             // If player decides to click any button expect for (G), the loop will print the else statement 
-            System.out.println("\nYou have exited out of Chances Of Wheel...");
-            System.out.println("\nSad To See You GO :(");
+            System.out.println("\nPlease click on G");
+            chancesOfWheel();
 
             // this loop will break, if the player decides to leave the Chances Wheel
         }

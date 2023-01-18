@@ -14,7 +14,8 @@ import game.Roulette;
 import game.slots;
 import game.startAndGo;
 import game.wheelMethods;
-import game.umbrella;
+import game.casinopolyShop2;
+import game.giantWheel2;
 
 // Main Code Of The Game Goes Here
 public class casinopolyMain {
@@ -63,9 +64,11 @@ public class casinopolyMain {
         //startAndGo.start();
 
         turns turns = new turns();
-        //turns.noNamefornow();
-        //turns.playerTurn1();
+        turns.noNamefornow();
+        turns.playerTurn1();
 
-        umbrella umbrella = new umbrella();
+        giantWheel2 giantWheel2 = new giantWheel2();
+
+        casinopolyShop2 casinopolyShop2 = new casinopolyShop2();
     }
 }
