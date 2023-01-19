@@ -125,7 +125,6 @@ public class cardGame {
             bet(); 
             //instructions.close();
         }
-    }
 
     public void confrimBet() {
         // this method will confrim the player bet
