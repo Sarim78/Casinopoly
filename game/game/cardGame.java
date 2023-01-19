@@ -125,11 +125,7 @@ public class cardGame {
                 bet(); 
                 //instructions.close();
             }
-        } catch (Exception e) {
-            System.out.println("\nERROR");
-            instructions();
         }
-    }
 
     public void confrimBet() {
         // this method will confrim the player bet
