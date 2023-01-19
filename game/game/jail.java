@@ -36,12 +36,11 @@ public class jail {
 
         System.out.println("\nGoodLuck!");
 
-        player1Money();
+        player1Data();
     }
 
-
-    // This 2 methods are for player 1
-    public void player1MovingSpaces() {
+    // This 3 methods are for player 1
+    public void player1MovingSpacesAndLosingMoney() {
         // If player 1, decides to pay his bail, this method will be printed
 
         // this statement will take out the money from his account balance
@@ -51,16 +50,23 @@ public class jail {
         player.totalSpace = player.totalSpace + player.space + 1;
     }
 
-    public void player1Money() {
+    public void player1Data() {
         // This method will check if player 1 have more then 5k to pay for bail
 
-        if(player.gameEarnings > 5000) {
+        if(player.gameEarnings >= 5000) {
             // If player 1 have more then 5k, this statement will be executed
             askingUserToPayTheBail();
-            player1MovingSpaces();
+            player1MovingSpacesAndLosingMoney();
         } else {
             // If player 1 have less then 5k, this statement will be executed
             diceRoller();
+        }
+    }
+
+    public void player1LandedOnJail() {
+        // this If Statement will check if player 1 is at space 8
+        if(player.totalSpace == 8) {
+            player1Data();
         }
     }
 
@@ -80,6 +86,7 @@ public class jail {
 
         int dice = rnd.nextInt(1,10);
 
+        // this if statement will check, if the number is even or odd
         if(dice == 2 || dice == 4 || dice == 6 || dice == 8 || dice == 10) {
             // if dice lands on even number, this statement will be executed
             try {
@@ -103,8 +110,8 @@ public class jail {
 
     public void askingUserToPayTheBail() {
         // This method will ask user to pay for bail
-        try {
 
+        try {
             // this thread, will let this code to executed 1 sec after.
             try {
                 Thread.sleep(1000);
@@ -114,11 +121,13 @@ public class jail {
 
             Scanner bail = new Scanner(System.in);
 
+            // asking user to pay their bail
             System.out.println("\nWould you like to your bail for $5000?");
             System.out.println("Please enter your input (Y/N): ");
     
             String userInputBail = bail.nextLine();
-    
+
+            // this if statement will check player input
             if(userInputBail.equals("Y") || userInputBail.equals("y")) {
                 // If players pay his bail, this statement will be executed
                 System.out.println("\nCONGRATS! Your out of jail!");

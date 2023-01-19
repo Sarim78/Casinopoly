@@ -41,6 +41,8 @@ public class gameBoard {
 
   startAndGo startAndGo = new startAndGo();
 
+  jail Jail = new jail();
+
   public String spaceName;
 
   // Creating Variables
@@ -122,6 +124,7 @@ public class gameBoard {
       spaceName = "Jail";
       System.out.println("\nYou have just landed at space #" + player.totalSpace);
       System.out.println("You are visiting the jail! You have earned nothing...");
+      Jail.player1LandedOnJail();
 
     } else if(player.totalSpace == 11 || player.totalSpace == 16) {
       //free space

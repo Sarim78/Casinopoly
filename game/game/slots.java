@@ -50,6 +50,7 @@ public class slots {
         Scanner instructions = new Scanner(System.in);
 
         // This methid will tell the players the instructions of this mini game
+        System.out.println("\nWelcome to slots!");
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
         String playerInput = instructions.nextLine();
@@ -60,9 +61,13 @@ public class slots {
             System.out.println("You have to place a bet.");
             System.out.println("You might win more money.");
             System.out.println("Or You might lose your money.");
+
+            // after player clicks (G), this method will be called 
             slotMachine();
+
             //instructions.close();
         } else {
+            // if player click anoything key, thos method will be called
             slotMachine();
             //instructions.close();
         }
@@ -161,9 +166,11 @@ public class slots {
             } else {
                 // If player place an bet between the range, this statement will print
                 System.out.println("\nYou have placed a bet of: " + "$" + bet);
+                jackPot();
                 confrimBet();
                 moneyGeneratedAfterBetting();
                 jackPot();
+                
                 //betPlacer.close();
             }
         } catch (Exception e) {

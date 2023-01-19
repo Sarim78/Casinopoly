@@ -44,7 +44,6 @@ public class cardGame {
     int minMoneyLose;
 
     // Creating Methods
-    
     public void numberGenerator() {
         // This method will tell the player, if you need to guess Hi or Lo
         num = rnd.nextInt(1, 50);
@@ -106,7 +105,8 @@ public class cardGame {
     }
 
     public void instructions() { 
-    // This methid will tell the players the instructions of this mini game
+        // This methid will tell the players the instructions of this mini game
+        System.out.println("\nWelcome to Hi/Lo (CARD GAME)!");
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
         Scanner instructions = new Scanner(System.in);
         String playerInput = instructions.nextLine();
@@ -131,11 +131,13 @@ public class cardGame {
         try {
             Scanner confrimbet = new Scanner(System.in);
 
+            // Asking user to confrim his bet
             System.out.println("\nYou have placed a bet of $" + bet);
             System.out.println("Please confrim if you want to place this bet (Y/N): ");
 
             String userConfrimBet = confrimbet.nextLine();
 
+            // this if statement will check if player confrimed his bet or not
             if(userConfrimBet.equals("Y") || userConfrimBet.equals("y")) {
                 System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
                 Ai(); 
@@ -167,11 +169,13 @@ public class cardGame {
         try {
             Scanner tryAgain = new Scanner(System.in);
 
+            // asking player if they want to play again
             System.out.println("\nWould you like to try again?");
             System.out.println("\nEnter Your Input (Y/N): ");
     
             String userTryAgain = tryAgain.nextLine();
-    
+
+            // this if statement will check user input
             if(userTryAgain.equals("Y") || userTryAgain.equals("y")) {
                 Ai(); 
                 HiLo2();
@@ -194,14 +198,18 @@ public class cardGame {
     public void HiLo() {
         // Player guess if the number is Hi or Lo
         try {
+
+            // This will ask the player there guess of hi or lo
             System.out.println("\nPlease Enter Your Guess (Hi/Lo): ");
 
             Scanner HiLo = new Scanner(System.in);
 
             String HiLoInput = HiLo.nextLine();
-            
+
+            // This if statement will check user guess
             if(HiLoInput.equals("Hi") || HiLoInput.equals("hi")) {
 
+                // this if statement will check if the user guess is lower of grater then the ai guessed
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     System.out.println("\nCONGRATS, you have won: $ " + playerEarningRandomAmountMoney);
@@ -222,6 +230,7 @@ public class cardGame {
 
             } else if (HiLoInput.equals("Lo") || HiLoInput.equals("lo")) {
 
+                // this if statement will check if the user guess is lower of grater then the ai guessed
                 if(ai < num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     System.out.println("\nCONGRATS, you have won: $ " + playerEarningRandomAmountMoney);
@@ -265,7 +274,7 @@ public class cardGame {
                     playerGettingMoney();
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
-                    //TODO if they lose here then you have to take away all the money they earned before so they end up with nothng
+                    playerLosingMoney1CardGame();
                 } else {
                     System.out.println("\nYou only can pick between (Hi/Lo)"); 
                     bet();
@@ -283,6 +292,7 @@ public class cardGame {
                     playerGettingMoney();
                 } else if(ai > num1) {
                     System.out.println("\nSorry, you lost :(");
+                    playerLosingMoney1CardGame();
                 }
     
                 //HiLo2.close();
