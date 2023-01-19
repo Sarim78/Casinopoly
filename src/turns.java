@@ -375,6 +375,10 @@ public class turns {
             System.out.println("This is space #" + player.totalSpace);
             anythingToContinue();
             playerTurn1();
+        } else if (choice1.equals("P") || choice1.equals("p")) {
+            powerMenu();
+            anythingToContinue();
+            playerTurn1();
         } else if (choice1.equals("R") || choice1.equals("r")) {
             //roll
             gameBoard.dice1();

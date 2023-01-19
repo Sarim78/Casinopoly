@@ -65,7 +65,7 @@ public class casinopolyMain {
         // startAndGo.start();
 
         jail jail = new jail();
-        jail.grettingUserToJail();
+        //jail.grettingUserToJail();
 
         turns turns = new turns();
         turns.gameMenu();
