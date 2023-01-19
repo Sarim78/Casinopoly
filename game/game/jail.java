@@ -80,6 +80,7 @@ public class jail {
 
         int dice = rnd.nextInt(1,10);
 
+        // this if statement will check, if the number is even or odd
         if(dice == 2 || dice == 4 || dice == 6 || dice == 8 || dice == 10) {
             // if dice lands on even number, this statement will be executed
             try {
@@ -103,8 +104,8 @@ public class jail {
 
     public void askingUserToPayTheBail() {
         // This method will ask user to pay for bail
-        try {
 
+        try {
             // this thread, will let this code to executed 1 sec after.
             try {
                 Thread.sleep(1000);
@@ -114,11 +115,13 @@ public class jail {
 
             Scanner bail = new Scanner(System.in);
 
+            // asking user to pay their bail
             System.out.println("\nWould you like to your bail for $5000?");
             System.out.println("Please enter your input (Y/N): ");
     
             String userInputBail = bail.nextLine();
-    
+
+            // this if statement will check player input
             if(userInputBail.equals("Y") || userInputBail.equals("y")) {
                 // If players pay his bail, this statement will be executed
                 System.out.println("\nCONGRATS! Your out of jail!");
