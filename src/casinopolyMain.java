@@ -16,6 +16,7 @@ import game.startAndGo;
 import game.wheelMethods;
 import game.casinopolyShop2;
 import game.giantWheel2;
+import game.jail;
 
 // Main Code Of The Game Goes Here
 public class casinopolyMain {
@@ -63,8 +64,11 @@ public class casinopolyMain {
         startAndGo startAndGo = new startAndGo();
         //startAndGo.start();
 
+        jail jail = new jail();
+        jail.grettingUserToJail();
+
         turns turns = new turns();
-        turns.gameMenu();
+        // turns.gameMenu();
 
         giantWheel2 giantWheel2 = new giantWheel2();
 
