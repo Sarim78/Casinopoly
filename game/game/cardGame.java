@@ -106,29 +106,24 @@ public class cardGame {
     }
 
     public void instructions() { 
-        // This methid will tell the players the instructions of this mini game
-        try {
-            System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
+    // This methid will tell the players the instructions of this mini game
+        System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
-            Scanner instructions = new Scanner(System.in);
-            String playerInput = instructions.nextLine();
-    
-            if(playerInput.equals("G") || playerInput.equals("g")) {
-                // If the player presses G/g then this IF STATEMENT will run.
-                System.out.println("\nInstructions: ");
-                System.out.println("You will be assigned an number.");
-                System.out.println("The A.i will decided if he should think of an number higher or lower of the assigned number.");
-                System.out.println("Then you have to decide if the number is (Hi/Lo).");
-                System.out.println("If you get the answer wrong, you will lose all the money you gained from this mini game and the game will end...");
-                bet(); 
-                instructions.close();
-            } else {
-                bet(); 
-                instructions.close();
-            }
-        } catch (Exception e) {
-            System.out.println("\nERROR");
-            instructions();
+        Scanner instructions = new Scanner(System.in);
+        String playerInput = instructions.nextLine();
+
+        if(playerInput.equals("G") || playerInput.equals("g")) {
+            // If the player presses G/g then this IF STATEMENT will run.
+            System.out.println("\nInstructions: ");
+            System.out.println("You will be assigned an number.");
+            System.out.println("The A.i will decided if he should think of an number higher or lower of the assigned number.");
+            System.out.println("Then you have to decide if the number is (Hi/Lo).");
+            System.out.println("If you get the answer wrong, you will lose all the money you gained from this mini game and the game will end...");
+            bet(); 
+            instructions.close();
+        } else {
+            bet(); 
+            instructions.close();
         }
     }
 
