@@ -36,9 +36,6 @@ public class wheelMethods {
     int raffelCardMoney;
     int raffelCardMoney2;
 
-    String showPlayer1Money = ("\nPlayer 1: Your current Balance In Your Account is: $" + String.format("$%.2f", player.playersMoney).replace("$0.", "$."));
-    String showPlayer2Money = ("\nPlayer 2: Your current Balance In Your Account is: $" + String.format("$%.2f", player2.playersMoney).replace("$0.", "$."));
-
     int player1Decides;
     int player2Decides;
 
@@ -94,11 +91,8 @@ public class wheelMethods {
         // @Author Sarim 
         // this method will move the player 3 spaces forward
         System.out.println("\nYou have moved 3 spaces foward from your current position!");
-    }
-
-    public void moveThreeSpaces1() {
-        // @Author Sarim 
         player.totalSpace = player.totalSpace + player.space + 3;
+
     }
 
     public void moveBackThreeSpaces() {
@@ -118,56 +112,24 @@ public class wheelMethods {
         inventory1.getOutOfJailFreeCard = inventory1.getOutOfJailFreeCard + 1;
     }
 
-    public void jailFreeCardPlayer1() {
-        // @Author Sarim 
-        // Player 1 free jail pass 
-        if(player.space == 8) {
-            System.out.println("\nYou have moved 1 space forward!");
-            player.space = player.space + 1;
-        } else {
-            System.out.println("\nSorry, you can't use this pass yet");
-        }
-    }
-
-    public void jailFreeCardPlayer2() {
-        // @Author Sarim 
-        // Player 2 free jail pass
-        if(player2.space == 8) {
-            System.out.println("\nYou have moved 1 space forward!");
-            player2.space = player2.space + 1;
-        } else {
-            System.out.println("\nSorry, you can't use this pass yet");
-        }
-    }
-
     // This 3 methods will be called if player lands on raffelCard Slot
     public void raffelCard() {
-        // @Author Sarim 
+        // @author Sarim 
         // This object will generate random amount of money
-        raffelCardMoney2 = rnd.nextInt(500, 5000);
-
-        raffelCardMoney = raffelCardMoney2;
+        raffelCardMoney = rnd.nextInt(500, 5000);
 
         // This method will let the player know, how much he is winning 
         System.out.println("\nCongrats, You have won a raffel card!");
         System.out.println("You have won $" + raffelCardMoney + "!");
+        raffelCard1();
     }
 
     // this raffel card method will be called, when player 1 or 2 lands on this slot
     public void raffelCard1() {
         // @Author Sarim 
         // This method is for player 1, if he wins a raffel card
-        player.playersMoney = player.playersMoney + raffelCardMoney;
-
-        System.out.println("\nNow You have: $" + player.playersMoney + " In your account");
-    }
-
-    public void raffelCard2() {
-        // @Author Sarim 
-        // This method is for player 2, if he wins a raffel card
-        player2.playersMoney = player2.playersMoney + raffelCardMoney;
-
-        System.out.println("\nNow You have: $" + player2.playersMoney + " In your account");
+        player.gameEarnings = player.gameEarnings + raffelCardMoney;
+        player.bankAccount();
     }
 
     // This 3 methods will be called if player lands on yourBirthday Slot
@@ -178,6 +140,7 @@ public class wheelMethods {
         System.out.println("\nToday is your birthday!");
         System.out.println("All other players are obligated to give you money!");
         System.out.println("The other player owes you " + String.format("$%.2f", birthdayMoney).replace("$0.", "$.") + "!");
+        birthdayMoney1();
     }
 
     // this birthdayMoney method will only be called when the player 1 or 2 land son this slot
@@ -185,19 +148,11 @@ public class wheelMethods {
         // @Author Sarim 
         // Player 1 gives Player 2 money
         // this will subtract the money from players 1 account
-        player.playersMoney = player.playersMoney - birthdayMoney;
+        player.gameEarnings = player.gameEarnings + birthdayMoney;
         // this will add money to players 2 account
-        player2.playersMoney = player2.playersMoney + birthdayMoney;
-        System.out.println(showPlayer1Money);
-        System.out.println(showPlayer2Money);
-    }
-    
-    public void birthdayMoney2() {
-        // @Author Sarim 
-        // this will subtract the money from players 2 account
-        player2.playersMoney = player2.playersMoney - birthdayMoney;
-        // this will add money to players 1 account
-        player.playersMoney = player.playersMoney + birthdayMoney;            
+        player2.gameEarnings = player2.gameEarnings - birthdayMoney;
+        player.bankAccount();
+        player2.bankAccount();
     }
 
     // This 3 methods will be called if player lands on advanceToFreeSpot Slot
@@ -206,31 +161,14 @@ public class wheelMethods {
         // this method will congrats the player to the free spot
         System.out.println("\nYou have moved to the free spot on the board!");
         System.out.println("CONGRATS!");
+        advanceToFreeSpot1();
     }
 
     // this advanceToFreeSpot method will only be called when the player 1 or 2 land on this slot
     public void advanceToFreeSpot1() {
         // @Author Sarim 
         // Player 1 advance to the free spot
-        if(player.space == 4) {
-            player.space = player.space + 12;
-        } else if(player2.space == 10) {
-            player.space = player.space + 6;
-        } else {
-            System.out.println("\nError");
-        }
-    }
-
-    public void advanceToFreeSpot2() {
-        // @Author Sarim 
-        // Player 1 advance to the free spot
-        if(player2.space == 4) {
-            player.space = player2.space + 12;
-        } else if(player2.space == 10) {
-            player2.space = player2.space + 6;
-        } else {
-            System.out.println("\nError");
-        }
+        player.totalSpace = 11;
     }
     
     
@@ -241,31 +179,15 @@ public class wheelMethods {
         System.out.println("\nYou have been sent back to jail for illegal gambling...");
         System.out.println("\nYou do not get money for crossing GO");
         System.out.println("Sad to see you go :(");
+        goToJail1();
     }
 
     // this goToJail method will only be called when the player 1 or 2 land on this slot
     public void goToJail1() {
         // @Author Sarim 
         // Player 1 sent to jail
-        if(player.space == 4) { 
-            player.space = player.space + 4;
-        } else if(player2.space == 10) {
-            player.space = player.space - 2;
-        } else {
-            System.out.println("\nError");
-        }
-    }
-
-    public void goToJail2() {
-        // @Author Sarim 
-        // Player 2 sent to jail
-        if(player2.space == 4) {
-            player2.space = player2.space + 4;
-        } else if(player2.space == 10) {
-            player2.space = player2.space - 2;
-        } else {
-            System.out.println("\nError");
-        }
+        player.space = 8;
+        //TODO put them in jail
     }
 
     // This 3 methods will be called if player lands on youLost Slot
@@ -275,89 +197,70 @@ public class wheelMethods {
         System.out.println("\nYou have lost a bet, you got to pay your opponent a random amount of money!");
         System.out.println("Range: Any Amount between $1000 - $10000!");
         System.out.println("You owe the other player " + String.format("$%.2f", payOpponent).replace("$0.", "$.") + "!");
+        youLost1();
     }
 
     public void youLost1() {
         // This method is called when player 1 loses
-        player.playersMoney = player.playersMoney - payOpponent;
-        player2.playersMoney = player2.playersMoney + payOpponent;
-        System.out.println(showPlayer1Money);
-        System.out.println(showPlayer2Money);
+        player.gameEarnings = player.gameEarnings - payOpponent;
+        player2.gameEarnings = player2.gameEarnings + payOpponent;
+        player.bankAccount();
+        player2.bankAccount();
     }
 
     public void youLost2() {
         // This method is called when player 2 loses
-        player2.playersMoney = player2.playersMoney - payOpponent;
-        System.out.println(showPlayer1Money);
-        System.out.println(showPlayer2Money);
+        player2.gameEarnings = player2.gameEarnings - payOpponent;
+        player.bankAccount();
+        player2.bankAccount();
     }
 
     public void loseMoney() {
         loseMoney = rnd.nextDouble(1000,20000);
         System.out.println("\nYou lost " + String.format("$%.2f", loseMoney).replace("$0.", "$.") + "!");
+        loseMoney1();
     }
 
     public void loseMoney1() {
-        player.playersMoney = player.playersMoney - loseMoney;
-        System.out.println(showPlayer1Money);
-    }
-
-    public void loseMoney2() {
-        player2.playersMoney = player2.playersMoney - loseMoney;
-        System.out.println(showPlayer2Money);
+        player.gameEarnings = player.gameEarnings - loseMoney;
+        player.bankAccount();
     }
 
     public void winMoney() {
         winMoney = rnd.nextDouble(1000,20000);
         System.out.println("\nYou won " + String.format("$%.2f", winMoney).replace("$0.", "$.") + "!");
+        winMoney1();
     }
 
     public void winMoney1() {
-        player.playersMoney = player.playersMoney + winMoney;
-        System.out.println(showPlayer1Money);
-    }
-
-    public void winMoney2() {
-        player2.playersMoney = player2.playersMoney + winMoney;
-        System.out.println(showPlayer2Money);
+        player.gameEarnings = player.gameEarnings + winMoney;
+        player.bankAccount();
     }
 
     public void takeMoney() {
         takeMoney = rnd.nextDouble(1000,10000);
         System.out.println("\nThe other player owes you " + String.format("$%.2f", takeMoney).replace("$0.", "$.") + "!");
+        takeMoney1();
     }
 
     public void takeMoney1() {
-        player.playersMoney = player.playersMoney + takeMoney;
-        player2.playersMoney = player2.playersMoney - takeMoney;
-        System.out.println(showPlayer1Money);
-        System.out.println(showPlayer2Money);
-    }
-
-    public void takeMoney2() {
-        player.playersMoney = player.playersMoney - takeMoney;
-        player2.playersMoney = player2.playersMoney + takeMoney;
-        System.out.println(showPlayer2Money);
-        System.out.println(showPlayer1Money);
+        player.gameEarnings = player.gameEarnings + takeMoney;
+        player2.gameEarnings = player2.gameEarnings - takeMoney;
+        player.bankAccount();
+        player2.bankAccount();
     }
 
     public void moneyTaken() {
         moneyTaken = rnd.nextDouble(1000,10000);
         System.out.println("\nYou owe the other player " + String.format("$%.2f", moneyTaken).replace("$0.", "$.") + "!");
+        moneyTaken1();
     }
 
     public void moneyTaken1() {
-        player.playersMoney = player.playersMoney - takeMoney;
-        player2.playersMoney = player2.playersMoney + takeMoney;
-        System.out.println(showPlayer1Money);
-        System.out.println(showPlayer2Money);
-    }
-
-    public void moneyTaken2() {
-        player.playersMoney = player.playersMoney + takeMoney;
-        player2.playersMoney = player2.playersMoney - takeMoney;
-        System.out.println(showPlayer2Money);
-        System.out.println(showPlayer1Money);
+        player.gameEarnings = player.gameEarnings - takeMoney;
+        player2.gameEarnings = player2.gameEarnings + takeMoney;
+        player.bankAccount();
+        player2.bankAccount();
     }
     
     // This 3 methods will be called if player lands on youHaveBeenFined Slot
@@ -367,22 +270,15 @@ public class wheelMethods {
         userGettingFined = rnd.nextDouble(500, 5000);
         System.out.println("\nYou have been fined for excessive gambling...");
         System.out.println("Fine: " + String.format("$%.2f", userGettingFined).replace("$0.", "$."));
+        gettingFined1();
     }
 
     // this GettingFined method will only be called when the player 1 land on this slot
     public void gettingFined1() {
         // @Author Sarim 
         // This method will be called if player 1 get fined
-        player.playersMoney = player.playersMoney - userGettingFined;
-        System.out.println(showPlayer1Money);
-    }
-
-    // this GettingFined method will only be called when the player 2 land on this slot
-    public void gettingFined2() {
-        // @Author Sarim 
-        // This method will be called if player 2 get fined
-        player2.playersMoney = player2.playersMoney - userGettingFined;
-        System.out.println(showPlayer2Money);
+        player.gameEarnings = player.gameEarnings - userGettingFined;
+        player.bankAccount();
     }
 
     // This 3 methods will be called if player lands on playerChoosesToMoveYou Slot
@@ -460,18 +356,7 @@ public class wheelMethods {
         // Player moving prevelges are gone until another player dont move more then 2 spaces
         System.out.println("\nYou have lost one turn!");
         System.out.println("HAVE FUN!");
-    }
-
-    public void movingPrevelges1() {
-        // @Author Sarim 
-        // Player 1
-
-    }
-
-    public void movingPrevelges2() {
-        // @Author Sarim 
-        // Player 2
-
+        inventory1.lostTurn = inventory1.lostTurn + 1;
     }
     
 
@@ -546,6 +431,6 @@ public class wheelMethods {
 
     public void advanceStart() {
         System.out.println("\nAdvance to START!");
-        player.totalSpace = 1;
+        player.totalSpace = 20;
     }
 }

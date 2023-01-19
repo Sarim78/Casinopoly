@@ -23,6 +23,8 @@ public class inventory1 {
 
     public int jailSentence = 0;
 
+    public int lostTurn = 0;
+
     public void viewInventory() {
         System.out.println("\nYour inventory: ");
         System.out.println("\nGet out of jail free cards: " + getOutOfJailFreeCard);
@@ -35,7 +37,14 @@ public class inventory1 {
     }
 
     public void getOutOfJailFreeCard() {
-
+        // @Author Sarim 
+        // Player 1 free jail pass 
+        //if (player.space == 8) {
+          //  System.out.println("\nYou have moved 1 space forward!");
+           // player.space = player.space + 1;
+        //} else {
+          //  System.out.println("\nSorry, you can't use this pass yet");
+        //}
     }
 
     public void reroll() {

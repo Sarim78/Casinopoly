@@ -59,8 +59,8 @@ public class gameBoard {
     //System.out.println(player.totalSpace);
 
     // Player 1
-    if(player.totalSpace > 19) {
-      player.totalSpace = player.totalSpace - 19;
+    if(src.player.totalSpace > 19) {
+      src.player.totalSpace = src.player.totalSpace - 19;
       startAndGo.passGo();
     }
 
@@ -81,34 +81,34 @@ public class gameBoard {
       System.out.println("This is the starting point of this game.");
       startAndGo.start();
 
-    } else if(player.totalSpace == 2) {
+    } else if(src.player.totalSpace == 2) {
       //jackpotwheel
       spaceName = "Jackpot Wheel";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       jackpotWheel.jackpotwheel();
 
-    } else if(player.totalSpace == 3 || player.totalSpace == 12) {
+    } else if(src.player.totalSpace == 3 || src.player.totalSpace == 12) {
       // roulette
       spaceName = "Roulette";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       Roulette.roulette();
 
-    } else if(player.totalSpace == 4 || player.totalSpace == 10) {
+    } else if(src.player.totalSpace == 4 || src.player.totalSpace == 10) {
       //chance wheel
       spaceName = "Chance Wheel";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       chanceWheel.chancewheel();
 
-    } else if(player.totalSpace == 5 || player.totalSpace == 9) {
+    } else if(src.player.totalSpace == 5 || src.player.totalSpace == 9) {
       // slot machine
       spaceName = "Slot Machine";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       slots.slotmachine();
 
-    } else if(player.totalSpace == 6 || player.totalSpace == 13) {
+    } else if(src.player.totalSpace == 6 || src.player.totalSpace == 13) {
       // BlackJack
       spaceName = "Blackjack";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       blackJack.blackjack();
 
     } else if(player.totalSpace == 7 || player.totalSpace == 18) {

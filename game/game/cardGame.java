@@ -84,16 +84,14 @@ public class cardGame {
     // This 4 methods if for playimng gaining ot losing money
     public void playerGettingMoney1CardGame() {
         // Player 1 earning the money
-        player.playersMoney = player.playersMoney + playerEarningRandomAmountMoney;
-
-        System.out.println("\nYour current balance is: " + "$" + player.playersMoney);
+        player.gameEarnings = player.gameEarnings + playerEarningRandomAmountMoney;
+        player.bankAccount();
     }
 
     public void playerLosingMoney1CardGame() {
         // This method will let the player 1 lose money
-        player.playersMoney = player.playersMoney - playerBet;
-
-        System.out.println("\nYour current balance is: " + "$" + player.playersMoney);
+        player.gameEarnings = player.gameEarnings - playerBet;
+        player.bankAccount();
     }
 
     public void betOverUnderLimit() {
@@ -264,7 +262,6 @@ public class cardGame {
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     System.out.println("\nCONGRATS, you have won: $ " + playerEarningRandomAmountMoney);
-    
                     playerGettingMoney();
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");

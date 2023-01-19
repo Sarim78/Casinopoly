@@ -83,8 +83,8 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nThe numbers match! Congratulations, you have won double your entire money!");
-                player.playersMoney = player.playersMoney*2;
-                System.out.println(player.showMoney);
+                player.gameEarnings = player.gameEarnings*2;
+                player.bankAccount();
                 
             } else if (choice != aiPick) {
                 try {
@@ -93,8 +93,9 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nSorry, the numbers do not match. You have lost all your money and will now be left with just 5K :(");
-                player.playersMoney = 5000;
-                System.out.println(player.showMoney);
+                //player.playersMoney = 5000;
+                player.gameEarnings = 0;
+                player.bankAccount();
                 //in.close();
             }
             //in.close();

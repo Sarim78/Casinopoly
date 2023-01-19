@@ -345,6 +345,10 @@ public class turns {
 
 
     public void playerTurn1() {
+        if (inventory1.lostTurn > 0) {
+            inventory1.lostTurn = inventory1.lostTurn - 1;
+            playerTurn2();
+        }
         System.out.println("\n" + player.name + ", it's your turn! What would you like to do?");
         System.out.println("\nPress (H) to view game instructions");
         System.out.println("\nPress (I) to view inventory");
@@ -363,7 +367,7 @@ public class turns {
             anythingToContinue();
             playerTurn1();
         } else if (choice1.equals("M") || choice1.equals("m")) {
-            System.out.println("\nYour current money total: " + player.playersMoney);
+            player.plsWorklol(src.player.playersMoney);
             anythingToContinue();
             playerTurn1();
         } else if (choice1.equals("G") || choice1.equals("g")) {
@@ -386,7 +390,7 @@ public class turns {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn1();
         }
-        playerTurn2();
+        playerTurn1();
     }
 
     public void playerTurn2() {
@@ -398,19 +402,31 @@ public class turns {
         System.out.println("\nPress (R) to roll and begin your turn!");
         Scanner in = new Scanner(System.in);
         choice2 = in.nextLine();
-        if (choice2.equals("H") || choice2.equals("h")) {
-            //show them instructions
+        if (choice1.equals("H") || choice1.equals("h")) {
+            instructionsMenu();
             playerTurn2();
-        } else if (choice2.equals("I") || choice2.equals("i")) {
-            //show them their inventory
+        } else if (choice1.equals("I") || choice1.equals("i")) {
+            inventory1.viewInventory();
+            anythingToContinue();
             playerTurn2();
-        } else if (choice2.equals("M") || choice2.equals("m")) {
-            System.out.println("\nYour current money total: " + player.playersMoney);
+        } else if (choice1.equals("M") || choice1.equals("m")) {
+            player.bankAccount();
+            anythingToContinue();
             playerTurn2();
-        } else if (choice2.equals("S") || choice2.equals("s")) {
+        } else if (choice1.equals("G") || choice1.equals("g")) {
+            gameBoard();
+            anythingToContinue();
+            playerTurn2();
+        } else if (choice1.equals("S") || choice1.equals("s")) {
             System.out.println("\nYou are on " + gameBoard.spaceName + "!");
+            System.out.println("This is space #" + player2.totalSpace);
+            anythingToContinue();
             playerTurn2();
-        } else if (choice2.equals("R") || choice2.equals("r")) {
+        } else if (choice1.equals("P") || choice1.equals("p")) {
+            powerMenu();
+            anythingToContinue();
+            playerTurn2();
+        } else if (choice1.equals("R") || choice1.equals("r")) {
             //roll
             gameBoard.dice1();
         } else {

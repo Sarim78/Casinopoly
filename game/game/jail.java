@@ -45,7 +45,7 @@ public class jail {
         // If player 1, decides to pay his bail, this method will be printed
 
         // this statement will take out the money from his account balance
-        player.playersMoney = player.playersMoney - bail;
+        player.gameEarnings = player.gameEarnings - bail;
 
         // this statement will let player 1 move spaces
         player.totalSpace = player.totalSpace + player.space + 1;
@@ -54,7 +54,7 @@ public class jail {
     public void player1Money() {
         // This method will check if player 1 have more then 5k to pay for bail
 
-        if(player.playersMoney > 5000) {
+        if(player.gameEarnings > 5000) {
             // If player 1 have more then 5k, this statement will be executed
             askingUserToPayTheBail();
             player1MovingSpaces();

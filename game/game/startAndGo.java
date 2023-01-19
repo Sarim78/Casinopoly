@@ -4,6 +4,8 @@ package game;
 import java.util.Random;
 import java.util.Scanner;
 
+import src.player;
+
 /**
  * start
  * @athuor adil
@@ -16,6 +18,8 @@ public class startAndGo {
 
     Scanner in = new Scanner(System.in);
 
+    player player = new player();
+
     // Creating Variables
 
     String landingMoney = ("\nYou have landed on GO! Collect $4000");
@@ -26,9 +30,13 @@ public class startAndGo {
 
     public void start() {
         System.out.println(landingMoney);
+        player.gameEarnings = player.gameEarnings + 4000;
+        player.bankAccount();
     }
     
     public void passGo() {
         System.out.println(passGO);
+        player.gameEarnings = player.gameEarnings + 2000;
+        player.bankAccount();
     }
 }

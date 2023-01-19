@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Random;
 import src.player;
 import src.player2;
-
+//TODO tell them they;re playing slots
 /**
  * Casino Slot Game
  * @athuor Sarim Siddiqui
@@ -82,16 +82,19 @@ public class slots {
             // This is for the jackpot, the chances to win this is (4%).
             System.out.println("\nYOU HAVE WON $" + jackPotMoney + "!");
             System.out.println("Congrats!");
+            jackpot1();
         } else if(jackpotPercentage == 7) {
             // This is for the jackpot, the chances to win this is (7%).
             System.out.println("\nYOU HAVE WON $" + jackPotMoney + "!");
             System.out.println("Congrats!");
+            jackpot1();
         }
     }
 
     public void jackpot1() {
         // this method will be called, if player 1 wins the jackpot
-        player.playersMoney = player.playersMoney + jackPotMoney;
+        player.gameEarnings = player.gameEarnings + jackPotMoney;
+        player.bankAccount();
     }
 
     public void moneyGeneratedAfterBetting() {
@@ -102,13 +105,13 @@ public class slots {
         doubledMoney = money * 2; 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
+        playerEarning1MoneySlots();
     }
 
     public void playerEarning1MoneySlots() {
         // Player 1 earning money
-        player.playersMoney = player.playersMoney + doubledMoney;
-
-        System.out.println("Your current balance is: $" + player.playersMoney);
+        player.gameEarnings = player.gameEarnings + doubledMoney;
+        player.bankAccount();
     }
 
     public void confrimBet() {
@@ -147,11 +150,13 @@ public class slots {
                 // this statement gonna tell the player that his bet was over the limit
                 System.out.println("\nYou have placed a bet of: " + "$" + bet);
                 System.out.println("\nSorry, you went over the limit. The maximum limit of betting was: $20k...");
+                slotMachine();
                 //betPlacer.close();
             } else if (bet < minBet) {
                 // this statement gonna tell the player that his bet was under the limit
                 System.out.println("\nYou have placed a bet of: " + "$" + bet);
                 System.out.println("\nSorry, you went under the limit. The minimum limit of betting was: $1k...");
+                slotMachine();
                 //betPlacer.close();
             } else {
                 // If player place an bet between the range, this statement will print

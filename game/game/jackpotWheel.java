@@ -41,13 +41,10 @@ public class jackpotWheel {
             e.printStackTrace();
         }
         if (spinWheel == 1) {
-            System.out.println("\nAdvance to START!");
-            startAndGo.start();
+            wheelMethods.advanceStart();
         } else if (spinWheel == 2) {
-            System.out.println("\nYou won a get out of jail free card!");
             wheelMethods.jailFreeCard();
         } else if (spinWheel == 3) {
-            System.out.println("\nAdvance to the nearest game!");
             wheelMethods.advanceToNearestGame();
         } else if (spinWheel == 4) {
             jackpot = rnd.nextInt(1,3);
@@ -62,7 +59,7 @@ public class jackpotWheel {
                     System.out.println("\nYou have chosen to spin the jackpot wheel again instead!");
                     jackpotwheel();
                 }
-                in.close();
+                //in.close();
             } else {
                 System.out.println("\nSpin the jackpot wheel again!");
                 jackpotwheel();

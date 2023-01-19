@@ -101,10 +101,10 @@ public class Roulette {
 
     public void player1EarningLosingMoneyRoulette() {
         // Player 1 earning money
-        player.playersMoney = player.playersMoney + totalMoneyWon;
+        player.gameEarnings = player.gameEarnings + totalMoneyWon;
 
         // Player 1 losing money
-        player.playersMoney = player.playersMoney - totalMoneyLost;
+        player.gameEarnings = player.gameEarnings - totalMoneyLost;
     }
 
     public void instructions() {
@@ -472,11 +472,13 @@ public class Roulette {
         totalMoneyLost = totalWager - playerNetEarnings;
         if (playerEarnings >= 0) {
             System.out.println("\nYou won " + String.format("$%.2f", totalMoneyWon).replace("$0.", "$.") + "!");
-            System.out.println(String.format("$%.2f", playerNetEarnings).replace("$0.", "$.") + " will be added to your total.");
+            player.gameEarnings = player.gameEarnings + totalMoneyWon;
+            player.bankAccount();
         }
         else if (playerEarnings < 0) {
             System.out.println("\nYou lost " + String.format("$%.2f", totalMoneyLost).replace("$0.", "$.") + "!");
-            System.out.println(String.format("$%.2f", playerNetEarnings).replace("$0.", "$.") + " will be added to your total.");
+            player.gameEarnings = player.gameEarnings - totalMoneyLost;
+            player.bankAccount();
         }
     }
 

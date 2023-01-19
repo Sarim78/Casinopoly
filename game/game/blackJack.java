@@ -97,10 +97,10 @@ public class blackJack {
     
     public void player1EarningLosingMoneyBlackJack() {
         // this statement will let player add the money he/she earned
-        player.playersMoney = player.playersMoney + moneyEarned;
+        player.gameEarnings = player.gameEarnings + moneyEarned;
 
         // this statement will let player subtract the money he/she lost
-        player.playersMoney = player.playersMoney - moneyLost;
+        player.gameEarnings = player.gameEarnings - moneyLost;
     }
 
     public void playerWager() {
@@ -173,24 +173,24 @@ public class blackJack {
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have won " + String.format("$%.2f", moneyEarned).replace("$0.", "$."));
-                player.playersMoney = player.playersMoney + moneyEarned;
-                System.out.println(player.showMoney);
+                player.gameEarnings = player.gameEarnings + moneyEarned;
+                player.bankAccount();
             }
             else if (playerCardValue > 21) {
                 System.out.println("\nYou busted! You lose!");
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have lost " + String.format("$%.2f", moneyLost).replace("$0.", "$."));
-                player.playersMoney = player.playersMoney - moneyLost;
-                System.out.println(player.showMoney);
+                player.gameEarnings = player.gameEarnings - moneyLost;
+                player.bankAccount();
             }
             else if (dealerCardValue > 21) {
                 System.out.println("\nThe dealer busted! You win!");
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have won " + String.format("$%.2f", moneyEarned).replace("$0.", "$."));
-                player.playersMoney = player.playersMoney + moneyEarned;
-                System.out.println(player.showMoney);
+                player.gameEarnings = player.gameEarnings + moneyEarned;
+                player.bankAccount();
             }
             else if (playerCardValue == dealerCardValue) {
                 System.out.println("\nPush!");
@@ -203,8 +203,8 @@ public class blackJack {
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have lost " + String.format("$%.2f", moneyLost).replace("$0.", "$."));
-                player.playersMoney = player.playersMoney - moneyLost;
-                System.out.println(player.showMoney);
+                player.gameEarnings = player.gameEarnings - moneyLost;
+                player.bankAccount();
             }
         }
         else {

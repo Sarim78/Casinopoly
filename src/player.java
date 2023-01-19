@@ -21,20 +21,39 @@ public class player {
     
     public int space = 1;
 
-    public double playersMoney = 10000;
-
     public int diceRoller;
 
-    public int totalSpace;
+    public static int totalSpace;
 
     public String name;
 
     String choice;
 
-    public String showMoney = ("\nYour current Balance In Your Account is now : $" + String.format("$%.2f", playersMoney).replace("$0.", "$."));
+    public static double gameEarnings;
+
+    public String showMoney;
+
+    public static double playersMoney;
+
+    public int plsworktoo(int totalSpace) {
+        return totalSpace;
+    }
 
     public void rollDice() {
         diceRoller = rnd.nextInt(1, 6);
         totalSpace = space + diceRoller;
+        plsworktoo(totalSpace);
+    }
+
+    public double plsWorklol(double playersMoney) {
+        showMoney = ("\nYour current Balance In Your Account is now : " + String.format("$%.2f", playersMoney).replace("$0.", "$."));
+        System.out.println(showMoney);
+        return playersMoney;
+    }
+
+    public void bankAccount() {
+        playersMoney = 10000;
+        playersMoney = playersMoney + gameEarnings;
+        plsWorklol(playersMoney);
     }
 }
