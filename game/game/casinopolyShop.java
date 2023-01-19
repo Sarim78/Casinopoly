@@ -118,7 +118,7 @@ public class casinopolyShop {
         sleep100();
         System.out.println("\n8. Buy a one-time use powerup that allows you to re-spin a wheel (works for any wheel) ($10K)");
         sleep100();
-        System.out.println("\n9. Buy a one-time use powerup that allows you to move the other player 1-1 spaces ($7K)");
+        System.out.println("\n9. Buy a one-time use powerup that allows you to move the other player 1-3 spaces ($7K)");
         sleep100();
         System.out.println("\n10. Buy a one-time use powerup that allows you to put the other player in jail ($12.5K)");
         sleep100();
@@ -135,7 +135,7 @@ public class casinopolyShop {
         System.out.println("\nBetting options are unavailable at this time");
         sleep100();
         if (allOrNothing == 5) {
-            System.out.println("\n13. You also have been given the option to play all or nothing! Risk almost all your money for the chance of doubling your entire total!");
+            System.out.println("\n13. You also have been given the option to play all or nothing! Risk almost all your money for the chance of doubling your entire total! ($10K)");
             sleep300();
         }
         userInput();
