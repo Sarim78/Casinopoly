@@ -67,7 +67,7 @@ public class cardGame {
         
         numberGenerator(); 
 
-        playerPlacingBet.close();
+        //playerPlacingBet.close();
     }
 
     public void playerGettingMoney() {
@@ -121,10 +121,10 @@ public class cardGame {
                 System.out.println("Then you have to decide if the number is (Hi/Lo).");
                 System.out.println("If you get the answer wrong, you will lose all the money you gained from this mini game and the game will end...");
                 bet(); 
-                instructions.close();
+                //instructions.close();
             } else {
                 bet(); 
-                instructions.close();
+                //instructions.close();
             }
         } catch (Exception e) {
             System.out.println("\nERROR");
@@ -150,7 +150,7 @@ public class cardGame {
                 System.out.println("\nPlease Re-Enter Your Bet.");
                 bet();
             }
-            confrimbet.close();
+            //confrimbet.close();
         } catch (Exception e) {
             System.out.println("\nERROR");
             confrimBet();
@@ -181,15 +181,15 @@ public class cardGame {
             if(userTryAgain.equals("Y") || userTryAgain.equals("y")) {
                 Ai(); 
                 HiLo2();
-                tryAgain.close();
+                //tryAgain.close();
             } else if(userTryAgain.equals("N") || userTryAgain.equals("n")) {
                 System.out.println("\nYou have left the game...");
-                tryAgain.close();
+                //tryAgain.close();
             } else {
                 System.out.println("\nYou have inputed an wrong answer.");
                 System.out.println("Please try again");
                 wouldYouTryAgainAfterWinning();
-                tryAgain.close();
+                //tryAgain.close();
             }
         } catch (Exception e) {
             System.out.println("\nError");
@@ -223,7 +223,7 @@ public class cardGame {
                     HiLo();
                 }
 
-                HiLo.close();
+                //HiLo.close();
 
             } else if (HiLoInput.equals("Lo") || HiLoInput.equals("lo")) {
 
@@ -242,7 +242,7 @@ public class cardGame {
                     HiLo();
                 }
 
-                HiLo.close();
+                //HiLo.close();
 
             }
         } catch (Exception e) {
@@ -276,7 +276,7 @@ public class cardGame {
                     HiLo2();
                 }
     
-                HiLo2.close();
+                //HiLo2.close();
     
             } else if (HiLo2Input.equals("Lo") || HiLo2Input.equals("lo")) {
     
@@ -289,12 +289,12 @@ public class cardGame {
                     System.out.println("\nSorry, you lost :(");
                 }
     
-                HiLo2.close();
+                //HiLo2.close();
     
             } else {
                 System.out.println("\nYou only can pick between (Hi/Lo)"); 
                 HiLo();
-                HiLo2.close();
+                //HiLo2.close();
             }
         } catch (Exception e) {
             System.out.println("\nYou only can pick between (Hi/Lo)"); 

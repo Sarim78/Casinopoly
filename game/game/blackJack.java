@@ -88,10 +88,10 @@ public class blackJack {
             System.out.println("\nOnce you've wagered, you will receive two cards which will add up to a value. Each card has a value from 1 to 11. You can choose to either stand, and submit your total, or hit, and add another card to increase your total. The dealer will also pick cards. The goal is to submit and finish with a higher number than the dealer, but you CANNOT go over 21, or you will lose! The dealer cannot have a value under 17, so it is wise to avoid standing before you reach that number.");
             System.out.println("\nIf you have a higher value than the dealer does after standing, you win, as long as you didn't bust! You can also win if the dealer busts (goes over 21) and you don't. However, if you go over 21, you lose regardless of what the dealer gets. If you and the dealer tie, then no one wins and you get your wager back, nothing less or more.");
             playerWager();
-            inStructions.close();
+            //inStructions.close();
         } else {
             playerWager();
-            inStructions.close();
+            //inStructions.close();
         }
     }
     
@@ -122,7 +122,7 @@ public class blackJack {
                 System.out.println("\nYour starting value is " + playerCardValue);
                 dealerPickingCards();
                 playerPickingCards();
-                inWager.close();
+                //inWager.close();
             }
             
         } catch (Exception e) {
@@ -207,7 +207,7 @@ public class blackJack {
             System.out.println("\nPlease try again.");
             playerPickingCards();
         }
-        inCards.close();
+        //inCards.close();
     }
 
     public void blackjack() {

@@ -42,11 +42,11 @@ public class allorNothing {
             System.out.println("\nSorry, there's no way out...");
             aiPicks();
             game();
-            in.close();
+            //in.close();
         } else {
             aiPicks();
             game();
-            in.close();
+            //in.close();
         }
     }
 
@@ -90,9 +90,9 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nSorry, the numbers do not match. You have lost all your money and will now be left with just 5K :(");
-                in.close();
+                //in.close();
             }
-            in.close();
+            //in.close();
         } catch (Exception e) {
             System.out.println("\nInvalid input! Please try again.");
             game();

@@ -61,10 +61,10 @@ public class slots {
             System.out.println("You might win more money.");
             System.out.println("Or You might lose your money.");
             slotMachine();
-            instructions.close();
+            //instructions.close();
         } else {
             slotMachine();
-            instructions.close();
+            //instructions.close();
         }
         } catch (Exception e) {
             System.out.println("\nError");
@@ -124,7 +124,7 @@ public class slots {
             } else if(confrimBet.equals("N") || confrimBet.equals("n")) {
                 System.out.println("\nPlease Re-Enter Your Bet.");
                 slotMachine();
-                playerConfrimBet.close();
+                //playerConfrimBet.close();
             }
         } catch (Exception e) {
             System.out.println("\nError");
@@ -145,19 +145,19 @@ public class slots {
                 // this statement gonna tell the player that his bet was over the limit
                 System.out.println("\nYou have placed a bet of: " + "$" + bet);
                 System.out.println("\nSorry, you went over the limit. The maximum limit of betting was: $20k...");
-                betPlacer.close();
+                //betPlacer.close();
             } else if (bet < minBet) {
                 // this statement gonna tell the player that his bet was under the limit
                 System.out.println("\nYou have placed a bet of: " + "$" + bet);
                 System.out.println("\nSorry, you went under the limit. The minimum limit of betting was: $1k...");
-                betPlacer.close();
+                //betPlacer.close();
             } else {
                 // If player place an bet between the range, this statement will print
                 System.out.println("\nYou have placed a bet of: " + "$" + bet);
                 confrimBet();
                 moneyGeneratedAfterBetting();
                 jackPot();
-                betPlacer.close();
+                //betPlacer.close();
             }
         } catch (Exception e) {
             System.out.println("\nError");

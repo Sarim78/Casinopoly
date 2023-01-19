@@ -81,14 +81,14 @@ public class casinopolyShop2 {
         if (choice.equals("Y") || choice.equals("y")) {
             allOrNothing = rnd.nextInt(1,10);
             displayBuyingOptions();
-            in.close();
+            //in.close();
         } else if (choice.equals("N") || choice.equals("n")) {
             System.out.println(exitShop);
-            in.close();
+            //in.close();
         } else {
             System.out.println("Please enter either Y or N.");
             welcome();
-            in.close();
+            //in.close();
         }
     }
 
@@ -152,23 +152,23 @@ public class casinopolyShop2 {
             System.out.println(buyingLimit);
             sleep300();
             userInput();
-            in.close();
+            //in.close();
         } else if (buyingOption.equals("2") && timesBoughtChanceWheel > 0) {
             System.out.println(buyingLimit);
             sleep300();
             userInput();
-            in.close();
+            //in.close();
         } else if (buyingOption.equals("13") && allOrNothing == 5 && allorNothingCounter > 0) {
             System.out.println(buyingLimit);
             sleep300();
             userInput();
-            in.close();
+            //in.close();
         } else if (shopCounter > 5) {
             exitShop();
-            in.close();
+            //in.close();
         } else {
             giveStuff();
-            in.close();
+            //in.close();
         }
     }
 
@@ -183,7 +183,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -192,7 +192,7 @@ public class casinopolyShop2 {
                 giantWheel2.giantwheel();
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("2")) {
             System.out.println("\nYou were just in the chance wheel! Please buy something else");
@@ -208,7 +208,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -222,7 +222,7 @@ public class casinopolyShop2 {
                 }
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("4")) {
             System.out.println("\nYou have bought a one-time use re-roll powerup for $5K!");
@@ -234,7 +234,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -243,7 +243,7 @@ public class casinopolyShop2 {
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("5")) {
             System.out.println("\nYou have bought a one-time use advance spaces powerup for $3.5K!");
@@ -255,7 +255,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -264,7 +264,7 @@ public class casinopolyShop2 {
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("6")) {
             System.out.println("\nYou have bought a one-time use refuse rent powerup for $5K!");
@@ -276,7 +276,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -285,7 +285,7 @@ public class casinopolyShop2 {
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("7")) {
             System.out.println("\nYou have bought a one-time use reverse rent powerup for $10K!");
@@ -297,7 +297,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -306,7 +306,7 @@ public class casinopolyShop2 {
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("8")) {
             System.out.println("\nYou have bought a one-time use re-spin wheel powerup for $10K!");
@@ -318,7 +318,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -327,7 +327,7 @@ public class casinopolyShop2 {
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("9")) {
             System.out.println("\nYou have bought a one-time use control opponent powerup for $10K!");
@@ -339,7 +339,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -348,7 +348,7 @@ public class casinopolyShop2 {
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             }
         } else if (buyingOption.equals("10")) {
             System.out.println("\nYou have bought a one-time use jail sentence powerup for $12.5K!");
@@ -360,7 +360,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -369,7 +369,7 @@ public class casinopolyShop2 {
                 shopCounter = shopCounter + 1;
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } 
         } else if (buyingOption.equals("11")) {
             System.out.println("\nYou have decided to buy one of the three lottery tickets!");
@@ -381,13 +381,13 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
                 shopCounter = shopCounter + 1;
                 lotteryTickets();
-                in.close();
+                //in.close();
             } 
         } else if (buyingOption.equals("12")) {
             System.out.println("\nYou have decided to wager on the game!");
@@ -399,13 +399,13 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 System.out.println("no betting lol");
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } 
         } else if (buyingOption.equals("13") && allOrNothing == 5) {
             System.out.println("\nYou have decided to go ALL OR NOTHING");
@@ -417,7 +417,7 @@ public class casinopolyShop2 {
                 System.out.println(withdraw);
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } else {
                 System.out.println(confirmPurchase);
                 sleep300();
@@ -426,7 +426,7 @@ public class casinopolyShop2 {
                 allorNothing.allOrNothing();
                 sleep1500();
                 displayBuyingOptions();
-                in.close();
+                //in.close();
             } 
         } else if (buyingOption.equals("X") || buyingOption.equals("x")) {
             System.out.println(exitShop);
@@ -485,11 +485,11 @@ public class casinopolyShop2 {
             System.out.println("Invalid input! Please try again.");
             sleep300();
             lotteryTickets();
-            in.close();
+            //in.close();
         }
         sleep2000();
         displayBuyingOptions();
-        in.close();
+        //in.close();
     }
 
     public void exitShop() {
@@ -500,7 +500,7 @@ public class casinopolyShop2 {
         plsExit = in.nextLine();
         if (plsExit != null) {
             System.out.println(exitShop);
-            in.close();
+            //in.close();
         }
     }
 
