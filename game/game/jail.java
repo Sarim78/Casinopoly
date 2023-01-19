@@ -36,12 +36,11 @@ public class jail {
 
         System.out.println("\nGoodLuck!");
 
-        player1Money();
+        player1Data();
     }
 
-
-    // This 2 methods are for player 1
-    public void player1MovingSpaces() {
+    // This 3 methods are for player 1
+    public void player1MovingSpacesAndLosingMoney() {
         // If player 1, decides to pay his bail, this method will be printed
 
         // this statement will take out the money from his account balance
@@ -51,16 +50,23 @@ public class jail {
         player.totalSpace = player.totalSpace + player.space + 1;
     }
 
-    public void player1Money() {
+    public void player1Data() {
         // This method will check if player 1 have more then 5k to pay for bail
 
         if(player.playersMoney >= 5000) {
             // If player 1 have more then 5k, this statement will be executed
             askingUserToPayTheBail();
-            player1MovingSpaces();
+            player1MovingSpacesAndLosingMoney();
         } else {
             // If player 1 have less then 5k, this statement will be executed
             diceRoller();
+        }
+    }
+
+    public void player1LandedOnJail() {
+        // this If Statement will check if player 1 is at space 8
+        if(player.totalSpace == 8) {
+            player1Data();
         }
     }
 
