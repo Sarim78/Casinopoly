@@ -31,6 +31,8 @@ public class player {
 
     String choice;
 
+    public String showMoney = ("\nYour current Balance In Your Account is now : $" + String.format("$%.2f", playersMoney).replace("$0.", "$."));
+
     public void rollDice() {
         diceRoller = rnd.nextInt(1, 6);
         totalSpace = space + diceRoller;

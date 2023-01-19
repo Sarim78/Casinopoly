@@ -92,6 +92,8 @@ public class cardGame {
     public void playerLosingMoney1CardGame() {
         // This method will let the player 1 lose money
         player.playersMoney = player.playersMoney - playerBet;
+
+        System.out.println("\nYour current balance is: " + "$" + player.playersMoney);
     }
 
     public void betOverUnderLimit() {
@@ -107,8 +109,7 @@ public class cardGame {
 
     public void instructions() { 
     // This methid will tell the players the instructions of this mini game
-    System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
-
+        System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
         Scanner instructions = new Scanner(System.in);
         String playerInput = instructions.nextLine();
 
@@ -122,10 +123,11 @@ public class cardGame {
             bet(); 
             //instructions.close();
         } else {
-            bet(); 
+            bet();
             //instructions.close();
         }
-
+    }
+        
     public void confrimBet() {
         // this method will confrim the player bet
         try {
@@ -133,9 +135,9 @@ public class cardGame {
 
             System.out.println("\nYou have placed a bet of $" + bet);
             System.out.println("Please confrim if you want to place this bet (Y/N): ");
-    
+
             String userConfrimBet = confrimbet.nextLine();
-    
+
             if(userConfrimBet.equals("Y") || userConfrimBet.equals("y")) {
                 System.out.println("\nAlright, your bet of $" + bet + " has been confrimed!");
                 Ai(); 
@@ -211,6 +213,7 @@ public class cardGame {
                     System.out.println("\nSorry, you lost :(");
                     System.out.println("You have lost all your bet money...");
                     System.out.println("The bet amount you have lost is: $" + bet);
+                    playerLosingMoney1CardGame();
                 } else {
                     System.out.println("\nYou only can pick between (Hi/Lo)"); 
                     bet();
@@ -230,6 +233,7 @@ public class cardGame {
                     System.out.println("\nSorry, you lost :(");
                     System.out.println("You have lost all your bet money...");
                     System.out.println("The bet amount you have lost is: $" + bet);
+                    playerLosingMoney1CardGame();
                 } else {
                     System.out.println("\nYou only can pick between (Hi/Lo)"); 
                     bet();
@@ -264,6 +268,7 @@ public class cardGame {
                     playerGettingMoney();
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
+                    //TODO if they lose here then you have to take away all the money they earned before so they end up with nothng
                 } else {
                     System.out.println("\nYou only can pick between (Hi/Lo)"); 
                     bet();

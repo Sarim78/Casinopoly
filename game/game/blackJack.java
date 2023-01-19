@@ -173,34 +173,38 @@ public class blackJack {
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have won " + String.format("$%.2f", moneyEarned).replace("$0.", "$."));
-                System.out.println(String.format("$%.2f", moneyEarnedWin).replace("$0.", "$.") + " will be added to your total");
+                player.playersMoney = player.playersMoney + moneyEarned;
+                System.out.println(player.showMoney);
             }
             else if (playerCardValue > 21) {
                 System.out.println("\nYou busted! You lose!");
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have lost " + String.format("$%.2f", moneyLost).replace("$0.", "$."));
-                System.out.println(String.format("$%.2f", moneyEarnedLoss).replace("$0.", "$.") + " will be added to your total");
+                player.playersMoney = player.playersMoney - moneyLost;
+                System.out.println(player.showMoney);
             }
             else if (dealerCardValue > 21) {
                 System.out.println("\nThe dealer busted! You win!");
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have won " + String.format("$%.2f", moneyEarned).replace("$0.", "$."));
-                System.out.println(String.format("$%.2f", moneyEarnedWin).replace("$0.", "$.") + " will be added to your total");
+                player.playersMoney = player.playersMoney + moneyEarned;
+                System.out.println(player.showMoney);
             }
             else if (playerCardValue == dealerCardValue) {
                 System.out.println("\nPush!");
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
-                System.out.println("\nYour wager of " + String.format("$%.2f", wager).replace("$0.", "$.") + " will be returned");
+                System.out.println("\nYou won't receive any money.");
             }
             else {
                 System.out.println("\nYou lose!");
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have lost " + String.format("$%.2f", moneyLost).replace("$0.", "$."));
-                System.out.println(String.format("$%.2f", moneyEarnedLoss).replace("$0.", "$.") + " will be added to your total");
+                player.playersMoney = player.playersMoney - moneyLost;
+                System.out.println(player.showMoney);
             }
         }
         else {
