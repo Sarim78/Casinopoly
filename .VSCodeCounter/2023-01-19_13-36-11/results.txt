@@ -1,0 +1,53 @@
+Date : 2023-01-19 13:36:11
+Directory : c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly
+Total : 24 files,  3291 codes, 494 comments, 744 blanks, all 4529 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Java     |         23 |      3,289 |        494 |        744 |      4,527 |
+| Markdown |          1 |          2 |          0 |          0 |          2 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                               | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                  |         24 |      3,291 |        494 |        744 |      4,529 |
+| . (Files)                                                                          |          1 |          2 |          0 |          0 |          2 |
+| game                                                                               |         16 |      2,794 |        445 |        614 |      3,853 |
+| game\game                                                                          |         16 |      2,794 |        445 |        614 |      3,853 |
+| src                                                                                |          7 |        495 |         49 |        130 |        674 |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                           | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\README.md                      | Markdown |          2 |          0 |          0 |          2 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\Roulette.java        | Java     |        398 |         26 |         64 |        488 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\allorNothing.java    | Java     |         76 |         13 |         21 |        110 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\blackJack.java       | Java     |        160 |         14 |         46 |        220 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\cardGame.java        | Java     |        198 |         43 |         72 |        313 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\casinopolyShop.java  | Java     |        515 |         46 |         49 |        610 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\casinopolyShop2.java | Java     |        460 |         44 |         48 |        552 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\chanceWheel.java     | Java     |         72 |         26 |         31 |        129 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\gameBoard.java       | Java     |         87 |         26 |         42 |        155 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\giantWheel.java      | Java     |         72 |          7 |         16 |         95 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\giantWheel2.java     | Java     |         71 |          7 |         16 |         94 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\jackpotWheel.java    | Java     |         57 |          7 |         15 |         79 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\jail.java            | Java     |         86 |         29 |         34 |        149 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\penaltyWheel.java    | Java     |         52 |         22 |         21 |         95 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\slots.java           | Java     |        105 |         33 |         41 |        179 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\startAndGo.java      | Java     |         15 |          8 |         11 |         34 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\game\game\wheelMethods.java    | Java     |        370 |         94 |         87 |        551 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\src\ai.java                    | Java     |          7 |          5 |          2 |         14 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\src\casinopolyMain.java        | Java     |         40 |         17 |         20 |         77 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\src\inventory1.java            | Java     |         37 |          4 |         28 |         69 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\src\inventory2.java            | Java     |         11 |          0 |         11 |         22 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\src\player.java                | Java     |         18 |          8 |         14 |         40 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\src\player2.java               | Java     |         10 |          7 |         12 |         29 |
+| c:\Users\siddi\OneDrive\Documents\GitHub\Casinopoly\src\turns.java                 | Java     |        372 |          8 |         43 |        423 |
+| Total                                                                              |          |      3,291 |        494 |        744 |      4,529 |
++------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

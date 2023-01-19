@@ -2,7 +2,7 @@ package src;
 
 /**
  * A.I Data
- * @athuor Sarim Siddiqui
+ * @author Sarim Siddiqui
  */
 
 public class ai {
