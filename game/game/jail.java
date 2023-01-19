@@ -54,7 +54,7 @@ public class jail {
     public void player1Money() {
         // This method will check if player 1 have more then 5k to pay for bail
 
-        if(player.playersMoney > 5000) {
+        if(player.playersMoney >= 5000) {
             // If player 1 have more then 5k, this statement will be executed
             askingUserToPayTheBail();
             player1MovingSpaces();
