@@ -68,6 +68,7 @@ public class slots {
         }
         } catch (Exception e) {
             System.out.println("\nError");
+            instructions();
         }
     }
 
@@ -128,6 +129,7 @@ public class slots {
             }
         } catch (Exception e) {
             System.out.println("\nError");
+            confrimBet();
         }
     }
 
@@ -161,6 +163,7 @@ public class slots {
             }
         } catch (Exception e) {
             System.out.println("\nError");
+            slotMachine();
         }
     }
 

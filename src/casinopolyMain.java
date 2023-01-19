@@ -23,49 +23,49 @@ public class casinopolyMain {
     public static void main(String[] args) {
 
         casinopolyShop casinopolyShop = new casinopolyShop();
-        //casinopolyShop.casinopolyshop();
+        // casinopolyShop.casinopolyshop();
 
         blackJack blackJack = new blackJack();
-        //blackJack.blackjack();
+        // blackJack.blackjack();
         
         slots slots = new slots();
-        //slots.instructions();
+        // slots.instructions();
         
         cardGame cardGame = new cardGame();
-        //cardGame.instructions();
+        // cardGame.instructions();
 
         Roulette Roulette = new Roulette();
-        //Roulette.roulette();
+       // Roulette.roulette();
 
         gameBoard gameBoard = new gameBoard();
         //gameBoard.dice();
 
         chanceWheel chanceWheel = new chanceWheel();
-        //chanceWheel.chancewheel();
+        // chanceWheel.chancewheel();
 
         penaltyWheel penaltyWheel = new penaltyWheel();
-        //penaltyWheel.wheelOfPenalty();
+        // penaltyWheel.wheelOfPenalty();
 
         wheelMethods wheelMethods = new wheelMethods();
-        //wheelMethods.advanceStart();
+        // wheelMethods.advanceStart();
 
         player player = new player();
-        //System.out.println(player.totalSpace);
+        // System.out.println(player.totalSpace);
 
         giantWheel giantWheel = new giantWheel();
-        //giantWheel.giantwheel();
+        // giantWheel.giantwheel();
 
         allorNothing allorNothing = new allorNothing();
-        //allorNothing.allOrNothing();
+        // allorNothing.allOrNothing();
 
         jackpotWheel jackpotWheel = new jackpotWheel();
-        //jackpotWheel.jackpotwheel();
+        // jackpotWheel.jackpotwheel();
 
         startAndGo startAndGo = new startAndGo();
-        //startAndGo.start();
+        // startAndGo.start();
 
         jail jail = new jail();
-        //jail.grettingUserToJail();
+        jail.grettingUserToJail();
 
         turns turns = new turns();
         turns.gameMenu();
