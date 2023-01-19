@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /**
- * wheel methods
+ * Coin Flip
  * @author Tyrell
  */
 
