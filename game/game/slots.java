@@ -50,6 +50,7 @@ public class slots {
         Scanner instructions = new Scanner(System.in);
 
         // This methid will tell the players the instructions of this mini game
+        System.out.println("\nWelcome to slots!");
         System.out.println("\nIf you would like to check out the instructions of this mini game, press (g). Otherwise, press anything.");
 
         String playerInput = instructions.nextLine();
