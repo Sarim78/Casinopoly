@@ -31,15 +31,9 @@ public class wheelMethods2 {
 
     inventory2 inventory2 = new inventory2();
 
-<<<<<<< HEAD
-    jail2 Jail = new jail2();
+    jail Jail = new jail();
 
-    startAndGo2 startAndGo = new startAndGo2();
-=======
-    jail2 Jail2 = new jail2();
-
-    startAndGo2 startAndGo2 = new startAndGo2();
->>>>>>> 8deca5c680e252a9ef0ca080de4c8d3a67f54282
+    startAndGo startAndGo = new startAndGo();
 
     // Creating Variables
 

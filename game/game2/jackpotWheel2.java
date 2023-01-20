@@ -17,19 +17,11 @@ public class jackpotWheel2 {
 
     Random rnd = new Random();
 
-<<<<<<< HEAD
-    wheelMethods2 wheelMethods = new wheelMethods2();
-
-    startAndGo2 startAndGo = new startAndGo2();
-
-    allorNothing2 allorNothing = new allorNothing2();
-=======
-    wheelMethods2 wheelMethods2 = new wheelMethods2();
+    wheelMethods wheelMethods = new wheelMethods();
 
     startAndGo2 startAndGo2 = new startAndGo2();
 
-    allorNothing2 allorNothing2 = new allorNothing2();
->>>>>>> 8deca5c680e252a9ef0ca080de4c8d3a67f54282
+    allorNothing allorNothing = new allorNothing();
 
     // Creating Variables
 
