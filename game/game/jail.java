@@ -47,7 +47,7 @@ public class jail {
         player.gameEarnings = player.gameEarnings - bail;
 
         // this statement will let player 1 move spaces
-        player.totalSpace = player.totalSpace + player.space + 1;
+        player.totalSpace = player.totalSpace + player.space - 6;
     }
 
     public void player1Data() {
