@@ -3,7 +3,6 @@ package game2;
 // Importing Libraries 
 import java.util.Scanner;
 import java.util.Random;
-import src.player;
 import src.player2;
 /**
  * Casino Slot Game
@@ -13,8 +12,6 @@ import src.player2;
 public class slots2 {
     // Creating Objects 
     Random rnd = new Random();
-
-    player player = new player();
 
     player2 player2 = new player2();
 

@@ -20,11 +20,11 @@ public class casinopolyShop2 {
 
     Random rnd = new Random();
 
-    giantWheel giantWheel = new giantWheel();
+    giantWheel2 giantWheel2 = new giantWheel2();
 
     chanceWheel2 chanceWheel2 = new chanceWheel2();
 
-    allorNothing allorNothing = new allorNothing();
+    allorNothing2 allorNothing2 = new allorNothing2();
 
     inventory2 inventory2 = new inventory2();
 

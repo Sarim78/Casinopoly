@@ -2,7 +2,6 @@ package game2;
 
 // Importing Libraries 
 import java.util.Random;
-import java.util.Scanner;
 import java.lang.Math;
 
 // Importing Files 
@@ -31,9 +30,9 @@ public class wheelMethods2 {
 
     inventory2 inventory2 = new inventory2();
 
-    jail Jail = new jail();
+    jail2 Jail2 = new jail2();
 
-    startAndGo startAndGo = new startAndGo();
+    startAndGo2 startAndGo2 = new startAndGo2();
 
     // Creating Variables
 

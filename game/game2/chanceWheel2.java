@@ -18,13 +18,13 @@ public class chanceWheel2 {
 
     Scanner in = new Scanner(System.in);
     
-    wheelMethods2 wheelMethods = new wheelMethods2();
+    wheelMethods2 wheelMethods2 = new wheelMethods2();
 
-    penaltyWheel2 penaltyWheel = new penaltyWheel2();
+    penaltyWheel2 penaltyWheel2 = new penaltyWheel2();
 
     giantWheel22 giantWheel2 = new giantWheel22();
 
-    casinopolyShop2 casinopolyShop2 = new casinopolyShop2();
+    casinopolyShop22 casinopolyShop22 = new casinopolyShop22();
 
     // Creating Variables
 
@@ -69,27 +69,27 @@ public class chanceWheel2 {
             // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
             if(randomSlot == 1) {
                 // This will call moveThreeSpaces() method
-                wheelMethods.moveThreeSpaces();
+                wheelMethods2.moveThreeSpaces();
 
             } else if (randomSlot == 2) {
                 // This will call moveBackThreeSpaces() method
-                wheelMethods.moveBackThreeSpaces();
+                wheelMethods2.moveBackThreeSpaces();
 
             } else if (randomSlot == 3) {
                 // This will call jailFreeCard() method
-                wheelMethods.jailFreeCard();
+                wheelMethods2.jailFreeCard();
 
             } else if (randomSlot == 4) {
                 // This will call raffelCard() method
-                wheelMethods.raffelCard();
+                wheelMethods2.raffelCard();
                 
             } else if (randomSlot == 5) {
                 // This will call yourBirthday() method
-                wheelMethods.yourBirthday();
+                wheelMethods2.yourBirthday();
                 
             } else if (randomSlot == 6) {
                 // This will call advanceToFreeSpot() method
-                wheelMethods.advanceToFreeSpot();
+                wheelMethods2.advanceToFreeSpot();
                 
             } else if (randomSlot == 7) {
                 // This will call freeSpinForGainCasinoWheel() method
@@ -99,24 +99,24 @@ public class chanceWheel2 {
             } else if (randomSlot == 8) {
                 // This will call buyingAnyObjects() method
                 System.out.println("Head to the Casinopoly shop!");
-                casinopolyShop2.casinopolyshop();
+                casinopolyShop22.casinopolyshop();
                 
             } else if (randomSlot == 9) {
                 // This will call goToJail() method
-                wheelMethods.goToJail();
+                wheelMethods2.goToJail();
                 
             } else if (randomSlot == 10) {
                 // This will call youLost() method
-                wheelMethods.youLost();
+                wheelMethods2.youLost();
                 
             } else if (randomSlot == 11) {
                 // This will call youHaveBeenFined() method
-                wheelMethods.youHaveBeenFined();
+                wheelMethods2.youHaveBeenFined();
                 
             } else if (randomSlot == 12) {
                 // This will call casinopolyPenaltySpace() method
                 System.out.println("Spin the penalty wheel!");
-                penaltyWheel.wheelOfPenalty();
+                penaltyWheel2.wheelOfPenalty();
             }
         } else {
             // If player decides to click any button expect for (G), the loop will print the else statement 

@@ -3,7 +3,6 @@ package game2;
 import java.util.Scanner;
 import java.util.Random;
 import java.lang.Thread;
-import src.player;
 import src.player2;
 
 /**
@@ -14,8 +13,6 @@ import src.player2;
 public class jail2 {
     // Objects 
     Random rnd = new Random(); 
-
-    player player = new player();
 
     player2 player2 = new player2();
 

@@ -3,7 +3,6 @@ package game2;
 // Importing Libraries 
 import java.util.Scanner;
 import java.util.Random;
-import src.player;
 import src.player2;
 
 /**
@@ -18,8 +17,6 @@ public class cardGame2 {
     Random rnd = new Random(); 
     
     Scanner in = new Scanner(System.in);
-
-    player player = new player();
 
     player2 player2 = new player2();
 

@@ -17,7 +17,7 @@ public class penaltyWheel2 {
 
     Scanner in = new Scanner(System.in);
 
-    wheelMethods2 wheelMethods = new wheelMethods2();
+    wheelMethods2 wheelMethods2 = new wheelMethods2();
 
     // Creating Variables
 
@@ -65,24 +65,24 @@ public class penaltyWheel2 {
             // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
             if(randomSlot == 1) {
                 // goToJail method
-                wheelMethods.goToJail();
+                wheelMethods2.goToJail();
 
             } else if (randomSlot == 2) {
                 // playerChoosesToMoveYou method
 
-                wheelMethods.playerChoosesToMoveYou();
+                wheelMethods2.playerChoosesToMoveYou();
 
             } else if (randomSlot == 3) {
                 // playerLosesMoney method
-                wheelMethods.loseMoney();
+                wheelMethods2.loseMoney();
 
             } else if (randomSlot == 4) {
                 // payingOtherPlayer method
-                wheelMethods.moneyTaken();
+                wheelMethods2.moneyTaken();
                 
             } else if (randomSlot == 5) {
                 // movingPrevelges method
-                wheelMethods.movingPrevelges();    
+                wheelMethods2.movingPrevelges();    
             }               
             else {
                 // If player decides to click any button expect for (G), the loop will print the else statement 

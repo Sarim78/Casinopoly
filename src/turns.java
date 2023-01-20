@@ -67,7 +67,7 @@ public class turns {
         // @author Sarim Siddiqui
 
         // This if statement will check if player 1 or player 2 have greater then or equal to $100k
-        if(player.playersMoney >= 100000 || player2.playersMoney >= 100000) {
+        if(src.player.playersMoney >= 100000 || src.player2.playersMoney >= 100000) {
             System.out.println("\nCONGRATS!!!");
             System.out.println("\nYou have won the game!");
         }

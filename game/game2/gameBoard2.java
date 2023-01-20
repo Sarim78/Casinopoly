@@ -4,7 +4,6 @@ package game2;
 import java.util.Random;
 
 // Importing Files 
-import src.player;
 import src.player2;
 
 /**
@@ -19,31 +18,29 @@ public class gameBoard2 {
 
   Random rnd = new Random();
 
-  player player = new player();
-
   player2 player2 = new player2();
 
-  jackpotWheel2 jackpotWheel = new jackpotWheel2();
+  jackpotWheel2 jackpotWheel2 = new jackpotWheel2();
 
-  chanceWheel2 chanceWheel = new chanceWheel2();
+  chanceWheel2 chanceWheel2 = new chanceWheel2();
 
-  Roulette2 Roulette = new Roulette2();
+  Roulette2 Roulette2 = new Roulette2();
 
-  slots2 slots = new slots2();
+  slots2 slots2 = new slots2();
 
-  blackJack2 blackJack = new blackJack2();
+  blackJack2 blackJack2 = new blackJack2();
 
-  penaltyWheel2 penaltyWheel = new penaltyWheel2();
+  penaltyWheel2 penaltyWheel2 = new penaltyWheel2();
 
-  giantWheel2 giantWheel = new giantWheel2();
+  giantWheel2 giantWheel2 = new giantWheel2();
 
-  cardGame2 cardGame = new cardGame2();
+  cardGame2 cardGame2 = new cardGame2();
 
-  startAndGo2 startAndGo = new startAndGo2();
+  startAndGo2 startAndGo2 = new startAndGo2();
 
-  jail2 Jail = new jail2();
+  jail2 Jail2 = new jail2();
 
-  casinopolyShop2 casinopolyShop = new casinopolyShop2();
+  casinopolyShop2 casinopolyShop2 = new casinopolyShop2();
 
   // Creating Variables
 
@@ -64,7 +61,7 @@ public class gameBoard2 {
     // Player 2
     if(src.player2.totalSpace > 19) {
       src.player2.totalSpace = src.player2.totalSpace - 19;
-      startAndGo.passGo();
+      startAndGo2.passGo();
     }
 
     gameBoardSpace();
@@ -85,43 +82,43 @@ public class gameBoard2 {
       spaceName = "START";
       System.out.println("\nYou are on space #" + src.player2.totalSpace);
       System.out.println("This is the starting point of this game.");
-      startAndGo.start();
+      startAndGo2.start();
 
     } else if(src.player2.totalSpace == 2) {
       //jackpotwheel
       spaceName = "Jackpot Wheel";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      jackpotWheel.jackpotwheel();
+      jackpotWheel2.jackpotwheel();
 
     } else if(src.player2.totalSpace == 3 || src.player2.totalSpace == 12) {
       // roulette
       spaceName = "Roulette";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      Roulette.roulette();
+      Roulette2.roulette();
 
     } else if(src.player2.totalSpace == 4 || src.player2.totalSpace == 10) {
       //chance wheel
       spaceName = "Chance Wheel";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      chanceWheel.chancewheel();
+      chanceWheel2.chancewheel();
 
     } else if(src.player2.totalSpace == 5 || src.player2.totalSpace == 9) {
       // slot machine
       spaceName = "Slot Machine";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      slots.slotmachine();
+      slots2.slotmachine();
 
     } else if(src.player2.totalSpace == 6 || src.player2.totalSpace == 13) {
       // BlackJack
       spaceName = "Blackjack";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      blackJack.blackjack();
+      blackJack2.blackjack();
 
     } else if(src.player2.totalSpace == 7 || src.player2.totalSpace == 18) {
       // cardgame
       spaceName = "Card Game";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      cardGame.instructions();
+      cardGame2.instructions();
 
     } else if(src.player2.totalSpace == 8) {
       // Jail
@@ -139,25 +136,25 @@ public class gameBoard2 {
       // go to Jail
       spaceName = "Go To Jail";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      Jail.grettingUserToJail();
+      Jail2.grettingUserToJail();
 
     } else if(src.player2.totalSpace == 15) {
       //giant casinopoly wheel
       spaceName = "Giant Casinopoly Wheel";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      giantWheel.giantwheel();
+      giantWheel2.giantwheel();
 
     } else if(src.player2.totalSpace == 17) {
       //casinopoly shop
       spaceName = "Casinopoly Shop";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      casinopolyShop.casinopolyshop();
+      casinopolyShop2.casinopolyshop();
 
     }  else if(src.player2.totalSpace == 19) {
       //penalty wheel
       spaceName = "Penalty Wheel";
       System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
-      penaltyWheel.wheelOfPenalty();
+      penaltyWheel2.wheelOfPenalty();
     }
   }
 }
