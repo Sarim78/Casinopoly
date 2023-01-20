@@ -70,6 +70,7 @@ public class turns {
         if(src.player.playersMoney >= 100000 || src.player2.playersMoney >= 100000) {
             System.out.println("\nCONGRATS!!!");
             System.out.println("\nYou have won the game!");
+            endGame();
         }
     }
 
@@ -88,6 +89,7 @@ public class turns {
         } else if(userInput.equals("N") || userInput.equals("n")) {
             System.out.println("\nYou have successfully ended the game!");
             System.out.println("\nWe hope that you enjoyed!");
+            System.exit(0);
         } else {
             System.out.println("\nPlease pick between (Y/N)");
             endGame();
@@ -431,7 +433,6 @@ public class turns {
             //roll
             gameBoard.dice1();
             winsGame();
-            endGame();
         } else {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn1();
@@ -482,7 +483,6 @@ public class turns {
             //roll
             gameBoard2.dice2();
             winsGame();
-            endGame();
         } else {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn2();
