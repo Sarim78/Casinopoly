@@ -33,20 +33,25 @@ public class allorNothing {
     // Creating Methods
 
     public void introduction() {
-        System.out.println("\nWelcome to all or nothing! Lay it all on the line, risk all your money, and get a 50% chance of either doubling your money or losing almost all of it.");
-        System.out.println("\nHow to play: You will pick a number. Either 1 or 2. The AI will do the same. If the numbers match, you double your money! But if the numbers do not match, you will be left with 5K");
-        System.out.println("\nAre you up to the task? Press anything to continue.");
-        Scanner in = new Scanner(System.in);
-        instructions = in.nextLine();
-        if (instructions.equals("no") || instructions.equals("NO") || instructions.equals("No")) {
-            System.out.println("\nSorry, there's no way out...");
-            aiPicks();
-            game();
-            //in.close();
+        player.playersMoney = player.playersMoney + 50000;
+        if (player.playersMoney < 20000) {
+            System.out.println("Sorry, you don't have enough money to play. You need at least $20K");
         } else {
-            aiPicks();
-            game();
-            //in.close();
+            System.out.println("\nWelcome to all or nothing! Lay it all on the line, risk all your money, and get a 50% chance of either doubling your money or losing almost all of it.");
+            System.out.println("\nHow to play: You will pick a number. Either 1 or 2. The AI will do the same. If the numbers match, you double your money! But if the numbers do not match, you will be left with 5K");
+            System.out.println("\nAre you up to the task? Press anything to continue.");
+            Scanner in = new Scanner(System.in);
+            instructions = in.nextLine();
+            if (instructions.equals("no") || instructions.equals("NO") || instructions.equals("No")) {
+                System.out.println("\nSorry, there's no way out...");
+                aiPicks();
+                game();
+                //in.close();
+            } else {
+                aiPicks();
+                game();
+                //in.close();
+            }
         }
     }
 
@@ -83,7 +88,7 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nThe numbers match! Congratulations, you have won double your entire money!");
-                player.playersMoney = player.playersMoney*2;
+                player.gameEarnings = player.gameEarnings*2 + 10000;
                 player.bankAccount();
                 
             } else if (choice != aiPick) {
@@ -93,7 +98,7 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nSorry, the numbers do not match. You have lost all your money and will now be left with just 5K :(");
-                player.playersMoney = 5000;
+                player.gameEarnings = -5000;
                 player.bankAccount();
                 //in.close();
             }

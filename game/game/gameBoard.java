@@ -43,6 +43,10 @@ public class gameBoard {
 
   jail Jail = new jail();
 
+  casinopolyShop casinopolyShop = new casinopolyShop();
+
+  allorNothing allorNothing = new allorNothing();
+
   // Creating Variables
 
   public String spaceName;
@@ -91,6 +95,7 @@ public class gameBoard {
       // roulette
       spaceName = "Roulette";
       System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      allorNothing.allOrNothing();
       Roulette.roulette();
 
     } else if(src.player.totalSpace == 4 || src.player.totalSpace == 10) {
@@ -145,6 +150,7 @@ public class gameBoard {
       //casinopoly shop
       spaceName = "Casinopoly Shop";
       System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      casinopolyShop.casinopolyshop();
 
     }  else if(player.totalSpace == 19) {
       //penalty wheel
