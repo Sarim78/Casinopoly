@@ -1,4 +1,4 @@
-package game;
+package game2;
 
 // Importing Libraries 
 import java.util.Random;
@@ -6,29 +6,29 @@ import java.util.Scanner;
 import java.lang.Thread;
 
 // Importing Files
-import src.inventory1;
-import src.player;
+import src.inventory2;
+import src.player2;
 
 /**
  * Casinopoly Shop
  * @author adil
  */
 
-public class casinopolyShop {
+public class casinopolyShop2 {
     
     //Creating Objects
 
     Random rnd = new Random();
 
-    giantWheel giantWheel = new giantWheel();
+    giantWheel2 giantWheel2 = new giantWheel2();
 
-    chanceWheel chanceWheel = new chanceWheel();
+    chanceWheel2 chanceWheel2 = new chanceWheel2();
 
-    allorNothing allorNothing = new allorNothing();
+    allorNothing2 allorNothing2 = new allorNothing2();
 
-    inventory1 inventory1 = new inventory1();
+    inventory2 inventory2 = new inventory2();
 
-    player player = new player();
+    player2 player2 = new player2();
 
     //Creating Variables
 
@@ -211,9 +211,9 @@ public class casinopolyShop {
                 sleep300();
                 timesBoughtGiantWheel = timesBoughtGiantWheel + 1; //because this item has a purchase limit
                 shopCounter = shopCounter + 1; //items bought get tracked like this
-                src.player.gameEarnings = src.player.gameEarnings - 1000; //bank account gets affected like this
-                player.bankAccount();
-                giantWheel.giantwheel();
+                src.player2.gameEarnings = src.player2.gameEarnings - 1000; //bank account gets affected like this
+                player2.bankAccount();
+                giantWheel2.giantwheel();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -235,9 +235,9 @@ public class casinopolyShop {
                 sleep300();
                 timesBoughtChanceWheel = timesBoughtChanceWheel + 1; //item has purchase limit
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 1000;
-                player.bankAccount();
-                chanceWheel.chancesOfWheel();
+                src.player2.gameEarnings = src.player2.gameEarnings - 1000;
+                player2.bankAccount();
+                chanceWheel2.chancesOfWheel();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -258,12 +258,12 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 2500;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 2500;
+                player2.bankAccount();
                 getoutofJail = rnd.nextInt(1,100);
                 if (getoutofJail >= 1 && getoutofJail <= 50) {
                     System.out.println("\nCongratulations, you won the get out of jail for free card! It will be added to your inventory.");
-                    inventory1.getOutOfJailFreeCard = inventory1.getOutOfJailFreeCard + 1; //add it to their inventory
+                    inventory2.getOutOfJailFreeCard = inventory2.getOutOfJailFreeCard + 1; //add it to their inventory
                 } else if (getoutofJail >= 51 && getoutofJail <= 100) {
                     System.out.println("\nSorry, you didn't win a get out of jail for free card. Better luck next time!");
                 }
@@ -287,10 +287,10 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe re-roll powerup will be added to your inventory.");
-                inventory1.reroll = inventory1.reroll + 1; //add it to their inventory
+                inventory2.reroll = inventory2.reroll + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 5000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 5000;
+                player2.bankAccount();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -311,10 +311,10 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe advance spaces powerup will be added to your inventory.");
-                inventory1.advanceSpaces = inventory1.advanceSpaces + 1; //add it to their inventory
+                inventory2.advanceSpaces = inventory2.advanceSpaces + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 3500;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 3500;
+                player2.bankAccount();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -335,10 +335,10 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe refuse rent powerup will be added to your inventory.");
-                inventory1.refuseRent = inventory1.refuseRent + 1; //add it to their inventory
+                inventory2.refuseRent = inventory2.refuseRent + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 5000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 5000;
+                player2.bankAccount();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -359,10 +359,10 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe reverse rent powerup will be added to your inventory.");
-                inventory1.reverseRent = inventory1.reverseRent + 1; //add it to their inventory
+                inventory2.reverseRent = inventory2.reverseRent + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 10000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 10000;
+                player2.bankAccount();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -383,10 +383,10 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe re-spin wheel powerup will be added to your inventory.");
-                inventory1.reSpin = inventory1.reSpin + 1; //add it to their inventory
+                inventory2.reSpin = inventory2.reSpin + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 10000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 10000;
+                player2.bankAccount();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -407,10 +407,10 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe control opponent powerup will be added to your inventory.");
-                inventory1.controlOpponent = inventory1.controlOpponent + 1; //add it to their inventory
+                inventory2.controlOpponent = inventory2.controlOpponent + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 10000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 10000;
+                player2.bankAccount();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -431,10 +431,10 @@ public class casinopolyShop {
                 System.out.println(confirmPurchase);
                 sleep300();
                 System.out.println("\nThe jail sentence powerup will be added to your inventory.");
-                inventory1.jailSentence = inventory1.jailSentence + 1; //add it to their inventory
+                inventory2.jailSentence = inventory2.jailSentence + 1; //add it to their inventory
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 12500;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - 12500;
+                player2.bankAccount();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -489,7 +489,7 @@ public class casinopolyShop {
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
-            } else if (src.player.gameEarnings < 30000) {
+            } else if (src.player2.gameEarnings < 30000) {
                 //you need at least 20K to play, and it costs 10K to play from the shop, so at least 30K total
                 System.out.println("Sorry, you don't have enough money to play all or nothing");
                 displayBuyingOptions();
@@ -498,9 +498,9 @@ public class casinopolyShop {
                 sleep300();
                 allorNothingCounter = allorNothingCounter + 1; //purchase limit for this item
                 shopCounter = shopCounter + 1;
-                src.player.gameEarnings = src.player.gameEarnings - 10000;
-                player.bankAccount();
-                allorNothing.allOrNothing();
+                src.player2.gameEarnings = src.player2.gameEarnings - 10000;
+                player2.bankAccount();
+                allorNothing2.allOrNothing();
                 sleep1500();
                 displayBuyingOptions();
                 //in.close();
@@ -530,48 +530,48 @@ public class casinopolyShop {
         ticketChoice = in.nextLine();
         if (ticketChoice.equals("1")) {
             System.out.println("You bought the $1K lottery ticket! Will today be your lucky day...");
-            src.player.gameEarnings = src.player.gameEarnings - 1000;
+            src.player2.gameEarnings = src.player2.gameEarnings - 1000;
             sleep3000();
             lotteryTicket1 = rnd.nextInt(1,100);
             if (lotteryTicket1 <= 15) { //15% chance to win, here is if they do win
                 System.out.println(bigWinner);
                 sleep300();
                 System.out.println("\n$15K will be added to your total.");
-                src.player.gameEarnings = src.player.gameEarnings + 15000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings + 15000;
+                player2.bankAccount();
             } else if (lotteryTicket1 > 15) { //here is where if they lose
                 System.out.println(bigLoser);
-                player.bankAccount();
+                player2.bankAccount();
             }
         } else if (ticketChoice.equals("2")) {
             System.out.println("You bought the $2.5K lottery ticket! Will today be your lucky day...");
-            src.player.gameEarnings = src.player.gameEarnings - 2500;
+            src.player2.gameEarnings = src.player2.gameEarnings - 2500;
             sleep3000();
             lotteryTicket2 = rnd.nextInt(1,100);
             if (lotteryTicket2 <= 15) {
                 System.out.println(bigWinner);
                 sleep300();
                 System.out.println("\n$30K will be added to your total.");
-                src.player.gameEarnings = src.player.gameEarnings + 30000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings + 30000;
+                player2.bankAccount();
             } else if (lotteryTicket2 > 15) {
                 System.out.println(bigLoser);
-                player.bankAccount();
+                player2.bankAccount();
             }
         } else if (ticketChoice.equals("3")) {
             System.out.println("You bought the $5K lottery ticket! Will today be your lucky day...");
-            src.player.gameEarnings = src.player.gameEarnings - 5000;
+            src.player2.gameEarnings = src.player2.gameEarnings - 5000;
             sleep3000();
             lotteryTicket3 = rnd.nextInt(1,100);
             if (lotteryTicket3 <= 15) {
                 System.out.println(bigWinner);
                 sleep300();
                 System.out.println("\n$50K will be added to your total.");
-                src.player.gameEarnings = src.player.gameEarnings + 50000;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings + 50000;
+                player2.bankAccount();
             } else if (lotteryTicket3 > 15) {
                 System.out.println(bigLoser);
-                player.bankAccount();
+                player2.bankAccount();
             }
         } else {
             System.out.println("Invalid input! Please try again.");

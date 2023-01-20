@@ -1,21 +1,18 @@
-package game;
+package game2;
 import java.util.Scanner;
 import java.util.Random;
 import java.lang.Math;
-import src.player;
 import src.player2;
 
 /**
  * blackjack
 @author adil
  */
-public class blackJack {
+public class blackJack2 {
 
     // Creating Objects
 
     Random rnd = new Random();
-
-    player player = new player();
 
     player2 player2 = new player2();
 
@@ -97,12 +94,12 @@ public class blackJack {
     }
     
     // @author Sarim just this method
-    public void player1EarningLosingMoneyBlackJack() {
+    public void player2EarningLosingMoneyBlackJack() {
         // this statement will let player add the money he/she earned
-        src.player.gameEarnings = src.player.gameEarnings + moneyEarned;
+        src.player2.gameEarnings = src.player2.gameEarnings + moneyEarned;
 
         // this statement will let player subtract the money he/she lost
-        src.player.gameEarnings = src.player.gameEarnings - moneyLost;
+        src.player2.gameEarnings = src.player2.gameEarnings - moneyLost;
     }
 
     //the player enters their wager here
@@ -187,8 +184,8 @@ public class blackJack {
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have won " + String.format("$%.2f", moneyEarned).replace("$0.", "$."));
                 //adding money to bank account
-                src.player.gameEarnings = src.player.gameEarnings + moneyEarned;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings + moneyEarned;
+                player2.bankAccount();
             }
             else if (playerCardValue > 21) {
                 //if the player goes over 21 they bust and lose regardless of the dealer
@@ -197,8 +194,8 @@ public class blackJack {
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have lost " + String.format("$%.2f", moneyLost).replace("$0.", "$."));
                 //subtracting money from bank account
-                src.player.gameEarnings = src.player.gameEarnings - moneyLost;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - moneyLost;
+                player2.bankAccount();
             }
             else if (dealerCardValue > 21) {
                 //if they didn't bust but the dealer did, then they will win
@@ -206,8 +203,8 @@ public class blackJack {
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have won " + String.format("$%.2f", moneyEarned).replace("$0.", "$."));
-                src.player.gameEarnings = src.player.gameEarnings + moneyEarned;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings + moneyEarned;
+                player2.bankAccount();
             }
             else if (playerCardValue == dealerCardValue) {
                 //if they are the same, no one wins
@@ -222,8 +219,8 @@ public class blackJack {
                 System.out.println("\nYour value: " + playerCardValue);
                 System.out.println("\nDealer value: " + dealerCardValue);
                 System.out.println("\nYou have lost " + String.format("$%.2f", moneyLost).replace("$0.", "$."));
-                src.player.gameEarnings = src.player.gameEarnings - moneyLost;
-                player.bankAccount();
+                src.player2.gameEarnings = src.player2.gameEarnings - moneyLost;
+                player2.bankAccount();
             }
         }
         else {
