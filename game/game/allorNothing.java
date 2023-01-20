@@ -33,7 +33,6 @@ public class allorNothing {
     // Creating Methods
 
     public void introduction() {
-        player.playersMoney = player.playersMoney + 50000;
         if (player.playersMoney < 20000) {
             System.out.println("Sorry, you don't have enough money to play. You need at least $20K");
         } else {
