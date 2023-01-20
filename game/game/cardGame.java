@@ -83,13 +83,13 @@ public class cardGame {
     // This 4 methods if for playimng gaining ot losing money
     public void playerGettingMoney1CardGame() {
         // Player 1 earning the money
-        player.gameEarnings = player.gameEarnings + playerEarningRandomAmountMoney;
+        player.gameEarnings = player.playersMoney + playerEarningRandomAmountMoney;
         player.bankAccount();
     }
 
     public void playerLosingMoney1CardGame() {
         // This method will let the player 1 lose money
-        player.gameEarnings = player.gameEarnings - playerBet;
+        player.gameEarnings = player.playersMoney - playerBet;
         player.bankAccount();
     }
 
