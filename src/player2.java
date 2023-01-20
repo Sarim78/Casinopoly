@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * Player 2 Data
- * @athuor Sarim Siddiqui
+ * @author adil
  */
 
 public class player2 {
@@ -18,27 +18,43 @@ public class player2 {
     
     public int space = 1;
 
-    public double playersMoney = 10000;
-
     public int diceRoller;
 
-    public int totalSpace;
+    public static int totalSpace = 1; //game space player is in
 
     public String name;
 
     String choice;
 
-    public double gameEarnings = 0;
+    public static double gameEarnings; //money earned playing the game
 
     public String showMoney;
 
-    public void rollDice() {
-        diceRoller = rnd.nextInt(1, 6);
-        totalSpace = space + diceRoller;
+    public static double playersMoney; //bank account
+
+    //to store total space
+    public int plsworktoo(int totalSpace) {
+        return totalSpace;
     }
 
-    public void bankAccount() {
-        playersMoney = playersMoney + gameEarnings;
+    //to roll the dice
+    public void rollDice() {
+        diceRoller = rnd.nextInt(1, 6);
+        totalSpace = totalSpace + diceRoller;
+        plsworktoo(totalSpace);
+    }
+
+    //to store players money
+    public double plsWorklol(double playersMoney) {
         showMoney = ("\nYour current Balance In Your Account is now : " + String.format("$%.2f", playersMoney).replace("$0.", "$."));
+        System.out.println(showMoney);
+        return playersMoney;
+    }
+
+    //to add game earnings to bank account
+    public void bankAccount() {
+        playersMoney = 10000;
+        playersMoney = playersMoney + gameEarnings;
+        plsWorklol(playersMoney);
     }
 }

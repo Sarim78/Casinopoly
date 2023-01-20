@@ -47,10 +47,11 @@ public class gameBoard {
 
   // Creating Variables
 
-  public String spaceName;
+  public String spaceName; //the name of the space
 
   // Creating Methods
 
+  //@author Sarim
   public void dice1() {
     // This method is for rolling a dice
 
@@ -69,17 +70,20 @@ public class gameBoard {
     gameBoardSpace();
   }
 
+  //@author adil
+  //this gets called before the game starts, lets the players know they they are starting at the start
   public void start() {
     spaceName = "START";
     System.out.println("\nBoth players are on space #1");
     System.out.println("This is the starting point of this game.");
   }
 
+  //@author Sarim
   public void gameBoardSpace() {
     // this if statement calls the game
-    if(player.totalSpace == 1) {
+    if(src.player.totalSpace == 1) {
       spaceName = "START";
-      System.out.println("\nYou are on space #" + player.totalSpace);
+      System.out.println("\nYou are on space #" + src.player.totalSpace);
       System.out.println("This is the starting point of this game.");
       startAndGo.start();
 
@@ -113,46 +117,46 @@ public class gameBoard {
       System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       blackJack.blackjack();
 
-    } else if(player.totalSpace == 7 || player.totalSpace == 18) {
+    } else if(src.player.totalSpace == 7 || src.player.totalSpace == 18) {
       // cardgame
       spaceName = "Card Game";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       cardGame.instructions();
 
-    } else if(player.totalSpace == 8) {
+    } else if(src.player.totalSpace == 8) {
       // Jail
       spaceName = "Jail";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       System.out.println("You are visiting the jail! You have earned nothing...");
 
-    } else if(player.totalSpace == 11 || player.totalSpace == 16) {
+    } else if(src.player.totalSpace == 11 || src.player.totalSpace == 16) {
       //free space
       spaceName = "Free Space";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       System.out.println("This is a free space, you have earned nothing...");
 
-    } else if(player.totalSpace == 14) {
+    } else if(src.player.totalSpace == 14) {
       // go to Jail
       spaceName = "Go To Jail";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       Jail.grettingUserToJail();
 
-    } else if(player.totalSpace == 15) {
+    } else if(src.player.totalSpace == 15) {
       //giant casinopoly wheel
       spaceName = "Giant Casinopoly Wheel";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       giantWheel.giantwheel();
 
-    } else if(player.totalSpace == 17) {
+    } else if(src.player.totalSpace == 17) {
       //casinopoly shop
       spaceName = "Casinopoly Shop";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       casinopolyShop.casinopolyshop();
 
-    }  else if(player.totalSpace == 19) {
+    }  else if(src.player.totalSpace == 19) {
       //penalty wheel
       spaceName = "Penalty Wheel";
-      System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
       penaltyWheel.wheelOfPenalty();
     }
   }

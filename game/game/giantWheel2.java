@@ -6,6 +6,8 @@ import java.lang.Thread;
 
 /**
  * Giant Wheel
+ * Exact same as Giant Wheel, but this what the chance wheel uses when you win a giant wheel spin from there
+ * This is to avoid a stack overflow error
  * @author adil
  */
 

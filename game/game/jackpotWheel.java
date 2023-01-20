@@ -5,7 +5,9 @@ import java.util.Random;
 import java.lang.Thread;
 
 /**
- * Giant Wheel
+ * Jackpot Wheel
+ * This is just all the good stuff on giant wheel
+ * Not much else is different
  * @author adil
  */
 
@@ -47,7 +49,7 @@ public class jackpotWheel {
         } else if (spinWheel == 3) {
             wheelMethods.advanceToNearestGame();
         } else if (spinWheel == 4) {
-            jackpot = rnd.nextInt(1,3);
+            jackpot = rnd.nextInt(1,3); //there is a higher chance of winning all or nothing here
             if (jackpot == 1) {
                 Scanner in = new Scanner(System.in);
                 System.out.println("\nYou have been given the opportunity to go ALL OR NOTHING! Would you like to play and get a 50% chance of either doubling your money or losing almost all of it, or would you instead like to spin the jackpot wheel? Press y to go all or nothing, anything else to spin the jackpot wheel again.");

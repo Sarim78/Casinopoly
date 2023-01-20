@@ -33,7 +33,7 @@ public class allorNothing {
     // Creating Methods
 
     public void introduction() {
-        if (player.playersMoney < 20000) {
+        if (src.player.playersMoney < 20000) {
             System.out.println("Sorry, you don't have enough money to play. You need at least $20K");
         } else {
             System.out.println("\nWelcome to all or nothing! Lay it all on the line, risk all your money, and get a 50% chance of either doubling your money or losing almost all of it.");
@@ -87,7 +87,7 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nThe numbers match! Congratulations, you have won double your entire money!");
-                player.gameEarnings = player.gameEarnings*2 + 10000;
+                src.player.gameEarnings = src.player.gameEarnings*2 + 10000;
                 player.bankAccount();
                 
             } else if (choice != aiPick) {
@@ -97,7 +97,7 @@ public class allorNothing {
                     e.printStackTrace();
                 }
                 System.out.println("\nSorry, the numbers do not match. You have lost all your money and will now be left with just 5K :(");
-                player.gameEarnings = -5000;
+                src.player.gameEarnings = -5000;
                 player.bankAccount();
                 //in.close();
             }

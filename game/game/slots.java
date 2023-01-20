@@ -5,7 +5,6 @@ import java.util.Scanner;
 import java.util.Random;
 import src.player;
 import src.player2;
-//TODO tell them they;re playing slots
 /**
  * Casino Slot Game
  * @athuor Sarim Siddiqui
@@ -107,7 +106,7 @@ public class slots {
 
     public void jackpot1() {
         // this method will be called, if player 1 wins the jackpot
-        player.gameEarnings = player.gameEarnings + jackPotMoney;
+        src.player.gameEarnings = src.player.gameEarnings + jackPotMoney;
         player.bankAccount();
     }
 
@@ -124,7 +123,7 @@ public class slots {
 
     public void playerEarning1MoneySlots() {
         // Player 1 earning money
-        player.gameEarnings = player.gameEarnings + doubledMoney;
+        src.player.gameEarnings = src.player.gameEarnings + doubledMoney;
         player.bankAccount();
     }
 

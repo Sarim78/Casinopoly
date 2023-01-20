@@ -21,102 +21,105 @@ public class Roulette {
 
     //Creating Variables
     
-    int dealerFirstPick;
+    int dealerFirstPick; //first number dealer picks
 
-    int dealerSecondPick;
+    int dealerSecondPick; //second number dealer picks
 
-    int dealerThirdPick;
+    int dealerThirdPick; //third number dealer picks
 
-    int dealerFourthPick;
+    int dealerFourthPick; //fourth number dealer picks
 
-    int dealerFifthPick;
+    int dealerFifthPick; //fifth number dealer picks
 
-    int playerPick;
+    int playerPick; //first number player picks
 
-    int playerPick2;
+    int playerPick2; //second number player picks
 
-    int playerPick3;
+    int playerPick3; //third number player picks
 
-    int playerPick4;
+    int playerPick4; //fourth number player picks
 
-    int playerPick5;
+    int playerPick5; //fifth number player picks
 
-    int playerWinAmount = 0;
+    int playerWinAmount = 0; //amount of times player wins, which is set to zero at the start of the game
 
-    double wager1;
+    double wager1; //first player wager
 
-    double wager2;
+    double wager2; //second player wager
 
-    double wager3;
+    double wager3; //third player wager
     
-    double wager4;
+    double wager4; //fourth player wager
 
-    double wager5;
+    double wager5; //fifth player wager
 
-    int maxBet = 4000;
+    int maxBet = 4000; //max amount player can bet
 
-    int minBet = 200;
+    int minBet = 200; //min amount player can bet
 
-    double moneyEarnedMax;
+    double moneyEarnedMax; //max amount a player can win
 
-    double moneyEarnedMin;
+    double moneyEarnedMin; //min amount a player can win
 
-    double moneyLostMax;
+    double moneyLostMax; //max amount a player can lose
 
-    double moneyLostMin;
+    double moneyLostMin; //min amount a player can lose
 
-    double moneyEarned1;
+    double moneyEarned1; //money earned from first game
 
-    double moneyEarned2;
+    double moneyEarned2; //money earned from second game
 
-    double moneyEarned3;
+    double moneyEarned3; //money earned from third game
 
-    double moneyEarned4;
+    double moneyEarned4; //money earned from fourth game
 
-    double moneyEarned5;
+    double moneyEarned5; //money earned from fifth game
 
-    double moneyLost1;
+    double moneyLost1; //money lost from first game
 
-    double moneyLost2;
+    double moneyLost2; //money lost from second game
 
-    double moneyLost3;
+    double moneyLost3; //money lost from third game
 
-    double moneyLost4;
+    double moneyLost4; //money lost from fourth game
 
-    double moneyLost5;
+    double moneyLost5; //money lost from fifth game
 
-    double playerEarnings;
+    double playerEarnings; //net money the player takes with them
 
-    double totalMoneyWon;
+    double totalMoneyWon; //all their money won from the games
 
-    double totalMoneyLost;
+    double totalMoneyLost; //all their money lost from the games
 
-    double totalWager;
+    double totalWager; //total amount of money they wagered
 
-    double playerNetEarnings;
+    double playerNetEarnings; //adds wager to money won
 
-    String instruction;
+    String instruction; //whether they want to see how to play or not
 
     //Creating Methods
 
+
+    //@author Sarim
     public void player1EarningLosingMoneyRoulette() {
         // Player 1 earning money
-        player.gameEarnings = player.gameEarnings + totalMoneyWon;
+        src.player.gameEarnings = src.player.gameEarnings + totalMoneyWon;
 
         // Player 1 losing money
-        player.gameEarnings = player.gameEarnings - totalMoneyLost;
+        src.player.gameEarnings = src.player.gameEarnings - totalMoneyLost;
     }
 
+    //if they want to view instructions they can + welcome to roulette
     public void instructions() {
-        System.out.println("\nWelcome to roulette! Enter w for instrcutions, anything else to continue");
+        System.out.println("\nWelcome to roulette! Enter w for instructions, anything else to continue");
         Scanner in = new Scanner(System.in);
-        instruction = in.nextLine();
+        instruction = in.nextLine(); //if they do want to see them, they are displayed
         if (instruction.equals("W") || instruction.equals("w")) {
             System.out.println("\nHere's how to play.");
             System.out.println("\nThe dealer picks 5 numbers, from 1 to 20. You have 5 chances to correctly guess the numbers.");
             System.out.println("\nBefore you guess a number, you will wager a value from 400 to 4000 dollars.");
             System.out.println("\nFor every correct guess, you could win as much as 3 times your wager! But with every incorrect guess, you lose a percentage of what you wagered.");
-            dealerPickingNumbers();
+            dealerPickingNumbers(); //dealer picks all the numbers here
             playerWager1();
             //in.close();
         } else {
@@ -126,10 +129,11 @@ public class Roulette {
         }
     }
 
+    //the dealer makes all five of their selections, from a 1-20 range. Player wins if they correctly guess any of the 5
     public void dealerPickingNumbers() {
         dealerFirstPick = rnd.nextInt(1,20);
         dealerSecondPick = rnd.nextInt(1,20);
-            while (dealerSecondPick == dealerFirstPick) {
+            while (dealerSecondPick == dealerFirstPick) { //these while loops are for if the dealer picks a number they already picked before, they are then forced to pick another number
                 dealerSecondPick = rnd.nextInt(1,20);
             }
         dealerThirdPick = rnd.nextInt(1,20);
@@ -146,20 +150,21 @@ public class Roulette {
             }
     }
 
+    //player makes wager for game 1
     public void playerWager1() {
         try {
             System.out.println("\nHow much money would you like to wager? (please bet from 400 to 4K)");
             Scanner in = new Scanner(System.in);
             wager1 = in.nextDouble();
-            if (wager1 > maxBet) {
+            if (wager1 > maxBet) { //if they go over max bet they pick another wager
                 System.out.println("\nYou cannot go over the max bet of $4K! Please enter a value between 1000 and 20000.");
                 playerWager1();
             }
-            else if (wager1 < minBet) {
-                System.out.println("\nYou cannot go under the max bet of $400! Please enter a value between 1000 and 20000.");
+            else if (wager1 < minBet) { //same thing if they go under min bet
+                System.out.println("\nYou cannot go under the min bet of $400! Please enter a value between 1000 and 20000.");
                 playerWager1();
             }
-            else {
+            else { //otherwise the game continues
                 System.out.println("\nYou have wagered " + String.format("$%.2f", wager1).replace("$0.", "$.") + "!");
                 playerPickingNumbers1();
                 //in.close();
@@ -170,15 +175,18 @@ public class Roulette {
         }
     }
 
+    //player plays game 1
+    //all 5 games have the player trying to guess any of the 5 numbers the dealer picked
     public void playerPickingNumbers1() {
         try {
             System.out.println("\nPick a number from 1 to 20: ");
             Scanner in = new Scanner(System.in);
             playerPick = in.nextInt();
-            if (playerPick > 20 || playerPick < 1) {
+            if (playerPick > 20 || playerPick < 1) { //if they don't pick a number from 1-20 they have to pick again
                 System.out.println("\nYou must pick a number from 1 to 20! Please try again.");
                 playerPickingNumbers1();
             }
+            //if the number they guessed matches any of the 5 dealer numbers they win
             else if (playerPick == dealerFirstPick || playerPick == dealerSecondPick || playerPick == dealerThirdPick || playerPick == dealerFourthPick || playerPick == dealerFifthPick) {
                 System.out.println("\nThere is a match! You have 4 guesses left.");
                 moneyEarnedMin = wager1*2.7;
@@ -190,6 +198,7 @@ public class Roulette {
                 playerWager2();
                 //in.close();
             }
+            //if it doesn't equal any of the 5 dealer numbers they lose
             else if (playerPick != dealerFirstPick || playerPick != dealerSecondPick || playerPick != dealerThirdPick || playerPick != dealerFourthPick || playerPick != dealerFifthPick) {
                 System.out.println("\nThere is no match! You have 4 guesses left. ");
                 moneyLostMin = 0;
@@ -206,6 +215,7 @@ public class Roulette {
         }
     }
 
+    //player wager for game 2
     public void playerWager2() {
         try {
             System.out.println("\nHow much money would you like to wager? (please bet from 400 to 4K)");
@@ -216,7 +226,7 @@ public class Roulette {
                 playerWager2();
             }
             else if (wager2 < minBet) {
-                System.out.println("\nYou cannot go under the max bet of $400! Please enter a value between 1000 and 20000.");
+                System.out.println("\nYou cannot go under the min bet of $400! Please enter a value between 1000 and 20000.");
                 playerWager2();
             }
             else {
@@ -230,6 +240,7 @@ public class Roulette {
         }
     }
 
+    //player plays game 2
     public void playerPickingNumbers2() {
         try {
             System.out.println("\nPick a number from 1 to 20: ");
@@ -239,7 +250,7 @@ public class Roulette {
                 System.out.println("\nYou must pick a number from 1 to 20! Please try again.");
                 playerPickingNumbers2();
             }
-            else if (playerPick2 == playerPick) {
+            else if (playerPick2 == playerPick) { //new else if for if the player guesses something they already guessed before, it will make them pick another number
                 System.out.println("\nYou already guessed this! Please guess a different number.");
                 playerPickingNumbers2();
             }
@@ -270,6 +281,7 @@ public class Roulette {
         }
     }
 
+    //player wager for game 3
     public void playerWager3() {
         try {
             System.out.println("\nHow much money would you like to wager? (please bet from 400 to 4K)");
@@ -280,7 +292,7 @@ public class Roulette {
                 playerWager3();
             }
             else if (wager3 < minBet) {
-                System.out.println("\nYou cannot go under the max bet of $400! Please enter a value between 1000 and 20000.");
+                System.out.println("\nYou cannot go under the min bet of $400! Please enter a value between 1000 and 20000.");
                 playerWager3();
             }
             else {
@@ -294,6 +306,7 @@ public class Roulette {
         }
     }
 
+    //player plays game 3
     public void playerPickingNumbers3() {
         try {
             System.out.println("\nPick a number from 1 to 20: ");
@@ -334,6 +347,7 @@ public class Roulette {
         }
     }
 
+    //player wager for game 4
     public void playerWager4() {
         try {
             System.out.println("\nHow much money would you like to wager? (please bet from 400 to 4K)");
@@ -344,7 +358,7 @@ public class Roulette {
                 playerWager4();
             }
             else if (wager4 < minBet) {
-                System.out.println("\nYou cannot go under the max bet of $400! Please enter a value between 1000 and 20000.");
+                System.out.println("\nYou cannot go under the min bet of $400! Please enter a value between 1000 and 20000.");
                 playerWager4();
             }
             else {
@@ -358,6 +372,7 @@ public class Roulette {
         }
     }
 
+    //player plays game 4
     public void playerPickingNumbers4() {
         try {
             System.out.println("\nPick a number from 1 to 20: ");
@@ -398,6 +413,7 @@ public class Roulette {
         }
     }
 
+    //player wager for game 5
     public void playerWager5() {
         try {
             System.out.println("\nHow much money would you like to wager? (please bet from 400 to 4K)");
@@ -408,7 +424,7 @@ public class Roulette {
                 playerWager5();
             }
             else if (wager5 < minBet) {
-                System.out.println("\nYou cannot go under the max bet of $400! Please enter a value between 1000 and 20000.");
+                System.out.println("\nYou cannot go under the min bet of $400! Please enter a value between 1000 and 20000.");
                 playerWager5();
             }
             else {
@@ -422,6 +438,7 @@ public class Roulette {
         }
     }
 
+    //player plays game 5
     public void playerPickingNumbers5() {
         try {
             System.out.println("\n This is your last guess! Pick a number from 1 to 20: ");
@@ -462,26 +479,28 @@ public class Roulette {
         }
     }
 
+    //the end of the line, where totals are shown and final outcomes are made
     public void finalDisplay() {
-        System.out.println("\nTotal times won: " + playerWinAmount);
-        totalWager = wager1 + wager2 + wager3 + wager4 + wager5;
+        System.out.println("\nTotal times won: " + playerWinAmount); //how many times they won
+        totalWager = wager1 + wager2 + wager3 + wager4 + wager5; //adding up all the wagers and showing them the total money wagered
         System.out.println("\nTotal money wagered: " + String.format("$%.2f", totalWager).replace("$0.", "$."));
-        playerEarnings = totalMoneyWon - totalMoneyLost;
-        playerNetEarnings = totalWager + playerEarnings;
-        totalMoneyWon = playerNetEarnings - totalWager;
-        totalMoneyLost = totalWager - playerNetEarnings;
-        if (playerEarnings >= 0) {
+        playerEarnings = totalMoneyWon - totalMoneyLost; //the player net earnings
+        playerNetEarnings = totalWager + playerEarnings; //net earnings with adding wager
+        totalMoneyWon = playerNetEarnings - totalWager; //money won
+        totalMoneyLost = totalWager - playerNetEarnings; //money lost
+        if (playerEarnings >= 0) { //if they won money
             System.out.println("\nYou won " + String.format("$%.2f", totalMoneyWon).replace("$0.", "$.") + "!");
-            player.gameEarnings = player.gameEarnings + totalMoneyWon;
+            src.player.gameEarnings = src.player.gameEarnings + totalMoneyWon; //adding to bank account here
             player.bankAccount();
         }
-        else if (playerEarnings < 0) {
+        else if (playerEarnings < 0) { //if they lost money
             System.out.println("\nYou lost " + String.format("$%.2f", totalMoneyLost).replace("$0.", "$.") + "!");
-            player.gameEarnings = player.gameEarnings - totalMoneyLost;
+            src.player.gameEarnings = src.player.gameEarnings - totalMoneyLost;
             player.bankAccount();
         }
     }
 
+    //game gets called here
     public void roulette() {
         instructions();
     }

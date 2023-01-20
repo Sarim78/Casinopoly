@@ -1,13 +1,16 @@
 package src;
 
 // Importing Libraries 
-import java.util.Random;
 import java.util.Scanner;
-import java.lang.Math;
 
 // Importing Files
 
 import game.gameBoard;
+
+/**
+ * Player 1 Data
+ * @author adil
+ */
 
 public class turns {
     // Creating Objects
@@ -40,6 +43,7 @@ public class turns {
 
     // Creating Variables
 
+    //game menu when you open the game
     public void gameMenu() {
         System.out.println("\nWelcome to Casinopoly, the casino version of Monopoly you never knew you needed!");
         System.out.println("\nThis where luck wins over skill!");
@@ -55,6 +59,7 @@ public class turns {
         }
     }
 
+    //player 1 sets name
     public void player1Name() {
         System.out.println("\nPlayer 1, what would you like to be called?");
         Scanner in = new Scanner(System.in);
@@ -62,6 +67,7 @@ public class turns {
         player1ConfirmName();
     }
 
+    //player 2 sets name
     public void player2Name() {
         System.out.println("\nPlayer 2, what would you like to be called?");
         Scanner in = new Scanner(System.in);
@@ -95,6 +101,7 @@ public class turns {
         }
     }
 
+    //if they want to know how to play
     public void instructions() {
         System.out.println("\nWould you like to see how to play? Click (I) for instructions, anything else to start the game");
         Scanner in = new Scanner(System.in);
@@ -120,6 +127,7 @@ public class turns {
         }
     }
 
+    //the game instructions
     public void instructionsMenu() {
         System.out.println("\nWelcome to the instructions menu! What would you like to do?");
         System.out.println("\nPress (I) to view the entire game instructions");
@@ -339,11 +347,13 @@ public class turns {
         }
     }
 
+    //setting up game
     public void noNamefornow(){
         gameBoard.start();
     }
 
 
+    //player1 turn
     public void playerTurn1() {
         if (inventory1.lostTurn > 0) {
             inventory1.lostTurn = inventory1.lostTurn - 1;
@@ -376,7 +386,6 @@ public class turns {
             playerTurn1();
         } else if (choice1.equals("S") || choice1.equals("s")) {
             System.out.println("\nYou are on " + gameBoard.spaceName + "!");
-            player.plsworktoo(src.player.totalSpace);
             anythingToContinue();
             playerTurn1();
         } else if (choice1.equals("P") || choice1.equals("p")) {
@@ -390,45 +399,51 @@ public class turns {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn1();
         }
-        playerTurn1();
+        playerTurn2();
     }
 
+    //player2 turn
     public void playerTurn2() {
+        if (inventory2.lostTurn > 0) {
+            inventory2.lostTurn = inventory2.lostTurn - 1;
+            playerTurn1();
+        }
         System.out.println("\n" + player2.name + ", it's your turn! What would you like to do?");
         System.out.println("\nPress (H) to view game instructions");
         System.out.println("\nPress (I) to view inventory");
         System.out.println("\nPress (M) to view your current money total");
+        System.out.println("\nPress (G) to view the gameboard");
         System.out.println("\nPress (S) to view what space you're currently on");
+        System.out.println("\nPress (P) to activate powerups or see what they do");
         System.out.println("\nPress (R) to roll and begin your turn!");
         Scanner in = new Scanner(System.in);
         choice2 = in.nextLine();
-        if (choice1.equals("H") || choice1.equals("h")) {
+        if (choice2.equals("H") || choice2.equals("h")) {
             instructionsMenu();
             playerTurn2();
-        } else if (choice1.equals("I") || choice1.equals("i")) {
-            inventory1.viewInventory();
+        } else if (choice2.equals("I") || choice2.equals("i")) {
+            inventory2.viewInventory();
             anythingToContinue();
             playerTurn2();
-        } else if (choice1.equals("M") || choice1.equals("m")) {
-            player.bankAccount();
+        } else if (choice2.equals("M") || choice2.equals("m")) {
+            player2.plsWorklol(src.player2.playersMoney);
             anythingToContinue();
             playerTurn2();
-        } else if (choice1.equals("G") || choice1.equals("g")) {
+        } else if (choice2.equals("G") || choice2.equals("g")) {
             gameBoard();
             anythingToContinue();
             playerTurn2();
-        } else if (choice1.equals("S") || choice1.equals("s")) {
-            System.out.println("\nYou are on " + gameBoard.spaceName + "!");
-            System.out.println("This is space #" + player2.totalSpace);
+        } else if (choice2.equals("S") || choice2.equals("s")) {
+            System.out.println("\nYou are on " + 2gameBoard.spaceName + "!");
             anythingToContinue();
             playerTurn2();
-        } else if (choice1.equals("P") || choice1.equals("p")) {
+        } else if (choice2.equals("P") || choice2.equals("p")) {
             powerMenu();
             anythingToContinue();
             playerTurn2();
-        } else if (choice1.equals("R") || choice1.equals("r")) {
+        } else if (choice2.equals("R") || choice2.equals("r")) {
             //roll
-            gameBoard.dice1();
+            gameBoard.dice2();
         } else {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn2();
