@@ -77,7 +77,7 @@ public class cardGame {
 
         playerEarningRandomAmountMoney = moneyEarned;
 
-        System.out.print("\nYou have earned: $" + moneyEarned + "!");
+        System.out.print("\nYou have earned: $" + playerEarningRandomAmountMoney + "!");
     }
 
     // This 4 methods if for playimng gaining ot losing money
@@ -210,7 +210,6 @@ public class cardGame {
                 // this if statement will check if the user guess is lower of grater then the ai guessed
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
-                    System.out.println("\nCONGRATS, you have won: $ " + playerEarningRandomAmountMoney);
                     playerGettingMoney();
                     wouldYouTryAgainAfterWinning();
                 } else if(ai < num1) {
@@ -231,7 +230,6 @@ public class cardGame {
                 // this if statement will check if the user guess is lower of grater then the ai guessed
                 if(ai < num1) {
                     System.out.println("\nCongrats, You Got It Right!");
-                    System.out.println("\nCONGRATS, you have won: $ " + playerEarningRandomAmountMoney);
                     playerGettingMoney();
                     wouldYouTryAgainAfterWinning();
                 } else if(ai > num1) {
