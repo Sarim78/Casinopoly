@@ -41,7 +41,7 @@ public class Roulette {
 
     int playerPick5;
 
-    int playerWinAmount;
+    int playerWinAmount = 0;
 
     double wager1;
 
