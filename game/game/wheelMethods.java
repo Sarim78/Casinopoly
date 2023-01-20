@@ -162,7 +162,7 @@ public class wheelMethods {
         // this will subtract the money from players 1 account
         src.player.gameEarnings = src.player.gameEarnings + birthdayMoney;
         // this will add money to players 2 account
-        player2.gameEarnings = player2.gameEarnings - birthdayMoney;
+        src.player2.gameEarnings = src.player2.gameEarnings - birthdayMoney;
         player.bankAccount();
         player2.bankAccount();
     }
@@ -217,7 +217,7 @@ public class wheelMethods {
         //@author adil
         // This method is called when player 1 loses
         src.player.gameEarnings = src.player.gameEarnings - payOpponent;
-        player2.gameEarnings = player2.gameEarnings + payOpponent;
+        src.player2.gameEarnings = src.player2.gameEarnings + payOpponent;
         player.bankAccount();
         player2.bankAccount();
     }
@@ -264,7 +264,7 @@ public class wheelMethods {
         //@author adil
         //Called when player 1 wins
         src.player.gameEarnings = src.player.gameEarnings + takeMoney;
-        player2.gameEarnings = player2.gameEarnings - takeMoney;
+        src.player2.gameEarnings = src.player2.gameEarnings - takeMoney;
         player.bankAccount();
         player2.bankAccount();
     }
@@ -281,7 +281,7 @@ public class wheelMethods {
         //@author adil
         //Called when player 1 loses
         src.player.gameEarnings = src.player.gameEarnings - takeMoney;
-        player2.gameEarnings = player2.gameEarnings + takeMoney;
+        src.player2.gameEarnings = src.player2.gameEarnings + takeMoney;
         player.bankAccount();
         player2.bankAccount();
     }

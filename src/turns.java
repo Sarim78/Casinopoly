@@ -25,6 +25,8 @@ public class turns {
     inventory1 inventory1 = new inventory1();
 
     inventory2 inventory2 = new inventory2();
+    
+    gameBoard2 gameBoard2 = new gameBoard2();
 
     public String choice1;
 
@@ -57,6 +59,38 @@ public class turns {
         } else {
             System.out.println("\nIt's time to choose names!");
             player1Name();
+        }
+    }
+
+    // This will check who will win
+    public void winsGame() {
+        // @author Sarim Siddiqui
+
+        // This if statement will check if player 1 or player 2 have greater then or equal to $100k
+        if(player.playersMoney >= 100000 || player2.playersMoney >= 100000) {
+            System.out.println("\nCONGRATS!!!");
+            System.out.println("\nYou have won the game!");
+        }
+    }
+
+    // This will end the game
+    public void endGame() {
+        // @author Sarim Siddiqui
+        Scanner endgame = new Scanner(System.in);
+
+        System.out.println("\nWould you like to restart the game?");
+        System.out.println("Input (Y/N): ");
+
+        String userInput = endgame.nextLine();
+
+        if(userInput.equals("Y") || userInput.equals("y")) {
+            gameMenu();
+        } else if(userInput.equals("N") || userInput.equals("n")) {
+            System.out.println("\nYou have successfully ended the game!");
+            System.out.println("\nWe hope that you enjoyed!");
+        } else {
+            System.out.println("\nPlease pick between (Y/N)");
+            endGame();
         }
     }
 
@@ -396,6 +430,8 @@ public class turns {
         } else if (choice1.equals("R") || choice1.equals("r")) {
             //roll
             gameBoard.dice1();
+            winsGame();
+            endGame();
         } else {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn1();
@@ -445,6 +481,8 @@ public class turns {
         } else if (choice2.equals("R") || choice2.equals("r")) {
             //roll
             gameBoard2.dice2();
+            winsGame();
+            endGame();
         } else {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn2();

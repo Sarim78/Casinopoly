@@ -1,4 +1,4 @@
-package game;
+package game2;
 // Importing Libraries 
 import java.util.Scanner;
 import java.util.Random;
@@ -11,7 +11,7 @@ import src.player2;
  * @athuor Sarim Siddiqui
  */
 
-public class jail {
+public class jail2 {
     // Objects 
     Random rnd = new Random(); 
 
@@ -41,18 +41,18 @@ public class jail {
 
     // This 3 methods are for player 1
     public void player1MovingSpacesAndLosingMoney() {
-        // If player 1, decides to pay his bail, this method will be printed
+        // If player 2, decides to pay his bail, this method will be printed
 
         // this statement will take out the money from his account balance
-        src.player.gameEarnings = src.player.gameEarnings - bail;
+        src.player2.gameEarnings = src.player2.gameEarnings - bail;
 
         // this statement will let player 1 move spaces
-        src.player.totalSpace = src.player.totalSpace + 1;
+        src.player2.totalSpace = src.player2.totalSpace + 1;
     }
 
     public void player1Data() {
-        // This method will check if player 1 have more then 5k to pay for bail
-        if(src.player.playersMoney >= 5000) {
+        // This method will check if player 2 have more then 5k to pay for bail
+        if(src.player2.playersMoney >= 5000) {
             // If player 1 have more then 5k, this statement will be executed
             askingUserToPayTheBail();
             player1MovingSpacesAndLosingMoney();
@@ -63,22 +63,12 @@ public class jail {
     }
 
     public void player1LandedOnJail() {
-        // this If Statement will check if player 1 is at space 8
-        if(src.player.totalSpace == 8) {
+        // this If Statement will check if player 2 is at space 8
+        if(src.player2.totalSpace == 8) {
             player1Data();
         }
     }
 
-    // This 2 methods are for player 2
-    public void player2MovingSpaces() {
-        // If player 2, decides to pay his bail, this method will be printed
-
-    }
-
-    public void player2Money() {
-        // This method will check if player 2 have more then 5k to pay for bail
-
-    }
 
     public void diceRoller() {
         // If player doesn't have enough money to pay his bail, this method will be executed

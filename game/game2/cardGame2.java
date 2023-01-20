@@ -1,4 +1,4 @@
-package game;
+package game2;
 
 // Importing Libraries 
 import java.util.Scanner;
@@ -11,7 +11,7 @@ import src.player2;
  * @athuor Sarim Siddiqui
  */
 
-public class cardGame {
+public class cardGame2 {
 
     // Creating Objects 
 
@@ -79,14 +79,14 @@ public class cardGame {
     // This 4 methods if for playimng gaining ot losing money
     public void playerGettingMoney1CardGame() {
         // Player 1 earning the money
-        src.player.gameEarnings = src.player.playersMoney + playerEarningRandomAmountMoney;
-        player.bankAccount();
+        src.player2.gameEarnings = src.player2.playersMoney + playerEarningRandomAmountMoney;
+        player2.bankAccount();
     }
 
     public void playerLosingMoney1CardGame() {
         // This method will let the player 1 lose money
-        src.player.gameEarnings = src.player.playersMoney - playerBet;
-        player.bankAccount();
+        src.player2.gameEarnings = src.player2.playersMoney - playerBet;
+        player2.bankAccount();
     }
 
     public void betOverUnderLimit() {

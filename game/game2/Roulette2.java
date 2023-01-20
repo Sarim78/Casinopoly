@@ -1,7 +1,6 @@
-package game;
+package game2;
 import java.util.Scanner;
 import java.util.Random;
-import src.player;
 import src.player2;
 
 /**
@@ -9,13 +8,11 @@ import src.player2;
  * @author adil
  */
 
-public class Roulette {
+public class Roulette2 {
 
     //Creating Objects
 
     Random rnd = new Random();
-
-    player player = new player();
 
     player2 player2 = new player2();
 
@@ -103,10 +100,10 @@ public class Roulette {
     //@author Sarim
     public void player1EarningLosingMoneyRoulette() {
         // Player 1 earning money
-        src.player.gameEarnings = src.player.gameEarnings + totalMoneyWon;
+        src.player2.gameEarnings = src.player2.gameEarnings + totalMoneyWon;
 
         // Player 1 losing money
-        src.player.gameEarnings = src.player.gameEarnings - totalMoneyLost;
+        src.player2.gameEarnings = src.player2.gameEarnings - totalMoneyLost;
     }
 
     //if they want to view instructions they can + welcome to roulette
@@ -490,13 +487,13 @@ public class Roulette {
         totalMoneyLost = totalWager - playerNetEarnings; //money lost
         if (playerEarnings >= 0) { //if they won money
             System.out.println("\nYou won " + String.format("$%.2f", totalMoneyWon).replace("$0.", "$.") + "!");
-            src.player.gameEarnings = src.player.gameEarnings + totalMoneyWon; //adding to bank account here
-            player.bankAccount();
+            src.player2.gameEarnings = src.player2.gameEarnings + totalMoneyWon; //adding to bank account here
+            player2.bankAccount();
         }
         else if (playerEarnings < 0) { //if they lost money
             System.out.println("\nYou lost " + String.format("$%.2f", totalMoneyLost).replace("$0.", "$.") + "!");
-            src.player.gameEarnings = src.player.gameEarnings - totalMoneyLost;
-            player.bankAccount();
+            src.player2.gameEarnings = src.player2.gameEarnings - totalMoneyLost;
+            player2.bankAccount();
         }
     }
 

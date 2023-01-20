@@ -1,4 +1,4 @@
-package game;
+package game2;
 
 // Importing Libraries 
 import java.util.Random;
@@ -10,7 +10,7 @@ import java.lang.Thread;
  * @athuor Sarim Siddiqui
  */
 
-public class chanceWheel {
+public class chanceWheel2 {
     
     // Creating Objects  
 
@@ -18,11 +18,11 @@ public class chanceWheel {
 
     Scanner in = new Scanner(System.in);
     
-    wheelMethods wheelMethods = new wheelMethods();
+    wheelMethods2 wheelMethods = new wheelMethods2();
 
-    penaltyWheel penaltyWheel = new penaltyWheel();
+    penaltyWheel2 penaltyWheel = new penaltyWheel2();
 
-    giantWheel2 giantWheel2 = new giantWheel2();
+    giantWheel22 giantWheel2 = new giantWheel22();
 
     casinopolyShop2 casinopolyShop2 = new casinopolyShop2();
 

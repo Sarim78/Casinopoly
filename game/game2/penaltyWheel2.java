@@ -1,4 +1,4 @@
-package game;
+package game2;
 
 // Importing Libraries 
 import java.util.Random;
@@ -10,14 +10,14 @@ import java.lang.Thread;
  * @athuor Sarim Siddiqui
  */
 
-public class penaltyWheel {
+public class penaltyWheel2 {
     // Creating Objects  
 
     Random rnd = new Random();
 
     Scanner in = new Scanner(System.in);
 
-    wheelMethods wheelMethods = new wheelMethods();
+    wheelMethods2 wheelMethods = new wheelMethods2();
 
     // Creating Variables
 

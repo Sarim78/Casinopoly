@@ -1,4 +1,4 @@
-package game;
+package game2;
 
 // Importing Libraries 
 import java.util.Scanner;
@@ -10,7 +10,7 @@ import src.player2;
  * @athuor Sarim Siddiqui
  */
 
-public class slots {
+public class slots2 {
     // Creating Objects 
     Random rnd = new Random();
 
@@ -106,8 +106,8 @@ public class slots {
 
     public void jackpot1() {
         // this method will be called, if player 1 wins the jackpot
-        src.player.gameEarnings = src.player.gameEarnings + jackPotMoney;
-        player.bankAccount();
+        src.player2.gameEarnings = src.player2.gameEarnings + jackPotMoney;
+        player2.bankAccount();
     }
 
     public void moneyGeneratedAfterBetting() {
@@ -123,8 +123,8 @@ public class slots {
 
     public void playerEarning1MoneySlots() {
         // Player 1 earning money
-        src.player.gameEarnings = src.player.gameEarnings + doubledMoney;
-        player.bankAccount();
+        src.player2.gameEarnings = src.player2.gameEarnings + doubledMoney;
+        player2.bankAccount();
     }
 
     public void confrimBet() {

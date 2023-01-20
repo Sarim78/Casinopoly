@@ -1,4 +1,4 @@
-package game;
+package game2;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -9,21 +9,33 @@ import java.lang.Thread;
  * @author adil
  */
 
-public class giantWheel {
+public class giantWheel2 {
 
     // Creating Objects
 
     Random rnd = new Random();
 
-    penaltyWheel penaltyWheel = new penaltyWheel();
+<<<<<<< HEAD
+    penaltyWheel2 penaltyWheel = new penaltyWheel2();
 
-    wheelMethods wheelMethods = new wheelMethods();
+    wheelMethods2 wheelMethods = new wheelMethods2();
 
-    jackpotWheel jackpotWheel = new jackpotWheel();
+    jackpotWheel2 jackpotWheel = new jackpotWheel2();
 
-    allorNothing allorNothing = new allorNothing();
+    allorNothing2 allorNothing = new allorNothing2();
 
-    chanceWheel chanceWheel = new chanceWheel();
+    chanceWheel2 chanceWheel = new chanceWheel2();
+=======
+    penaltyWheel2 penaltyWheel2 = new penaltyWheel2();
+
+    wheelMethods2 wheelMethods2 = new wheelMethods2();
+
+    jackpotWheel2 jackpotWheel2 = new jackpotWheel2();
+
+    allorNothing2 allorNothing2 = new allorNothing2();
+
+    chanceWheel2 chanceWheel2 = new chanceWheel2();
+>>>>>>> 8deca5c680e252a9ef0ca080de4c8d3a67f54282
 
     // Creating Variables
 
@@ -48,23 +60,23 @@ public class giantWheel {
         if (spinWheel == 1) {
             //win a chance wheel spin
             System.out.println("\nSpin the chance wheel!");
-            chanceWheel.chancewheel();
+            chanceWheel2.chancewheel();
         } else if (spinWheel == 2) {
             //win a penalty wheel spin
             System.out.println("\nSpin the penalty wheel!");
-            penaltyWheel.wheelOfPenalty();
+            penaltyWheel2.wheelOfPenalty();
         } else if (spinWheel == 3) {
             //win advance to start
-            wheelMethods.advanceStart();
+            wheelMethods2.advanceStart();
         } else if (spinWheel == 4) {
             //win go to jail
-            wheelMethods.goToJail();
+            wheelMethods2.goToJail();
         } else if (spinWheel == 5) {
             //win get out of jail for free card
-            wheelMethods.jailFreeCard();
+            wheelMethods2.jailFreeCard();
         } else if (spinWheel == 6) {
             //win advance to nearest game
-            wheelMethods.advanceToNearestGame();
+            wheelMethods2.advanceToNearestGame();
         } else if (spinWheel == 7) {
             jackpot = rnd.nextInt(1,6);
             if (jackpot == 1) { //if jackpot is 1, then they can play or nothing
@@ -73,37 +85,37 @@ public class giantWheel {
                 choice = in.nextLine(); //they can pass and re-spin instead
                 if (choice.equals("Y") || choice.equals("y")) {
                     System.out.println("\nYou have chosen to go all or nothing!");
-                    allorNothing.allOrNothing();
+                    allorNothing2.allOrNothing();
                 } else {
                     System.out.println("\nYou have chosen to spin the jackpot wheel instead!");
-                    jackpotWheel.jackpotwheel();
+                    jackpotWheel2.jackpotwheel();
                 }
                 in.close();
             } else { //otherwise they re-spin the jackpot wheel
                 System.out.println("\nSpin the jackpot wheel!");
-                jackpotWheel.jackpotwheel();
+                jackpotWheel2.jackpotwheel();
             }
         } else if (spinWheel == 8) {
             //win money
-            wheelMethods.winMoney();
+            wheelMethods2.winMoney();
         } else if (spinWheel == 9) {
             //lose money
-            wheelMethods.loseMoney();
+            wheelMethods2.loseMoney();
         } else if (spinWheel == 10) {
             //take money from opponent
-            wheelMethods.takeMoney();
+            wheelMethods2.takeMoney();
         } else if (spinWheel == 11) {
             //opponent takes their money
-            wheelMethods.moneyTaken();
+            wheelMethods2.moneyTaken();
         } else if (spinWheel == 12) {
             //opponent wins control opponent powerup
-            wheelMethods.playerChoosesToMoveYou();
+            wheelMethods2.playerChoosesToMoveYou();
         } else if (spinWheel == 13) {
             //player loses turn
-            wheelMethods.movingPrevelges();  
+            wheelMethods2.movingPrevelges();  
         } else if (spinWheel == 14) {
             //player wins a powerup
-            wheelMethods.powerUp();
+            wheelMethods2.powerUp();
         }
     }
 }

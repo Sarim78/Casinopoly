@@ -1,4 +1,4 @@
-package game;
+package game2;
 
 // Importing Libraries 
 import java.util.Random;
@@ -23,27 +23,27 @@ public class gameBoard2 {
 
   player2 player2 = new player2();
 
-  jackpotWheel jackpotWheel = new jackpotWheel();
+  jackpotWheel2 jackpotWheel = new jackpotWheel2();
 
-  chanceWheel chanceWheel = new chanceWheel();
+  chanceWheel2 chanceWheel = new chanceWheel2();
 
-  Roulette Roulette = new Roulette();
+  Roulette2 Roulette = new Roulette2();
 
-  slots slots = new slots();
+  slots2 slots = new slots2();
 
-  blackJack blackJack = new blackJack();
+  blackJack2 blackJack = new blackJack2();
 
-  penaltyWheel penaltyWheel = new penaltyWheel();
+  penaltyWheel2 penaltyWheel = new penaltyWheel2();
 
-  giantWheel giantWheel = new giantWheel();
+  giantWheel2 giantWheel = new giantWheel2();
 
-  cardGame cardGame = new cardGame();
+  cardGame2 cardGame = new cardGame2();
 
-  startAndGo startAndGo = new startAndGo();
+  startAndGo2 startAndGo = new startAndGo2();
 
-  jail Jail = new jail();
+  jail2 Jail = new jail2();
 
-  casinopolyShop casinopolyShop = new casinopolyShop();
+  casinopolyShop2 casinopolyShop = new casinopolyShop2();
 
   // Creating Variables
 
@@ -52,18 +52,18 @@ public class gameBoard2 {
   // Creating Methods
 
   //@author Sarim
-  public void dice1() {
+  public void dice2() {
     // This method is for rolling a dice
 
-    player.rollDice();
+    player2.rollDice();
 
-    System.out.println("\nYou have rolled a: " + player.diceRoller);
+    System.out.println("\nYou have rolled a: " + player2.diceRoller);
 
-    //System.out.println(player.totalSpace);
+    //System.out.println(player2.totalSpace);
 
-    // Player 1
-    if(src.player.totalSpace > 19) {
-      src.player.totalSpace = src.player.totalSpace - 19;
+    // Player 2
+    if(src.player2.totalSpace > 19) {
+      src.player2.totalSpace = src.player2.totalSpace - 19;
       startAndGo.passGo();
     }
 
@@ -81,82 +81,82 @@ public class gameBoard2 {
   //@author Sarim
   public void gameBoardSpace() {
     // this if statement calls the game
-    if(src.player.totalSpace == 1) {
+    if(src.player2.totalSpace == 1) {
       spaceName = "START";
-      System.out.println("\nYou are on space #" + src.player.totalSpace);
+      System.out.println("\nYou are on space #" + src.player2.totalSpace);
       System.out.println("This is the starting point of this game.");
       startAndGo.start();
 
-    } else if(src.player.totalSpace == 2) {
+    } else if(src.player2.totalSpace == 2) {
       //jackpotwheel
       spaceName = "Jackpot Wheel";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       jackpotWheel.jackpotwheel();
 
-    } else if(src.player.totalSpace == 3 || src.player.totalSpace == 12) {
+    } else if(src.player2.totalSpace == 3 || src.player2.totalSpace == 12) {
       // roulette
       spaceName = "Roulette";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       Roulette.roulette();
 
-    } else if(src.player.totalSpace == 4 || src.player.totalSpace == 10) {
+    } else if(src.player2.totalSpace == 4 || src.player2.totalSpace == 10) {
       //chance wheel
       spaceName = "Chance Wheel";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       chanceWheel.chancewheel();
 
-    } else if(src.player.totalSpace == 5 || src.player.totalSpace == 9) {
+    } else if(src.player2.totalSpace == 5 || src.player2.totalSpace == 9) {
       // slot machine
       spaceName = "Slot Machine";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       slots.slotmachine();
 
-    } else if(src.player.totalSpace == 6 || src.player.totalSpace == 13) {
+    } else if(src.player2.totalSpace == 6 || src.player2.totalSpace == 13) {
       // BlackJack
       spaceName = "Blackjack";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       blackJack.blackjack();
 
-    } else if(src.player.totalSpace == 7 || src.player.totalSpace == 18) {
+    } else if(src.player2.totalSpace == 7 || src.player2.totalSpace == 18) {
       // cardgame
       spaceName = "Card Game";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       cardGame.instructions();
 
-    } else if(src.player.totalSpace == 8) {
+    } else if(src.player2.totalSpace == 8) {
       // Jail
       spaceName = "Jail";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       System.out.println("You are visiting the jail! You have earned nothing...");
 
-    } else if(src.player.totalSpace == 11 || src.player.totalSpace == 16) {
+    } else if(src.player2.totalSpace == 11 || src.player2.totalSpace == 16) {
       //free space
       spaceName = "Free Space";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       System.out.println("This is a free space, you have earned nothing...");
 
-    } else if(src.player.totalSpace == 14) {
+    } else if(src.player2.totalSpace == 14) {
       // go to Jail
       spaceName = "Go To Jail";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       Jail.grettingUserToJail();
 
-    } else if(src.player.totalSpace == 15) {
+    } else if(src.player2.totalSpace == 15) {
       //giant casinopoly wheel
       spaceName = "Giant Casinopoly Wheel";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       giantWheel.giantwheel();
 
-    } else if(src.player.totalSpace == 17) {
+    } else if(src.player2.totalSpace == 17) {
       //casinopoly shop
       spaceName = "Casinopoly Shop";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       casinopolyShop.casinopolyshop();
 
-    }  else if(src.player.totalSpace == 19) {
+    }  else if(src.player2.totalSpace == 19) {
       //penalty wheel
       spaceName = "Penalty Wheel";
-      System.out.println("\nYou have just landed at space #" + src.player.totalSpace);
+      System.out.println("\nYou have just landed at space #" + src.player2.totalSpace);
       penaltyWheel.wheelOfPenalty();
     }
   }
