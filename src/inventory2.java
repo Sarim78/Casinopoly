@@ -3,28 +3,31 @@ package src;
 /**
  * Player 2 Inventory
  * @author adil
+ * @author Sarim Siddiqui 
  */
 
 public class inventory2 {
-    
-    public int getOutOfJailFreeCard = 0;
 
-    public int reroll = 0;
+  // @author Sarim Siddiqui 
+    public static int getOutOfJailFreeCard = 0;
 
-    public int advanceSpaces = 0;
+    public static int reroll = 0;
 
-    public int refuseRent = 0;
+    public static int advanceSpaces = 0;
 
-    public int reverseRent = 0;
+    public static int refuseRent = 0;
 
-    public int reSpin = 0;
+    public static int reverseRent = 0;
 
-    public int controlOpponent = 0;
+    public static int reSpin = 0;
 
-    public int jailSentence = 0;
+    public static int controlOpponent = 0;
 
-    public int lostTurn = 0;
+    public static int jailSentence = 0;
 
+    public static int lostTurn = 0;
+
+    // @author adil
     public void viewInventory() {
         System.out.println("\nYour inventory: ");
         System.out.println("\nGet out of jail free cards: " + getOutOfJailFreeCard);

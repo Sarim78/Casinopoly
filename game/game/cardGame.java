@@ -207,6 +207,7 @@ public class cardGame {
                 if(ai > num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
+                    playerGettingMoney1CardGame();
                     wouldYouTryAgainAfterWinning();
                 } else if(ai < num1) {
                     System.out.println("\nSorry, you lost :(");
@@ -227,6 +228,7 @@ public class cardGame {
                 if(ai < num1) {
                     System.out.println("\nCongrats, You Got It Right!");
                     playerGettingMoney();
+                    playerGettingMoney1CardGame();
                     wouldYouTryAgainAfterWinning();
                 } else if(ai > num1) {
                     System.out.println("\nSorry, you lost :(");

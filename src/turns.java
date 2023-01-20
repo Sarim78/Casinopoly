@@ -44,6 +44,8 @@ public class turns {
 
     String powerChoice;
 
+    String confrimPlayer1Name;
+
     // Creating Variables
 
     //game menu when you open the game
@@ -414,7 +416,7 @@ public class turns {
             anythingToContinue();
             playerTurn1();
         } else if (choice1.equals("M") || choice1.equals("m")) {
-            player.plsWorklol(src.player.playersMoney);
+            player.plsWorklol(src.player.playersMoney, src.player.name);
             anythingToContinue();
             playerTurn1();
         } else if (choice1.equals("G") || choice1.equals("g")) {
@@ -464,7 +466,7 @@ public class turns {
             anythingToContinue();
             playerTurn2();
         } else if (choice2.equals("M") || choice2.equals("m")) {
-            player2.plsWorklol(src.player2.playersMoney);
+            player2.plsWorklol(src.player2.playersMoney, src.player2.name);
             anythingToContinue();
             playerTurn2();
         } else if (choice2.equals("G") || choice2.equals("g")) {

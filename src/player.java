@@ -22,7 +22,7 @@ public class player {
 
     public static int totalSpace = 1; //game space player is in
 
-    public String name;
+    public static String name;
 
     String choice;
 
@@ -45,8 +45,8 @@ public class player {
     }
 
     //to store players money
-    public double plsWorklol(double playersMoney) {
-        showMoney = ("\nYour current Balance In Your Account is now : " + String.format("$%.2f", playersMoney).replace("$0.", "$."));
+    public double plsWorklol(double playersMoney, String name) {
+        showMoney = ("\n" + name + ", Your current Balance In Your Account is now : " + String.format("$%.2f", playersMoney).replace("$0.", "$."));
         System.out.println(showMoney);
         return playersMoney;
     }
@@ -55,6 +55,6 @@ public class player {
     public void bankAccount() {
         playersMoney = 10000;
         playersMoney = playersMoney + gameEarnings;
-        plsWorklol(playersMoney);
+        plsWorklol(playersMoney, name);
     }
 }
