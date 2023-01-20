@@ -23,7 +23,7 @@ public class casinopolyShop22 {
 
     giantWheel22 giantWheel22 = new giantWheel22();
 
-    allorNothing allorNothing = new allorNothing();
+    allorNothing2 allorNothing2 = new allorNothing2();
 
     inventory2 inventory2 = new inventory2();
 

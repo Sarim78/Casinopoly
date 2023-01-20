@@ -17,13 +17,13 @@ public class giantWheel22 {
 
     Random rnd = new Random();
 
-    penaltyWheel penaltyWheel = new penaltyWheel();
+    penaltyWheel2 penaltyWheel2 = new penaltyWheel2();
 
     wheelMethods2 wheelMethods2 = new wheelMethods2();
 
     jackpotWheel2 jackpotWheel2 = new jackpotWheel2();
 
-    allorNothing allorNothing = new allorNothing();
+    allorNothing2 allorNothing2 = new allorNothing2();
 
     // Creating Variables
 
