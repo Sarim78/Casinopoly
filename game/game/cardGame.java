@@ -33,15 +33,11 @@ public class cardGame {
 
     int num;
 
-    int playerBet;
+    int playerBet; // this variable will store players bet that they place
 
-    int aiNum;
+    int aiNum; // this variable stores the A.I number
 
-    int playerEarningRandomAmountMoney;
-
-    int maxMoneyLose;
-
-    int minMoneyLose;
+    int playerEarningRandomAmountMoney; // this variable will store money for each player
 
     // Creating Methods
     public void numberGenerator() {

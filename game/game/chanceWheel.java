@@ -30,7 +30,7 @@ public class chanceWheel {
 
     int randomSlot; // Creating a object for the random library 
 
-    String playerInput;
+    String playerInput; // this Variable is for player input for spinning the wheel
 
     // Creating Methods
     

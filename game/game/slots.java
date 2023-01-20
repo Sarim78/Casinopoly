@@ -35,11 +35,11 @@ public class slots {
 
     int probability = 15; // The probability of winning the jackpot is 15%
 
-    int money;
+    int money; // this Variable will added on to players balance after winning 
 
     int doubledMoney; // this will double the amount of money you win 
 
-    String confrimBet;
+    String confrimBet; // this Variable will store input of players when they confrim their bets
 
     String playerInput;
 
