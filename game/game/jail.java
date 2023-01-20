@@ -47,7 +47,7 @@ public class jail {
         player.gameEarnings = player.gameEarnings - bail;
 
         // this statement will let player 1 move spaces
-        player.totalSpace = player.totalSpace + player.space - 6;
+        player.totalSpace = player.totalSpace + player.space + 1;
     }
 
     public void player1Data() {
@@ -134,6 +134,7 @@ public class jail {
                 System.out.println("\nThanks for paying your bail!");
                 System.out.println("You have been moved 1 space forward!");
 
+                player1MovingSpacesAndLosingMoney();
                 //bail.close();
             } else if(userInputBail.equals("N") || userInputBail.equals("n")) {
                 // If players doesn't pay his bail, this statement will be executed
@@ -144,6 +145,7 @@ public class jail {
                 System.out.println("\nThanks for paying your bail!");
                 System.out.println("You have been moved 1 space forward!");
 
+                player1MovingSpacesAndLosingMoney();
                 //bail.close();
             }
         } catch (Exception e) {
