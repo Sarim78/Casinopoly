@@ -53,14 +53,18 @@ public class chanceWheel {
         // this will allow the player to input to spin the wheel
         System.out.println("\nClick (G) To Spin The Wheel or to exit, press anything: ");
         playerInput = in.nextLine();
+
         // this if statement will check the user input
         if(playerInput.equals("G") || playerInput.equals("g")) {
             System.out.println("Spinning the chance wheel.....");
+
+            // this try and catch is for the timer for the spinner
             try {
-                Thread.sleep(3000);
+                Thread.sleep(3000); // 3000 milisecounds = 3 secounds
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
             randomSlot = rnd.nextInt(1, 12);
             // creating IF-Statment for the object (RandomSlot), when the player clicks G to spin, this If Statment will run
             if(randomSlot == 1) {

@@ -69,6 +69,7 @@ public class slots {
         } else {
             // if player click anoything key, thos method will be called
             slotMachine();
+
             //instructions.close();
         }
         } catch (Exception e) {
@@ -85,13 +86,21 @@ public class slots {
         // if the random generator hit on 4 or 7, this IF STATEMENT will be printed
         if(jackpotPercentage == 4) {
             // This is for the jackpot, the chances to win this is (4%).
+
+            // this wil tell the player how much he won for jackpot
             System.out.println("\nYOU HAVE WON $" + jackPotMoney + "!");
             System.out.println("Congrats!");
+
+            // then method will be called 
             jackpot1();
         } else if(jackpotPercentage == 7) {
             // This is for the jackpot, the chances to win this is (7%).
+
+            // this wil tell the player how much he won for jackpot
             System.out.println("\nYOU HAVE WON $" + jackPotMoney + "!");
             System.out.println("Congrats!");
+
+            // then method will be called 
             jackpot1();
         }
     }
