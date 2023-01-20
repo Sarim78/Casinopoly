@@ -31,6 +31,8 @@ public class wheelMethods {
 
     inventory2 inventory2 = new inventory2();
 
+    jail Jail = new jail();
+
     // Creating Variables
 
     int raffelCardMoney;
@@ -187,7 +189,8 @@ public class wheelMethods {
         // @Author Sarim 
         // Player 1 sent to jail
         player.space = 8;
-        //TODO put them in jail
+        
+        Jail.grettingUserToJail();
     }
 
     // This 3 methods will be called if player lands on youLost Slot
