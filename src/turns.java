@@ -6,6 +6,7 @@ import java.util.Scanner;
 // Importing Files
 
 import game.gameBoard;
+import game2.gameBoard2;
 
 /**
  * Player 1 Data
@@ -434,7 +435,7 @@ public class turns {
             anythingToContinue();
             playerTurn2();
         } else if (choice2.equals("S") || choice2.equals("s")) {
-            System.out.println("\nYou are on " + 2gameBoard.spaceName + "!");
+            System.out.println("\nYou are on " + gameBoard2.spaceName + "!");
             anythingToContinue();
             playerTurn2();
         } else if (choice2.equals("P") || choice2.equals("p")) {
@@ -443,7 +444,7 @@ public class turns {
             playerTurn2();
         } else if (choice2.equals("R") || choice2.equals("r")) {
             //roll
-            gameBoard.dice2();
+            gameBoard2.dice2();
         } else {
             System.out.println("\nInvalid input! Please try again.");
             playerTurn2();
