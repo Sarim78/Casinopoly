@@ -376,7 +376,7 @@ public class turns {
             playerTurn1();
         } else if (choice1.equals("S") || choice1.equals("s")) {
             System.out.println("\nYou are on " + gameBoard.spaceName + "!");
-            System.out.println("This is space #" + player.totalSpace);
+            player.plsworktoo(src.player.totalSpace);
             anythingToContinue();
             playerTurn1();
         } else if (choice1.equals("P") || choice1.equals("p")) {

@@ -136,7 +136,7 @@ public class jail {
                 System.out.println("\nThanks for paying your bail!");
                 System.out.println("You have been moved 1 space forward!");
 
-                bail.close();
+                //bail.close();
             } else if(userInputBail.equals("N") || userInputBail.equals("n")) {
                 // If players doesn't pay his bail, this statement will be executed
                 System.out.println("\nSIKE, you still have to pay your bail!"); 
@@ -146,7 +146,7 @@ public class jail {
                 System.out.println("\nThanks for paying your bail!");
                 System.out.println("You have been moved 1 space forward!");
 
-                bail.close();
+                //bail.close();
             }
         } catch (Exception e) {
             System.out.println("\nInvaild Input, please try again");

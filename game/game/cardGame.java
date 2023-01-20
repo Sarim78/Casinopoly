@@ -156,12 +156,10 @@ public class cardGame {
     public void Ai() {
         // this method will let the ai think of a number greater than or less then numberGenerator() method
 
-        Random aiPickingRandomNumber = new Random();
-
-        System.out.println("\nAi: Am i thinking of an number higher or Lower of: " + num1 + "?");
-
-        aiNum = aiPickingRandomNumber.nextInt(1, 50);
+        aiNum = rnd.nextInt(1, 50);
         ai = aiNum;
+
+        System.out.println("\nAi: Am i thinking of an number higher or Lower of: " + ai + "?");
     }
 
     public void wouldYouTryAgainAfterWinning() {

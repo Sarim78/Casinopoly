@@ -32,7 +32,7 @@ public class casinopolyMain {
         // slots.instructions();
         
         cardGame cardGame = new cardGame();
-        // cardGame.instructions();
+        cardGame.instructions();
 
         Roulette Roulette = new Roulette();
         //Roulette.roulette();

@@ -43,11 +43,9 @@ public class gameBoard {
 
   jail Jail = new jail();
 
-  public String spaceName;
-
   // Creating Variables
 
-  
+  public String spaceName;
 
   // Creating Methods
 

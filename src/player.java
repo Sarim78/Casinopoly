@@ -23,7 +23,7 @@ public class player {
 
     public int diceRoller;
 
-    public static int totalSpace;
+    public static int totalSpace = 1;
 
     public String name;
 
@@ -36,12 +36,13 @@ public class player {
     public static double playersMoney;
 
     public int plsworktoo(int totalSpace) {
+        System.out.println("This is space #" + totalSpace);
         return totalSpace;
     }
 
     public void rollDice() {
         diceRoller = rnd.nextInt(1, 6);
-        totalSpace = space + diceRoller;
+        totalSpace = totalSpace + diceRoller;
         plsworktoo(totalSpace);
     }
 
