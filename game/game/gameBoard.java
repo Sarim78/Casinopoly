@@ -127,7 +127,6 @@ public class gameBoard {
       spaceName = "Jail";
       System.out.println("\nYou have just landed at space #" + player.totalSpace);
       System.out.println("You are visiting the jail! You have earned nothing...");
-      Jail.grettingUserToJail();
 
     } else if(player.totalSpace == 11 || player.totalSpace == 16) {
       //free space
@@ -139,6 +138,7 @@ public class gameBoard {
       // go to Jail
       spaceName = "Go To Jail";
       System.out.println("\nYou have just landed at space #" + player.totalSpace);
+      Jail.grettingUserToJail();
 
     } else if(player.totalSpace == 15) {
       //giant casinopoly wheel
