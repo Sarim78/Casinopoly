@@ -52,14 +52,15 @@ public class jail {
 
     public void player1Data() {
         // This method will check if player 1 have more then 5k to pay for bail
-
-        if(player.playersMoney >= 5000) {
-            // If player 1 have more then 5k, this statement will be executed
-            askingUserToPayTheBail();
-            player1MovingSpacesAndLosingMoney();
-        } else {
-            // If player 1 have less then 5k, this statement will be executed
-            diceRoller();
+        if (player.totalSpace == 8) {
+            if(player.playersMoney >= 5000) {
+                // If player 1 have more then 5k, this statement will be executed
+                askingUserToPayTheBail();
+                player1MovingSpacesAndLosingMoney();
+            } else {
+                // If player 1 have less then 5k, this statement will be executed
+                diceRoller();
+            }
         }
     }
 
